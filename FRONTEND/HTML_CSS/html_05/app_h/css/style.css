@@ -254,18 +254,19 @@ p {
 
 /* Task 7 -------------------------------------- */
 .out-7 {
-    position: fixed;
+
 }
 
 .out-7 {
     background: #000;
     width: 30px;
     height: 30px;
-    right: 322px;
-    top: 720px;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
 }
 
-
+/* 
 .out-8 {
     background: rgb(215, 9, 9);
     width: 50px;
@@ -284,6 +285,6 @@ p {
     top: 751px;
 }
 
-
+ */
 
 /* Task 7 END -------------------------------------- */
