@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet
+          type="text/xsl"
+          href="students.xslt"
+          version="1.0" ?>
+<students>
+     <cargospace>
+          <cargo amount="120">slime</cargo>
+          <cargo amount="180">slime2</cargo>
+          <cargo amount="20">slime3</cargo>
+          <cargo amount="10">slime4</cargo>
+          <cargo amount="12">slime4</cargo>
+     </cargospace>
+</students>
