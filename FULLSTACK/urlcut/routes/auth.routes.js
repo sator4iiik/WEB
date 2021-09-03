@@ -10,13 +10,11 @@ router.post(
     [
         check('email', 'Некорректный  email').isEmail(),
         check('password', 'Минимальная длина пароля 6 символов')
-            .isLength( options: { min: 6} )
+            .isLength({ min: 6})
     ],
     async (reg, res) => {
     try {
         const errors = validationResult(req)
-
-
 
         const {email, password} = req.body
 
@@ -29,9 +27,6 @@ router.post(
             })
         }
 
-        const {email, password} = req.body
-
-        const candidate = await User.findOne({ email })
 
         if (candidate) {
             return res.status(400).json({ message: 'Такой пользователь уже существует' })
