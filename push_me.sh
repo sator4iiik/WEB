@@ -4,4 +4,4 @@ git add .
 git commit -am "initial commit"
 git push
 echo "iнiцiалiзовано"
-git log --stat
+cat -e | git log --stat
