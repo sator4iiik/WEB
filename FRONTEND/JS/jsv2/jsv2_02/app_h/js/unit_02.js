@@ -50,11 +50,13 @@ document.querySelector('.out-7').textContent = (e4 * f4);
 // Task 8.
 // По нажатию на кнопку .b-8 выполняется функция, которая выводит в div.out-8 то, что пользователь ввел в input.i-8.
 
+let button = document.querySelector('button');
+
 function t8() {
     // value всегда получаем внутри функции
     let data = document.querySelector('.i-8').value; // получили значение
     // тут выводим
-    div.innerHTML;
+    console.log(inputIn.value);
 }
 
 document.querySelector('.b-8').onclick = t8;
