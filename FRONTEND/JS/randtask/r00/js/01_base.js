@@ -180,18 +180,63 @@
 //99999999999999999999999999999999999999999999999999999999999999999999
 // 9 массивы
 
-const cars = ['Nissan', 'Mersedes', 'Ford']
+// const cars = ['Nissan', 'Mersedes', 'Ford']
 // const cars = new Array('Nissan', 'Mersedes', 'Ford')
-console.log(cars)
+// console.log(cars)
 
-console.log(cars[0])
-console.log(cars[1])
-console.log(cars[2])
-console.log(cars[3])
+// console.log(cars[0])
+// console.log(cars[1])
+// console.log(cars[2])
+// console.log(cars[3])
 
-console.log(cars.length)
+// console.log(cars.length)
 
+// cars[0] = 'Porsche'
+// cars[3] = 'Nissan'
+// cars[cars.length] = 'Mazda'
+// console.log(cars)
 
 
 //10101010101010101010101010101010101010101010101010101010101010101010
-// 10
+// 10 циклы
+
+// const cars = ['Nissan', 'Mersedes', 'Ford', 'Porsche']
+
+// for(let i = 0; i < cars.length; i++) {
+//     const car = cars[1]
+//     console.log(car)
+// }
+
+// for (let car of cars) {
+//     console.log(car)
+// }
+
+//11111111111111111111111111111111111111111111111111111111111111111111
+// 11 объекты (структура данных, в которой мы группируе определенное количество
+// разных значений, в отличии от массива, когда мы создаем группу, то в
+// объектах мы создаем совершенно разную структуру)
+
+// const person = new Object({})
+// const person = {
+//     firstName: 'Sergey',
+//     lastName: 'Pupkin',
+//     year: 2000,
+//     languages: ['Ua', 'En', 'Ru', 'Pl'],
+//     hasWife: false,
+//     greet: function() {
+//         console.log('greet from person')
+//     }
+// }
+
+// console.log(person)
+// console.log(person.lastName)
+// console.log(person['lastName'])
+// console.log(person[key])
+
+// const key = 'languages'
+
+// // consol.log это тоже объект у которого есть метод log
+
+// person.hasWife = true
+// person.isProgrammer = true
+// person.greet()
