@@ -1,9 +1,10 @@
 #!/bin/zsh
+#oreznikov(c)
 
 sprintN="Sprint$1"
 taskdir="$2"
 echo "Created task $sprintN(*˘︶˘*).｡.:*: ./t$taskdir"
-say "$sprint инициализирован"
+say "$sprint redy"
 
 mkdir "$sprintN"
 

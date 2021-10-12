@@ -218,18 +218,18 @@
 
 // __proto__
 // ees6 до
-function Cat(name, color) {
-    this.name  = name
-    this.color = color
-}
+// function Cat(name, color) {
+//     this.name  = name
+//     this.color = color
+// }
 
-Cat.prototype.voice = function() {
-    console.log(`Cat ${this.name} says myay`)
-}
+// Cat.prototype.voice = function() {
+//     console.log(`Cat ${this.name} says myay`)
+// }
 
-const cat = new Cat('kot', 'white')
-console.log(Cat.prototype) // это поле является указателем на обьект у которого есть конструктор и соответствующие поля которые будут созданы от этого класса
-cat.voice()
+// const cat = new Cat('kot', 'white')
+// console.log(Cat.prototype) // это поле является указателем на обьект у которого есть конструктор и соответствующие поля которые будут созданы от этого класса
+// cat.voice()
 
 
 // forEach – для перебора массива.

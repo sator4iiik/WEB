@@ -71,7 +71,7 @@ body {
 }
 
 .hide {
-  display: nan;
+  display: none;
 }
 
 .hovered {
