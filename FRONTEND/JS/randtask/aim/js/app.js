@@ -1,14 +1,15 @@
 const startBtn = document.querySelector('#start')
-const screen = document.querySelectorAll('.screen')
+const screen   = document.querySelectorAll('.screen')
 const timeList = document.querySelector('#time-list')
-const timeEl = document.querySelector('#time')
-const board = document.querySelector('#board')
+const timeEl   = document.querySelector('#time')
+const board    = document.querySelector('#board')
 const colors = ['#ffd6e7', '#efdbff', '#d6e4ff', '#bae7ff', '#b5f5ec',
-    '#d9f7be', '#f4ffb8', '#f4ffb8', '#fff1b8', '#ffe7ba', '#ffd8bf',
-    '#ffccc7', 'white']
-let time = 0
-let score = 0
-
+                '#d9f7be', '#f4ffb8', '#f4ffb8', '#fff1b8', '#ffe7ba',
+                '#ffd8bf', '#ffccc7', 'white']
+// let openRequest = indexDB.open("scoreDB", 1);
+// let scoreDB = 0
+let time    = 0
+let score   = 0
 
 startBtn.addEventListener('click', (event) => {
     event.preventDefault()
@@ -66,6 +67,15 @@ function setTime(value) {
 function finishGame() {
     timeEl.parentNode.classList.add('hide')
     board.innerHTML = `<h1>your score: <span class="primary">${score}</span></h1>`
+}
+
+
+openRequest.onerror = function() {
+    console.error("Error", openRequest.error)
+}
+
+openRequest.onesuccess = function() {
+    let db = openRequest.result;
 }
 
 function createRandomCircle() {
