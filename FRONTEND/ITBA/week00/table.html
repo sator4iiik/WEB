@@ -25,7 +25,6 @@ o.`Y8b 88 Yb  "88 88YbdP88  dP__Yb     88""
 
             .container {
                 width: 100%;
-                display: flex;
                 justify-content: center;
                 background-color: rgb(40, 40, 34);
             }
@@ -37,14 +36,22 @@ o.`Y8b 88 Yb  "88 88YbdP88  dP__Yb     88""
             }
 
             table {
+                border: 1px solid grey;
+                text-align: center;
 
+            }
+
+            th, td {
+                border: 1px solid grey;
+                text-align: center;
+                padding: 10px;
             }
         </style>
     </head>
     <body>
         <div class="container">
             <table>
-                <capition>сравнительная таблица HTML, XML, MD, JSON</capition>
+                <capition title="о сравнении">сравнительная таблица HTML, XML, MD, JSON</capition>
                 <thead>
                     <tr>
                         <th>основа для сравнения</th><th>HTML</th><th>XML</th><th>MD</th><th>JSON</th>
@@ -54,6 +61,27 @@ o.`Y8b 88 Yb  "88 88YbdP88  dP__Yb     88""
                     <tr>
                         <td>полное название</td><td>HyperText Markup Language</td><td>eXtensible Markup Language</td><td>Markdown</td><td>JavaScript Object Notation</td>
                     </tr>
+                    <tr>
+                        <td>на чем базируется язык</td><td>Standart Generation Markup Language</td><td>Standart Generalized Markup Language</td><td>Много идей языка были подсмотренны с существующих соглашений по разметке текста в електронных письмах</td><td>Java Script</td>
+                    </tr>
+                    <tr>
+                        <td>для чего используется</td><td>разметка документов для просмотра веб-страниц в браузере</td><td>это выделенный язык описи данных, который используется для хранения данных</td><td>облегченный язык разметки, созданый с целью форматирования в простом тексте, с максимальным сохранением читаемости человеком, пригодный для машинного превращения в язык для продвинутых публикаций</td><td>используется в основном для передачи структурированой информации через сеть</td>
+                    </tr>
+                    <tr>
+                        <td>закрывающие теги</td><td>обязательное использование</td><td>не обязательное использование</td><td>не используют</td><td>используют</td>
+                    </tr>
+                    <tr>
+                        <td>поддержка коментариев</td><td>есть</td><td>есть</td><td>есть</td><td>нет</td>
+                    </tr>
+                    <tr>
+                        <td>поддержка форматов</td><td>поддержка многих форматов</td><td>поддержка многих форматов</td><td>.md</td><td>UTF-8</td>
+                    </tr>
+                    <tr>
+                        <td>поддержка массивов</td><td>нет</td><td>нет</td><td>нет</td><td>да</td>
+                    </tr>
+                    <tr>
+                        <td>поддержка пробелов</td><td>не поддерживает</td><td>может быть сохранено</td><td>не поддерживает</td><td>не поддерживает</td>
+                    </tr>
                 </thead>
             </table>
         </div>
@@ -62,3 +90,5 @@ o.`Y8b 88 Yb  "88 88YbdP88  dP__Yb     88""
 
         <!-- .container>table>capition{сравнительная таблица HTML, XML, MD, JSON}thead>tr>th{основа для сравнения}th{HTML}th{XML}th{MD}th{JSON} -->
         <!-- thead>tr>td{полное название}td{HyperText Markup Language}td{eXtensible Markup Language}td{Markdown}td{JavaScript Object Notation} -->
+        <!-- tr>td{для чего используется}td{разметка документов для просмотра веб-страниц в браузере}td{это выделенный язык описи данных, который используется для хранения данных}td{облегченный язык разметки, созданый с целью форматирования в простом тексте, с максимальным сохранением читаемости человеком, пригодный для машинного превращения в язык для продвинутых публикаций}td{используется в основном для передачи структурированой информации через сеть} -->
+        <!-- tr>td{закрывающие теги}td{обязательное использование}td{не обязательное использование}td{не используют}td{используют} -->
