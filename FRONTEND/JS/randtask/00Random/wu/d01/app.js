@@ -68,8 +68,10 @@ function nameList (firstName, lastName) {
 let num = 19;
 
 while (num < 67) {
-    num += 2;
-    console.log(num)
+    if (i % 2 != 0) {
+    console.log(num);
+    }
+    i++;
 }
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
