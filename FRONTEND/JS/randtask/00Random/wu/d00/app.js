@@ -1,6 +1,6 @@
-/* ....................................
- * /////////////DAY 1//////////////////
- * ```````````````````````````````````
+/* ....................................................................
+ * /////////////DAY 1//////////////////////////////////////////////////
+ * ```````````````````````````````````````````````````````````````````
  * OREZNIKOV 2021
  *
  * day 1
@@ -17,13 +17,24 @@ let stadium = Boolean(true);
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  */ // Задание 2:
 
-let   h = 40;
-let   w = 70;
+// let   h = 40;
+// let   w = 70;
+// const d = "см";
+
+// let areaRectangle = h * w;
+
+// console.log(areaRectangle + d);
+
+// Ver 2
+
 const d = "см";
+let h = 40,
+    w = 70;
 
 let areaRectangle = h * w;
+let result = `${areaRectangle} ${d}`;
 
-console.log(areaRectangle + d);
+console.log(result);
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  */ // Задание 3:
@@ -57,7 +68,6 @@ if (randomNumber < 20) {
  */ // Задание 5:
 
 const randomNumber2 = Math.floor(Math.random() * 100);
-
 const infoT05 = "switch ↓";
 
 console.log(infoT05);
@@ -72,5 +82,6 @@ switch (true) {
 
     default:
         console.log("randomNumber больше 20, и меньше 50");
-
 }
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
