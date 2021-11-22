@@ -47,31 +47,32 @@ const array = [
     'спаливши Трою,'                // 12 |----------10
 ];
 
-console.log(array[2] + ' ' + array[6] + ' ' + array[11] + ' ' + array[0]
-            + ' ' + array[7] + ' ' + array[3] + ' ' + array[4] + ' ' +
-            array[8] + ' ' + array[9] + ' ' + array[12] + ' ' + array[1]
-            + ' ' + array[10] + ' ' + array[5])
+let result = (array[2] + ' ' + array[6] + ' ' + array[11] + ' ' + array[0]
++ ' ' + array[7] + ' ' + array[3] + ' ' + array[4] + ' ' +
+array[8] + ' ' + array[9] + ' ' + array[12] + ' ' + array[1]
++ ' ' + array[10] + ' ' + array[5])
+
+console.log(result)
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  */ // Задание 4:
-
-nameList('Oleksii', 'Reznikov')
 
 function nameList (firstName, lastName) {
     const fullName = `${firstName} ${lastName}`;
     console.log(fullName);
 }
 
+nameList('Oleksii', 'Reznikov');
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  */ // Задание 5:
 
 let num = 19;
 
 while (num < 67) {
-    if (i % 2 != 0) {
+    if (num % 2 != 0) {
     console.log(num);
     }
-    i++;
+    num++;
 }
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
