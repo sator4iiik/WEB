@@ -26,6 +26,9 @@
         blanditiis hic dicta quod ab, molestias aliquam eveniet nobis nulla
         qui, distinctio dolore provident numquam.</div>
 
+    <button id="btn" onclick="alert('ты нажал на кнопку')">нажми меня</button>
+    <button id="btnN" onclick="foo()">нажми меня</button>
+
     <script>
     // Document Object Model
     // documet - самый главный/глобальный обьект
@@ -38,6 +41,64 @@
     const div2 = document.getElementById('two');
     const div3 = document.getElementById('three');
 
+    // получить данные по классу
+    const p = document.querySelector('.par');
+
+    // получить все дивы в документе
+    const divs = document.querySelectorAll('div');
+
+    // переменная.внутри штмл = поменять на
+    div3.innerHTML = 'Phyton';
+
+    console.log(div.className);
+
+    // дотянутся до айди и поменять на необходимый класс
+    div.className = 'div-green';
+
+    // и удалять класс и добавлять новый и тоглить
+    div.classList.add('div-red');
+    div.classList.remove('div-red');
+    // добавит класс если его небыло и удалит если он был( текст при нажатии кнопки)
+    div.classList.toggle('div-red');
+
+    // скрыть текст
+    const btn = document.getElementById('btn')
+    btn.addEventListener('click', () => {
+        div.classList.toggle('hide');
+    })
+
+    // font-size нужно записывать как fontSize (меняем в цсс размер шрифта и цвет)
+    btn.addEventListener('click', () => {
+        div.style.fontSize = '50px';
+        div.style.color = 'red';
+    })
+
+    //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    const btn = document.getElementById('btn');
+    const showMessage1 = () => {
+        alert('ты нажал на кнопку 1');
+    }
+    const btn = document.getElementById('btn');
+    const showMessage2 = () => {
+        alert('ты нажал на кнопку 2');
+    }
+    // btn.onclich = showMessage();
+
+    btn.addEventListener('click', () => {
+        showMessage1();
+        showMessage2();
+    })
+
+    //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    const div = document.querySelector('.div');
+
+    const showMessage5 = () => {
+        alert('Hello World');
+    };
+
+    div,addEventListener('mouseout', showMessage5);
+    //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     const test = {
         option1 : 'test',
         option2 : 'test2',
