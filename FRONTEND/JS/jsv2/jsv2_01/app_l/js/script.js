@@ -10,9 +10,9 @@ console.info('BEBEBE');
 // alert("Why you there?");
 
 
-document.getElementById("out").innerHTML = "Yo"
-document.getElementById("out").innerHTML = "Y2019"
-document.getElementById("out").innerHTML = "<b>2020<b>"
+document.getElementById("out").innerHTML = "Yo";
+document.getElementById("out").innerHTML = "Y2019";
+document.getElementById("out").innerHTML = "<b>2020<b>";
 
 document.querySelector('.header').innerHTML = 5;
 document.querySelector('#one').innerHTML = 777; // # есть

@@ -9,6 +9,7 @@ let inputIn = document.querySelector('.input-in'); // input
 let button  = document.querySelector('button');     // button
 let div     = document.querySelector('.out');
 
+
 ///////////////////////Событие//////////////////////////////////
 
 button.onclick = function (){
