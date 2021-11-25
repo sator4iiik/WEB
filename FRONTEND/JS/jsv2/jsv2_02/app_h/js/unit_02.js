@@ -204,7 +204,7 @@ function t16() {
 
         let a = data1;
         let b = data2;
-        let sum = data1 + data2;
+        let sum = a + b;
         div16.innerHTML = sum;
 }
 
@@ -229,18 +229,26 @@ document.querySelector('.b-17').onclick = t17;
 // из .i-18 число в переменную a. Выводит в out-18 результат операции
 // parseFloat(a). Попробуйте ввести значения 5, 33.02, 33.9a, -20.01
 
+let button18 = document.querySelector('.b-18');
+
 function t18() {
-    let data = document.querySelector('.i-17').value;
-    document.querySelector('.i-18')
+    let a = document.querySelector('.i-18').value;
+            document.querySelector('.out-18').innerHTML = parseFloat(a);
 }
 
 document.querySelector('.b-18').onclick = t18;
 
 // Task 19.
-// По нажатию кнопки .b-19 функция t19 дожна в out-19 вывести сумму двух отрицательных чисел из input .i-19-1 и .i-19-2.
+// По нажатию кнопки .b-19 функция t19 дожна в out-19 вывести сумму двух
+// отрицательных чисел из input .i-19-1 и .i-19-2.
 
 function t19() {
-
+    let data1 = document.querySelector('.i-19-1').value;
+    let data2 = document.querySelector('.i-19-2').value;
+            let a = +data1;
+            let b = +data2;
+            let sum = a + b;
+                document.querySelector('.out-19').innerHTML = Number(sum);
 }
 
 document.querySelector('.b-19').onclick = t19;
@@ -251,8 +259,7 @@ document.querySelector('.b-19').onclick = t19;
 let count = 0;
 
 function t20() {
-    count = count + 1; // можно сократить count++
-    // тут допишите вывод в out-20
+    document.querySelector('.out-20').innerHTML = count++;
 }
 
 document.querySelector('.b-20').onclick = t20;
