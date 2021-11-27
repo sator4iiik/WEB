@@ -22,47 +22,70 @@
     <p>Введи число от 1 до 100</p>
     <input type="text" class="input-in">
     <button>FizzBuzz!</button>
-
     <div class="out-1"></div>
 
     <!-- <p>открой консоль</p> -->
 
 
     <script>
-        let inputIn = document.querySelector('input.input-in');
+        let input = document.querySelector('.input-in');
         let button  = document.querySelector('button');
         let div     = document.querySelector('.out-1');
 
-        const f     = 'Fizz';
-        const bu    = 'Buzz';
-        const fb    = 'FizzBuzz';
-
-        let sum     = '0';
-
-
-        button.onclick = function () {
-            console.log('кнопка нажата')
-            console.log( inputIn.value );
-            let b = +inputIn.value;
-            div.innerHTML = b;
-            inputIn.value = '';
-        }
-
-        function FizzBuzzF(inputIn, f, bu, fb) {
-            if(inputIn % 3 === 0 && inputIn % 5 === 0) {
-                return sum = fb;
-            }
-                else if(inputIn % 5 === 0) {
-                    return sum = f;
+        button.onclick = () => {
+            let num = +input.value;
+                if (num % 3 === 0 && num % 5 === 0) {
+                    div.innerHTML = 'FizzBuzz!'
+                    document.querySelector('.out-1').value = 'FizzBuzz!';
+                    console.log('FizzBuzz!');
                 }
-                    else if(inputIn % 3 === 0) {
-                        return sum = bu;
-                    } else {
-                        return sum = inputIn;
+                    else if (num % 3 === 0) {
+                        div.innerHTML = 'Fizz';
+                        document.querySelector('.out-1').value = 'Fizz';
+                        console.log('Fizz');
                     }
+                        else if (num % 5 ===0) {
+                            div.innerHTML = 'Buzz!';
+                            document.querySelector('.out-1').value;
+                            console.log('Buzz');
+                        } else {
+                            div.innerHTML = num;
+                            document.querySelector('.out-1').value;
+                            console.log(num);
+                        }
+            document.querySelector('.out-1').value = '';
         }
-        div.innerHTML = sum;
-        console.log(sum)
+
+        // const f     = 'Fizz';
+        // const bu    = 'Buzz';
+        // const fb    = 'FizzBuzz';
+
+        // let sum     = '0';
+
+
+        // button.onclick = function () {
+        //     console.log('кнопка нажата')
+        //     console.log( inputIn.value );
+        //     let b = +inputIn.value;
+        //     div.innerHTML = b;
+        //     inputIn.value = '';
+        // }
+
+        // function FizzBuzzF(inputIn, f, bu, fb) {
+        //     if(inputIn % 3 === 0 && inputIn % 5 === 0) {
+        //         return sum = fb;
+        //     }
+        //         else if(inputIn % 5 === 0) {
+        //             return sum = f;
+        //         }
+        //             else if(inputIn % 3 === 0) {
+        //                 return sum = bu;
+        //             } else {
+        //                 return sum = inputIn;
+        //             }
+        // }
+        // div.innerHTML = sum;
+        // console.log(sum)
 
 
         // for (b; b <= 100; b++) {
@@ -148,8 +171,6 @@
 
         // let outF = document.querySelector('div.out-1')
         //             outF.textContent = sum;
-
-
     </script>
 </body>
 </html>
