@@ -237,3 +237,121 @@
 // every/some – для проверки массива.
 // map – для трансформации массива в массив.
 // reduce/reduceRight – для прохода по массиву с вычислением значения.
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// const f     = 'Fizz';
+// const bu    = 'Buzz';
+// const fb    = 'FizzBuzz';
+
+// let sum     = '0';
+
+
+// button.onclick = function () {
+//     console.log('кнопка нажата')
+//     console.log( inputIn.value );
+//     let b = +inputIn.value;
+//     div.innerHTML = b;
+//     inputIn.value = '';
+// }
+
+// function FizzBuzzF(inputIn, f, bu, fb) {
+//     if(inputIn % 3 === 0 && inputIn % 5 === 0) {
+//         return sum = fb;
+//     }
+//         else if(inputIn % 5 === 0) {
+//             return sum = f;
+//         }
+//             else if(inputIn % 3 === 0) {
+//                 return sum = bu;
+//             } else {
+//                 return sum = inputIn;
+//             }
+// }
+// div.innerHTML = sum;
+// console.log(sum)
+
+
+// for (b; b <= 100; b++) {
+//     switch(true) {
+//         case b % 3 === 0 && b % 5 === 0 : {
+//             sum = fb;
+//             console.log(sum);
+//             break;
+//         }
+//         case b % 3 === 0 : {
+//             sum = f;
+//         }
+//         case b % 5 === 0 : {
+//             sum = bu;
+//         }
+//         default : {
+//             sum = b;
+//             break;
+//         }
+//     }
+// }
+
+// let FizzBuzzV = inputIn % 5 === 0 ? 'Buzz' : inputIn % 3 === 0
+//             ? 'Fizz' : inputIn % 3 === 0 && inputIn % 5 === 0
+//             ? inputIn :'FizzBuzz';
+
+// for (let i = 1; i <= 100; i++) {
+//     switch(true) {
+//         case i % 3 === 0 && i % 5 === 0 : {
+//             console.log('FizzBuzz');
+//             break;
+//         }
+//         case i % 3 === 0 : {
+//             console.log('Fizz');
+//         }
+//         case i % 5 === 0 : {
+//             console.log('Buzz')
+//         }
+//         default : {
+//             console.log(i);
+//             break;
+//         }
+//     }
+// }
+
+// let FizzBuzzV = i % 5 === 0 ? 'Buzz' : i % 3 === 0
+//                  ? 'Fizz' : i % 3 === 0 && i % 5 === 0
+//                  ? i :'FizzBuzz';
+// console.log(FizzBuzzV)
+
+// let inputIn = document.querySelector('.input-in');
+// let button  = document.querySelector('button');
+//                 document.querySelector('.out-1')
+// let sum;
+// let b       = 0;
+// const f     = 'Fizz';
+// const bu    = 'Buzz';
+// const fb    = 'FizzBuzz';
+
+
+// button.onclick = function () {
+//     console.log('Ping')
+//     let b = inputIn.value;
+//     console.log(b);
+//     inputIn.value = '';
+// }
+
+
+
+// function FizzBuzzF(b, sum, f, bu, fb) {
+//     if(b % 3 === 0 && b % 5 === 0) {
+//         return sum = fb;
+//     }
+//         else if(b % 5 === 0) {
+//             return sum = f;
+//         }
+//             else if(b % 3 === 0) {
+//                 return sum = bu;
+//             } else {
+//                 return sum = b;
+//             }
+// } console.log(sum);
+
+// let outF = document.querySelector('div.out-1')
+//             outF.textContent = sum;

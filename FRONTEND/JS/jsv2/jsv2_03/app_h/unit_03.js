@@ -15,11 +15,9 @@ function f1(){
       div1.innerHTML = 'false';
       document.querySelector('.out-1').value = 'false';
    }
-
 }
 
 document.querySelector('.b-1').onclick = f1;
-
 
 // Task 2
 // Даны две переменные a21 и a22. При нажатии кнопки .b-2, запускается функция
@@ -362,6 +360,7 @@ function f15(){
       let a = +dat1;
       let b = +dat2;
       let c = dat3;
+
    switch (c){
       case '\x26\x26':
          div15.innerHTML = a && b;
