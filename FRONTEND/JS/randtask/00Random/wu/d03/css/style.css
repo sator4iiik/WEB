@@ -1,7 +1,13 @@
-h1 {
+html {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
     width: 100%;
     text-align: center;
 }
+
 .tabs-block-wrapper {
     width: 100%;
     display: flex;
@@ -9,21 +15,38 @@ h1 {
     align-items: center;
     flex-flow: column;
 }
+
+.flex-wrapper {
+    display: flex;
+    width: 100%;
+    height: 12vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
 #tabs {
     display: flex;
 }
-.tab-btn {
-    width: 100px;
+
+.tab-btn, .nested-tab {
+    width: 74px;
     height: 40px;
     font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    border: 1px solid rgb(48, 62, 62);
     border-radius: 5px;
 }
+
 .tab-btn.active {
-    background-color: blue;
+    background-color: rgb(51, 73, 78);
+    color: #ffffff;
+}
+
+.nested-tab.active {
+    background-color: rgb(51, 73, 78);
     color: #ffffff;
 }
 
@@ -34,10 +57,74 @@ h1 {
     border: 1px solid black;
 }
 
-.content {
+.content, .nested-content {
     display: none;
 }
 
 .content.active {
     display: block;
+}
+
+.nested-content.active {
+    display: block;
+}
+
+.nested{
+    padding: 15px;
+}
+
+.nested-contents{
+    border: 1px solid black;
+    width: 100%;
+    height: 200px;
+}
+
+.nested-tabs{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+}
+
+#btn-open {
+    width: 60px;
+    height: 30px;
+    background-color: rgb(40, 50, 62);
+    color: #ffffff;
+    font-size: 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#wrapper-modal {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#wrapper-modal.active {
+    display: block;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: gray;
+    opacity: 0.5;
+}
+
+#modal-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 300px;
+    z-index: 2;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: #ffffff;
 }
