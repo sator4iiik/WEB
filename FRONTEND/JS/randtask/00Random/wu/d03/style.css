@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    background-color: rgb(53, 61, 61);
+}
+h1 {
+    width: 100%;
+    text-align: center;
+}
+.tabs-block-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+#tabs {
+    display: flex;
+}
+.tab-btn {
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(35, 44, 44);
+    border-radius: 5px;
+}
+.tab-btn.active {
+    background-color: rgb(30, 30, 30);
+    color: #7f7474;
+}
+
+#contents {
+    max-width: 400px;
+    width: 100%;
+    height: 500px;
+    border: 1px solid rgb(49, 49, 49);
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
+.content-inner {
+    display: none;
+}
+
+.content-inner.active {
+    display: block;
+}

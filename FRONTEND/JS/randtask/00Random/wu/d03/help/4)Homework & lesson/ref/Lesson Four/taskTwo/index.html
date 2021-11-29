@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task_One: Tabs</title>
+
+    <div><!-- Links -->
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/tab.css">
+    </div>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tabs</h1>
+        <div class="tabs-block-wrapper">
+            <div id="tabs" data-level="1">
+                <div class="tab-button" data-button="1">1</div>
+                <div class="tab-button" data-button="2">2</div>
+                <div class="tab-button  active" data-button="3">3</div>
+            </div>
+            <div id="contents" data-level="1">
+                <div class="content" data-content="1">Content 1</div>
+                <div class="content" data-content="2">Content 2</div>
+                <div class="content active" data-content="3">
+                    <div class="tabs-intab">
+                        <div id="tabs" data-level="2">
+                            <div class="tab-button active" data-button="1">1</div>
+                            <div class="tab-button" data-button="2">2</div>
+                        </div>
+                        <div id="contents" data-level="2">
+                            <div class="content active" data-content="1">Content 1</div>
+                            <div class="content" data-content="2">Content 2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div><!-- Scripts -->
+        <script src="scripts/script.js"></script>
+    </div>
+</body>
+
+</html>

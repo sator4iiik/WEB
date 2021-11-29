@@ -1,0 +1,45 @@
+.tabs-block-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+#tabs {
+    width: 100%;
+    display: flex;
+}
+.tab-button {
+    width: 33.3333%;
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.tab-button.active {
+    background-color: blue;
+    color: #ffffff;
+}
+
+.tabs-intab .tab-button {
+    width: 50%;
+    height: 30px;
+}
+
+#contents {    
+    width: 100%;
+    min-height: 150px;
+    height: max-content;
+    border: 2px solid black;
+    padding: 1%;
+    box-sizing: border-box;
+}
+.content {
+    display: none;
+}
+.content.active {
+    display: block;
+}

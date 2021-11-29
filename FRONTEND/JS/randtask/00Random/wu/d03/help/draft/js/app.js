@@ -4,25 +4,25 @@
 const tabs    = document.getElementById('tabs');
 const content = document.querySelectorAll('.content');
 
-const nestedTabs = document.querySelector('.nested-tab');
+const nestedTab = document.querySelector('nested-tab');
 const nestedContent = document.querySelector('.nested-content');
 
 console.log(tabs);
+console.log(nestedTab);
 
 const changeClass = (el) => {
-    for(let i = 0; i < tabs.children.length || i < nestedTabs.children.length; i++) {
+    for(let i = 0; i < tabs.children.length; i++) {
         tabs.children[i].classList.remove('active');
         console.log(tabs.children[i]);
-        console.log(nestedTabs.children[i])
     }
     el.classList.add('active');
 }
 
 // можно не вешать на каждую кнопку обработчик событий
-tabs.addEventListener('click', e => { // достаточно к обертке добавить айди #tabs
-    console.log(e.target);
-    const currTab = e.target.dataset.btn;         // обьект ивент.со свойством таргет.дотяниваемся до атрибута дата.указываем btn
-    changeClass(e.target);
+tabs.addEventListener('click', el => { // достаточно к обертке добавить айди #tabs
+    console.log(el.target);
+    const currTab = el.target.dataset.btn;         // обьект ивент.со свойством таргет.дотяниваемся до атрибута дата.указываем btn
+    changeClass(el.target);
     for(let i = 0; i < content.length; i++) {
         content[i].classList.remove('active');
         if(content[i].dataset.content === currTab){
@@ -31,36 +31,25 @@ tabs.addEventListener('click', e => { // достаточно к обертке 
     }
 })
 
-// const changeClassNestedTabs = (elem) => {
-//     nestedTabs.forEach(nTb => {
-//         nTb.classList.remove('active');
-//     })
-//     elem.classList.add('active')
-// }
+const changeClassNestedTab = el => {
+    for (let i = 0; i < nestedTab.children.length; i++) {
+        nestedTab.children[i].classList.remove('active');
+        console.log(nestedTab.children[i]);
+    }
+    el.classList.add('active');
+}
 
-// nestedTabs.forEach(nesTab => {
-//     nesTab.addEventListener('click', (e) => {
-//         const target = e.target;
-//         changeClassNestedTabs(target);
-//         nestedContent.forEach(nesContent => {
-//             nesContent.classList.remove('active');
-//             if (target.dataset.nested === nesContent.dataset.nested) {
-//                 nesContent.classList.add('active');
-//             }
-//         })
-//     })
-// });
+nestedTab.addEventListener('click', el => {
+    const currTab = el.target.dataset.btn;
+    changeClassNestedTab(el.target);
+    for(let i = 0; i < nestedContent.length; i++) {
+        nestedContent[i].classList.remove('active');
+        if (nestedContent[i].dataset.content === currTab) {
+            nestedContent[i].classList.add('active');
+        }
+    }
+});
 
-// tabs.addEventListener('click', e => {
-//     const target = e.target;
-//     changeClass(target);
-//     content.forEach(content => {
-//         content.classList.remove('active');
-//         if (target.dataset.btn === content.dataset.content) {
-//             content.classList.add('active');
-//         }
-//     })
-// })
 
 // дата атрибуты внутрь которых мы будем передавать специальные значения data-btn="1" html
 
