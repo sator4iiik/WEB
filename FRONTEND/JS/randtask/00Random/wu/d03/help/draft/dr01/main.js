@@ -49,10 +49,25 @@ const prevSlide = () => {
 }
 
 dots.forEach((item, indexDot) => {
-    i
+    item.addEventListener('click', () => {
+        index = indexDot;
+        prepareCurrentSlide(index);
+
+    })
     console.log(item);
     console.log(indexDot);
 })
 
 next.addEventListener('click', nextSlide);
 prev.addEventListener('click', prevSlide);
+
+let timer = 0;
+
+const makeTimer = () => {
+    clearInterval(timer)
+    timer = setInterval(() => {
+        nextSlide();
+    }, 2000);
+}
+
+makeTimer();
