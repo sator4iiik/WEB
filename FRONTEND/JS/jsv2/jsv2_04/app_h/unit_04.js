@@ -14,19 +14,24 @@ document.querySelector('.b-1').onclick = f1;
 // При нажатии (click) на .i-2 запускайте f2, которая выводите в .out-2 число
 // 2. Т.е. как видите, мы можем повесить клик на любой элемент.
 
-function f2() {
+let div2 = document.querySelector('.out-2');
 
+function f2() {
+    div2.innerHTML = 2;
 }
 
-document.querySelector('.i-2').onclick = f2;
+document.querySelector('.i-2').onclick = f2; // кнопкой служит i-2
 
 
 // Task 3
 //  При нажатии (click) на .p-3 запускайте f3, которая выводите в .out-3 число
 // 3. Т.е. как видите, мы можем повеcить клик на любой элемент.
 
-function f3() {
+let div3 = document.querySelector('.out-3');
 
+function f3() {
+    let input = document.querySelector('.i-3')
+    div3.innerHTML = 3;
 }
 
 document.querySelector('.p-3').onclick = f3;
@@ -37,6 +42,7 @@ document.querySelector('.p-3').onclick = f3;
 // состояние .i-4 и если он checked - выводит true, если не выбран - false.
 // Вывод везде в задачах, где не указано другое, осуществляется в div.out-номер
 // задачи. В данном случае - div.out-4
+
 
 function f4() {
 
