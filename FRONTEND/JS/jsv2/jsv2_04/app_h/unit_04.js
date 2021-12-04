@@ -1,4 +1,4 @@
-d// Task 1
+// Task 1
 // При нажатии (click) на .b-1 запускайте f1, которая выводите в .out-1 число 1.
 const button1 = document.querySelector('.b-1');
 const div1    = document.querySelector('div.out-1');
@@ -129,7 +129,7 @@ let div8    = document.querySelector('.out-8');
 
 function f8() {
 let dat =  document.querySelector('div.out-8').innerHTML = '<div class="js2">new div</div>';
-    div8.innerHTML.value = dat;
+        dat.className = 'js2';
 }
 
 document.querySelector('.b-8').onclick = f8;
@@ -139,8 +139,18 @@ document.querySelector('.b-8').onclick = f8;
 // элемента .r-9. Если элемент выбран (checked) то выводит в .out-9 value
 // radiobutton. Если не выбран - выводит false.
 
-function f9() {
+let button9 = document.querySelector('.b-9');
+let div9    = document.querySelector('.out-9');
 
+function f9() {
+    let myRadioB = document.querySelector('.r-9');
+    let val = document.querySelector('.r-9').value;
+
+    if(myRadioB.checked) {
+        div9.innerHTML = val;
+    } else {
+        div9.innerHTML = 'false';
+    }
 }
 
 document.querySelector('.b-9').onclick = f9;
@@ -150,9 +160,11 @@ document.querySelector('.b-9').onclick = f9;
 // .i-10 значение цвета и окрашивает style.background элемента .out-10 в
 // этот цвет.
 
+let button10 = document.querySelector('.b-10');
+let div10    = document.querySelector('.out-10');
 
 function f10() {
-
+    let
 }
 
 document.querySelector('.b-10').onclick = f10;
