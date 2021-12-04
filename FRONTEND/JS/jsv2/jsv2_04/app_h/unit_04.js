@@ -1,4 +1,4 @@
-// Task 1
+d// Task 1
 // При нажатии (click) на .b-1 запускайте f1, которая выводите в .out-1 число 1.
 const button1 = document.querySelector('.b-1');
 const div1    = document.querySelector('div.out-1');
@@ -43,9 +43,18 @@ document.querySelector('.p-3').onclick = f3;
 // Вывод везде в задачах, где не указано другое, осуществляется в div.out-номер
 // задачи. В данном случае - div.out-4
 
+let button4 = document.querySelector('.b-4');
+let div4    = document.querySelector('.out-4');
 
 function f4() {
-
+    let myCheckBox = document.querySelector('.i-4');
+    if (myCheckBox.checked) {
+        div4.innerHTML = 'true';
+        console.log('нажат');
+    } else {
+        div4.innerHTML = 'false';
+        console.log('не нажат');
+    }
 }
 
 document.querySelector('.b-4').onclick = f4;
@@ -56,8 +65,17 @@ document.querySelector('.b-4').onclick = f4;
 // выбран - false. Вывод везде в задачах, где не указано другое, осуществляется
 // в div.out-номер задачи. В данном случае div.out-5
 
-function f5() {
+let button5 = document.querySelector('.b-5');
+let div5    = document.querySelector('.out-5');
 
+function f5() {
+    let myCheckBox = document.querySelector('.i-5');
+    let val        = document.querySelector('.i-5').value; // навесил VAL что бы подтянуть значение
+    if (myCheckBox.checked) {
+        div5.innerHTML = val;
+    } else {
+        div5.innerHTML = 'false';
+    }
 }
 
 document.querySelector('.b-5').onclick = f5;
@@ -67,8 +85,12 @@ document.querySelector('.b-5').onclick = f5;
 // При нажатии на кнопку выводите value из input.i-6 в div.out-6. Обратите
 // внимание, что даже скрытый hidden input - нам не помеха.
 
-function f6() {
+let button6 = document.querySelector('.b-6');
+let div6    = document.querySelector('.out-6');
 
+function f6() {
+    let val = document.querySelector('.i-6').value;
+    div6.innerHTML = val;
 }
 
 document.querySelector('.b-6').onclick = f6;
@@ -78,8 +100,21 @@ document.querySelector('.b-6').onclick = f6;
 // .i-7. В .out-72 выводите 1 если длина пароля больше или равна 6 или 0 если
 // меньше. Для подсчета количества символов в строке используйте length.
 
-function f7() {
+let button7 = document.querySelector('.b-7');
+let div71   = document.querySelector('.out-71');
+let div72   = document.querySelector('.out-72');
 
+function f7() {
+    let dat = document.querySelector('.i-7').value;
+    div71.innerHTML = dat;
+    if (dat.length >= 6) {
+        div72.innerHTML = 1;
+    }
+        else if (dat.length < 6) {
+            div72.innerHTML = 0;
+            } else {
+                return;
+    }
 }
 
 document.querySelector('.b-7').onclick = f7;
@@ -89,7 +124,12 @@ document.querySelector('.b-7').onclick = f7;
 // создает в .out-8 новый div с классом "js2" и текстом "new div". Нажали
 // несколько раз? Создаем несколько раз!
 
+let button8 = document.querySelector('.b-8');
+let div8    = document.querySelector('.out-8');
+
 function f8() {
+let dat =  document.querySelector('div.out-8').innerHTML = '<div class="js2">new div</div>';
+    div8.innerHTML.value = dat;
 }
 
 document.querySelector('.b-8').onclick = f8;
