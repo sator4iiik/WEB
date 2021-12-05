@@ -1,5 +1,6 @@
 // Task 1
 // При нажатии (click) на .b-1 запускайте f1, которая выводите в .out-1 число 1.
+
 const button1 = document.querySelector('.b-1');
 const div1    = document.querySelector('div.out-1');
 
