@@ -129,8 +129,9 @@ let button8 = document.querySelector('.b-8');
 let div8    = document.querySelector('.out-8');
 
 function f8() {
-let dat =  document.querySelector('div.out-8').innerHTML = '<div class="js2">new div</div>';
-        dat.className = 'js2';
+let dat =  document.querySelector('div.out-8').innerHTML
+        = '<div class="js2">new div</div>';
+            dat.className = 'js2';
 }
 
 document.querySelector('.b-8').onclick = f8;
@@ -165,7 +166,9 @@ let button10 = document.querySelector('.b-10');
 let div10    = document.querySelector('.out-10');
 
 function f10() {
-    let
+    let dat = document.querySelector('.i-10').value;
+    document.querySelector('.b-10').style.background =
+    document.querySelector('.i-10').value;
 }
 
 document.querySelector('.b-10').onclick = f10;
@@ -176,8 +179,14 @@ document.querySelector('.b-10').onclick = f10;
 // цвет из .i-111 и присваивает как value элементу .i-112. Т.е. после
 // нажатия кнопки выбранный цвета в первом и втором input станут одинаковые.
 
-function f11() {
+let button11 = document.querySelector('.b-11');
 
+function f11() {
+    // let dat1 = document.querySelector('.i-111').value;
+    //             document.querySelector('.i-112').value = dat1;
+    document.querySelector('.i-112').value =
+    document.querySelector('.i-111').value;
+    // console.log(document.querySelector('.i-111').value);
 }
 
 document.querySelector('.b-11').onclick = f11;
@@ -186,8 +195,13 @@ document.querySelector('.b-11').onclick = f11;
 // При нажатии кнопки .b-12 запускается функция f12. Функция выводит
 // дату из .i-12 в out-12.
 
-function f12() {
+const button12 = document.querySelector('.b-12');
+const div12    = document.querySelector('.out-12');
 
+function f12() {
+    let data   = document.querySelector('.i-12').value;
+    div12.innerHTML = data;
+    // console.log(document.querySelector('.i-12').value)
 }
 
 document.querySelector('.b-12').onclick = f12;
@@ -196,17 +210,27 @@ document.querySelector('.b-12').onclick = f12;
 // При изменении положения ползунка .i-13 выводите его значение в out-13.
 // Обратите внимание на событие.
 
+const button13 = document.querySelector('.b-13');
+const div13    = document.querySelector('.out-13');
+
 function f13() {
+    let data   = document.querySelector('.i-13').value;
+    div13.innerHTML = data;
+
 
 }
 
-document.querySelector('.i-13').oninput = f13;
+document.querySelector('.i-13').oninput = f13; // .oninput именно это отвечает за вывод
 
 // Task 14
 // При нажатии на кнопку выводите текст из textarea .t-14 в .out-14.
 
-function f14() {
+const button14 = document.querySelector('.b-14');
+const div14    = document.querySelector('.out-14');
 
+function f14() {
+    let data   = document.querySelector('.t-14').value;
+    div14.innerHTML = data;
 }
 
 document.querySelector('.b-14').onclick = f14;
@@ -215,7 +239,13 @@ document.querySelector('.b-14').onclick = f14;
 // При нажатии кнопки .b-15 функция должна выводить текст из .i-15 в
 // textarea .t-15 и в .out-15.
 
+const button15 = document.querySelector('.b-14');
+const div15    = document.querySelector('.out-15');
+
 function f15() {
+    let inp15  = document.querySelector('.i-15').value;
+    let tex15  = document.querySelector('.t-15').value;
+    div15.innerHTML = inp15 + ' ' + tex15;
 
 }
 
@@ -225,10 +255,16 @@ document.querySelector('.b-15').onclick = f15;
 // При нажатии на кнопку .b-16 выводите в .out-16 value выбранного option
 // из .s-16.
 
+const button16 = document.querySelector('.b-16');
+const div16    = document.querySelector('.out-16');
+
 function f16() {
     // для получения выбранного option просто получите select в переменную
     // и select.value;
+    let sel161 = document.querySelector('.s-16').value;
 
+    // console.log(document.querySelector('.s-16').value);
+    div16.innerHTML = sel161;
 }
 
 document.querySelector('.b-16').onclick = f16;
@@ -237,18 +273,24 @@ document.querySelector('.b-16').onclick = f16;
 // При смене выбранного значения .s-17 выводите в .out-17 value выбранного
 // option из .s-17.
 
+const button17 = document.querySelector('.b-17');
+const div17    = document.querySelector('.out-17')
+
 function f17() {
+    let sel17  = document.querySelector('.s-17').value;
+    div17.innerHTML = sel17;
 
 }
 
-document.querySelector('.s-17').onchange = f17;
+document.querySelector('.s-17').onchange = f17; // эта штука позволяет сходу же отдавать знаяения при смене
 
 // Task 18
 // При смене выбранного значения в s-18, получайте из него value выбранного
 // option и присвойте данный value в input .i-18.
 
 function f18() {
-
+    document.querySelector('.i-18').value = document.querySelector('.s-18').value;
+    // console.log(document.querySelector('.s-18').value);
 }
 
 document.querySelector('.s-18').onchange = f18;
@@ -257,8 +299,11 @@ document.querySelector('.s-18').onchange = f18;
 // На странице создан div.out-19. По нажатию кнопки, получите из него текст и
 // присвойте в value элемента .i-19.
 
-function f19() {
+const button19 = document.querySelector('.b-19');
 
+function f19() {
+    document.querySelector('.i-19').value = document.querySelector('.out-19').textContent;
+    console.log(document.querySelector('.out-19').textContent);
 }
 
 document.querySelector('.b-19').onclick = f19;
@@ -268,7 +313,7 @@ document.querySelector('.b-19').onclick = f19;
 // будет аналогично изменять выбранный option в .s-202.
 
 function f20() {
-
+    document.querySelector('.s-202').value = document.querySelector('.s-201').value;
 }
 
 document.querySelector('.s-201').onchange = f20;
