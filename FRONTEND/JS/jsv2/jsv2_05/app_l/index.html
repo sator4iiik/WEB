@@ -7,17 +7,55 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="one">1</div>
+    <div class="one"></div>
+    <div class="out"></div>
     <script>
         // for (для)
         // while ()
-        let div = document.querySelector('.one');
+        let div1 = document.querySelector('.one');
+        let div2 = document.querySelector('.out');
 
-
-        for (let i = 5; i >= 0; i--){
-            if ( i == 4 ) break;
-            console.log(i);
+        for ( let i = 1; i < 10; i++ ) {
+            for ( let k = 1; k <= 10; k++ ) {
+                div1.innerHTML += `${i} * ${k} = ${i * k}<br>` // интерполяция строк через динамические данные ``
+            }
+            div1.innerHTML += '<hr>'
         }
+
+        // console.log(out);
+        // for (let k = 1; k <= 1; k++) {
+        //     div1.innerHTML += '<br>'
+        //     for (let i = 1; i <= 10; i++) {
+        //         div1.innerHTML += '1 * ' + i + ' = ' + (i * 1) +
+        //                          ' 2 * ' + i + ' = ' + (i * 2) + '<br>' ;
+        //     }
+        //     div1.innerHTML += '<br>'
+        //     for (let i = 1; i <= 10; i++) {
+        //         div1.innerHTML += '2 * ' + i + ' = ' + (i * 2) + '<br>';
+        //     }
+        //     div1.innerHTML += '<br>'
+        //     for (let i = 1; i <= 10; i++) {
+        //         div1.innerHTML += `3 * ${i} = ${ 3 * i } <br>`; // интерполяция строк через динамические данные ``
+        //     }
+        // }
+
+
+        for (let i = 0; i < 5; i++) {
+            // i = 1
+            div2.innerHTML += '<br>';
+            for (let k = 0; k < 10; k++) {
+                div2.innerHTML += '*';
+            }
+            div2.innerHTML += '<br>';
+        }
+
+
+        // for (let i = 5; i >= 0; i--){
+        //     if ( i == 4 ) break; //
+        //     console.log(i);
+        // }
+
+
     </script>
 </body>
 </html>
