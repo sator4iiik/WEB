@@ -264,7 +264,10 @@ document.querySelector('.b-11').onclick = t11;
 
 
 function t12() {
-
+    let elem  = document.getElementsByClassName('div-12'); // почему когда ставишь точку ничего не происходит а когда убeраешь все работает
+    for(let i = 0; i < elem.length; i++){
+        elem[i].style.background = 'orange';
+    }
 }
 
 document.querySelector('.b-12').onclick = t12;
@@ -272,8 +275,12 @@ document.querySelector('.b-12').onclick = t12;
 //  Task 13
 // С помощью цикла присвойте всем input .i-13 value равное 1 для первого, 2 для второго и 3 для третьего.
 
-function t13() {
 
+function t13() {
+    let inp = document.querySelectorAll('.i-13');
+    for(let i = 0; i < inp.length; i++){
+        inp[i].value  += i + 1;
+    }
 }
 
 document.querySelector('.b-13').onclick = t13;
@@ -284,8 +291,14 @@ document.querySelector('.b-13').onclick = t13;
 // перебрать их с помощью цикла. Обращение к элементу выглядит так elem[i]
 // вывести в .out-14 value выбранного. Проверить выбран ли элемент можно с помощью elem[i].checked.
 
+let button14 = document.querySelector('.b-14');
+let div14    = document.querySelector('.out-14');
 
 function t14() {
+    let che = document.querySelectorAll('.i-14').value;
+    for(let i = 0; i < ){
+
+    }
 
 }
 
