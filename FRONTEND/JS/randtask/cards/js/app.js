@@ -1,4 +1,4 @@
-function slidePlugin(activeSlide = 3) {
+function slidePlugin(activeSlide) {
     const slides = document.querySelectorAll('.slide')
 
     slides[activeSlide].classList.add('active') //какой слайд в превью (элемент массива с 0)
@@ -17,4 +17,4 @@ function slidePlugin(activeSlide = 3) {
     }
 }
 
-slidesPlugin(1) // тут вызываю с функции
+slidePlugin(1) // тут вызываю с функции

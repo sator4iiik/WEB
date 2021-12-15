@@ -24,7 +24,7 @@ function dragend(event) {
 
 function dragover(event) {
     event.preventDefault()
-    // console.log('drag over')
+    console.log('drag over')
 }
 function dragenter(event) {
     event.target.classList.add('hovered')

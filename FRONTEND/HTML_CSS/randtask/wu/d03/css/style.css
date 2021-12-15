@@ -1,0 +1,66 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #201b2d;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+div, p, input, button, form, span, a, ul, li {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 1070px;
+    margin: 0 auto;
+    /* border: 2px solid red; */
+}
+
+.header {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#50496b+0,28343b+100 */
+    background: #50496b; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #50496b 0%, #28343b 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #50496b 0%,#28343b 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #50496b 0%,#28343b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#50496b', endColorstr='#28343b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    padding-top: 100px;
+    color: #fff;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.logo {
+
+}
+
+.offer {
+
+    margin-top: 166px;
+}
+
+.title {
+    font-size: 36px;
+}
+
+.title span {
+    color: #48ed8e;
+}
+
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    background: #ed9619;
+    color: #fff;
+    border-radius: 100px;
+    display: block;
+    width: 205px;
+    padding: 20px 0;
+    text-align: center;
+    text-decoration: none;
+}

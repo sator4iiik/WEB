@@ -1,0 +1,30 @@
+.wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: space-around;
+
+}
+
+.button {
+    width: 80px;
+    height: 80px;
+    font-size: 30px;
+    background: rgb(69, 69, 69);
+    overflow: hidden;
+}
+
+.button__radius {
+    border-radius: 50%;
+}
+
+.button__box_sized {
+    width: 150px;
+    height: 150px;
+}
+
+.button__radius_sized {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
