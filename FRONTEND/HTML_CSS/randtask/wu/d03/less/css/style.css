@@ -34,6 +34,7 @@ p {
     background: linear-gradient(135deg, #50496b 0%,#28343b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#50496b', endColorstr='#28343b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     padding-top: 100px;
+    padding-bottom: 225px;
     color: #fff;
 }
 
@@ -115,6 +116,7 @@ p {
 .skill-free {
     width: 380px;
     background: url('../img/icon2.jpg') no-repeat left top;
+
 }
 .skill-change {
     width: 380px;
@@ -127,6 +129,33 @@ p {
     padding-bottom: 190px;
 }
 
-.input {
+.form {
+    margin-top: 40px;
+}
 
+.input {
+    width: 474px;
+    border: 1px solid #bfb8d1;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 100px;
+    height: 54px;
+    padding-left: 38px;
+}
+
+.btn-form {
+    border: none;
+    cursor: pointer;
+    display: inline;
+    margin-left: 11px;
+}
+
+.footer {
+    padding: 33px 0;
+    background: #201b2d;
+}
+
+.credits {
+    color: #d4cee3;
+    font-size: 14px;
 }
