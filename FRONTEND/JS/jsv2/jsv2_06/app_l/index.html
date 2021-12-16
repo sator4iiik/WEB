@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit6</title>
+</head>
+<body>
+    <div class="out"></div>
+    <script>
+        let out = document.querySelector('.out')
+
+        // for(let i = 0; i < 5; i++) {
+        //     // i = 0 заходит на К;
+        //     for (let k = 0; k < 10; k++) {
+        //         // k = 0;
+        //         out.innerHTML += k;
+        //     }
+        //     out.innerHTML += '<br>';
+        //     // k верентся в i = 1 после того как отработает 10 раз
+        // }
+
+        for (let i = 1; i <= 10; i++) {
+            // out.innerHTML += '3*' + i + '=' + (i * 3) + '<br>'; // конкатенация
+            for (let k = 1; k <= 10; k++){
+                out.innerHTML += `${i}*${k}=${i * k}<br>`                 // интерполяция
+
+            }
+            out.innerHTML += '<hr>'
+        }
+    </script>
+</body>
+</html>
