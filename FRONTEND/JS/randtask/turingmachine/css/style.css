@@ -92,14 +92,14 @@ td {
   border: 1px solid #daa997;
 }
 #tape .potato:after {
-  content: "🥔";
+  content: "🌙";
 }
 #tape .tractor {
   background-color: #80bbe7;
   border: 1px solid #78ace0;
 }
 #tape .tractor:after {
-  content: "🚜";
+  content: "🥷🏻";
 }
 #tape .blank {
   background-color: #e0d8e0;
