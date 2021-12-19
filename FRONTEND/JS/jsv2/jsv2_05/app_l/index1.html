@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIT 5 HW</title>
+
+    <style>
+        div {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="one">1</div>
+        <div class="one">2</div>
+        <div class="one">3</div>
+
+        <div><input type="radio" name="r" value="1" checked> Bla-Bla</div>
+        <div><input type="radio" name="r" value="2"> Ha-ha</div>
+        <div><input type="radio" name="r" value="3"> He-he</div>
+        <!-- name="r" обьеденяет в одну группу, один нажимаешь другой отжимается -->
+        <button>Push</button>
+        <div id="out"></div>
+    </div>
+
+
+    <script>
+        document.querySelector('button').onclick = () => {
+            let r = document.querySelectorAll('input[type="radio"]');
+            console.log(r);
+
+            for(let i = 0; i < r.length; i++) {
+                if(r[i].checked){
+                    console.log(r[i].value);
+                }
+            }
+        }
+
+        let out = '';
+        for(let i = 0; i < 10; i++) {
+            out += i + ' ';
+            console.log(i);
+        }
+
+        document.querySelector('#out').innerHTM += out;
+
+        // for (для)
+        // while ()
+        // for (let старт; работает пока верно; счетчик)
+        //                    == != <= >=      ++i i++ --i i--
+
+//         let div1 = document.querySelectorAll('.one');
+//         console.log(div1);
+// //        div1.style.background = 'green';
+//         for (let i = 0; i < div1.length; i++) {
+//             console.log(i);
+//             console.log(div1[i]);
+
+//             div1[i].style.background = 'green';
+//             div1[i].onclick = two;
+//             // if (i == 4) break;
+//         }
+
+//         function two() {
+//             console.log('work!!!');
+//         }
+
+//         let b = document.getElementsByClassName('one'); // по классу one
+//         let c = document.getElementsByTagName('div');   // по
+//         console.log(b);
+//         console.log(c);
+
+//         for(let i = 0; i < b.length; i++) {
+//             b[i].style.border = '1px solid black';
+//         }
+
+
+    </script>
+</body>
+</html>
