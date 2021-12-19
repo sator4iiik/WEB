@@ -41,11 +41,14 @@
 
         let out = '';
         for(let i = 0; i < 10; i++) {
+            if (i == 6) continue; // преривает текущий круг цикла, (не выводит 6) его логично ставить вверху так как аут должен быть ниже
             out += i + ' ';
             console.log(i);
+            // if (i == 6) break; // прекратить на 6
+
         }
 
-        document.querySelector('#out').innerHTM += out;
+        document.querySelector('#out').innerHTML += out;
 
         // for (для)
         // while ()

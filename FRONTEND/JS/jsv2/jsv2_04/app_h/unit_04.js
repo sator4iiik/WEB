@@ -50,10 +50,10 @@ let div4    = document.querySelector('.out-4');
 function f4() {
     let myCheckBox = document.querySelector('.i-4');
     if (myCheckBox.checked) {
-        div4.innerHTML = 'true';
+        div4.innerHTML = true;
         console.log('нажат');
     } else {
-        div4.innerHTML = 'false';
+        div4.innerHTML = false;
         console.log('не нажат');
     }
 }
@@ -245,7 +245,8 @@ const div15    = document.querySelector('.out-15');
 function f15() {
     let inp15  = document.querySelector('.i-15').value;
     let tex15  = document.querySelector('.t-15').value;
-    div15.innerHTML = inp15 + ' ' + tex15;
+    div15.innerHTML = `${inp15}${tex15}`;
+    // div15.innerHTML = inp15 + ' ' + tex15;
 
 }
 

@@ -95,7 +95,7 @@ function t5() {
         } else {
             out += '**' + i + '_';
         }
-
+/////////////ЭТО РЕШЕНИЕ НЕ ПРАВИЛЬНОЕ, СМОТРИ В unit_05_interpolation.js Task 5
     }
     div05.innerHTML = out;
 }
