@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> FUNCTION JS 2021</h1>
+    <pre>
+        1. что такое функция
+        2. как функции создаются
+        3. как функции запускаются
+        4. переменные и функции
+        5. счетчики
+    </p>
+
+    <script>
+        // функция это блок кода прокграммного который определяется
+        // один раз и может использоваться многократно
+        // hello(); // функцию можно вызывать выше ее создания
+
+        // function declaration
+
+        function testFunc() {
+            const x = 5,
+                y = 10;
+                console.log(x + y); // создали функцию
+        }
+
+        function hello(){
+            testFunc();
+            console.log('Hello');
+        }
+
+        hello();  // запускаем функцию (вызываем)
+        function testFunction2() {
+            function t3(){
+                console.log('t3 function');
+            }
+            t3();
+            console.log('test function 2');
+        }
+        testFunction2();
+        // t3(); !Error
+
+        function unixTime(){
+            let time = Math.floor(new Date().getTime());
+            console.log(time);
+        }
+
+
+        unixTime();
+    </script>
+</body>
+</html>
