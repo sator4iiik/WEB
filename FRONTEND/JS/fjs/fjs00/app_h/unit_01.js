@@ -198,7 +198,15 @@ function showNumber() {
 }
 
 function t8() {
-
+    if(z8 < 9){
+        z8++;
+        out8.innerHTML = z8;
+    } else if(z8 == 9){
+        z8 = 0;
+        out8.innerHTML = z8;
+    } else {
+        return;
+    }
 }
 
 document.querySelector('.b-8').addEventListener('click', t8);
@@ -214,7 +222,7 @@ let z9 = 3;
 const s9 = document.querySelector('.s-9');
 
 function t9() {
-
+    console.log();
 }
 
 document.querySelector('.b-9').addEventListener('click', t9);
