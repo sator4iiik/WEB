@@ -249,3 +249,13 @@ function t10() {
 }
 
 document.querySelector('.b-10').addEventListener('click', t10);
+
+//   1 && 2 && 3 (вернет последний тру 3 либо вернет первый ложный)
+//   1 && 0 && 3 (вернет первый ложный 0)
+//   1 || 3 || 7 (вернет первый всегда тру 1 )
+//   1 || 3 || 7
+//  -2 || -1 || -8
+//    const xpornuxax = { a: 1, c: 3 }
+
+//    console.log(Object.values(xpornuxax))
+//    console.log(Object.values(xpornuxax).map(el => el * 2))
