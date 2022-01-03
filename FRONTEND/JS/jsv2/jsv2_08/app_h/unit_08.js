@@ -66,13 +66,24 @@ function t3() {
 document.querySelector('.b-3').onclick = t3;
 
 //  Task 4
-// Кнопка b-4 запускает функцию t4. Функция должна выводить в .out-4 строку вида:
+// Кнопка b-4 запускает функцию t4. Функция должна выводить в .out-4
+// строку вида:
 // 77_74_71_68_65_62_59_56_53_50_47_44_41_38_35_
-// от 77 до 35 c шагом 3. Разделитель - нижнее подчеркивание. Задача решается с помощью цикла  while.
+// от 77 до 35 c шагом 3. Разделитель - нижнее подчеркивание.
+// Задача решается с помощью цикла  while.
 
+const btn4 = document.querySelector('.b4');
+const out4 = document.querySelector('.out-4');
 
 function t4() {
-
+    let r = 77;
+    while(r >= 35){
+        console.log(r);
+        out4.innerHTML += `${r}_`;
+        r--;
+        r--;
+        r--;
+    }
 }
 
 document.querySelector('.b-4').onclick = t4;
@@ -83,7 +94,20 @@ document.querySelector('.b-4').onclick = t4;
 // 1_*2_**3_*4_**5_*6_**7_*8_**9_*10_**11_*12_**13_*14_**15_*16_**17_*
 // от 1 до 17 c шагом 1. Разделитель - знак подчеркивания и одна звездочка если число нечетное, и две звездочки если четное. Задача решается с помощью цикла  while.
 
+const btn5 = document.querySelector('.b-5');
+const out5 = document.querySelector('.out-5');
+
 function t5() {
+    let r = 0;
+    while(r != 17){
+        r++;
+        out5.innerHTML += `${r}_`;
+        if(r % 2 === 0){
+            out5.innerHTML += `**`;
+        } else {
+            out5.innerHTML += `*`;
+        }
+    }
 
 }
 
