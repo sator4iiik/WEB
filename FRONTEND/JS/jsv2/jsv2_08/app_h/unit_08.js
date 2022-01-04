@@ -10,12 +10,14 @@ const btn1 = document.querySelector('.b-1');
 const out1 = document.querySelector('.out-1');
 
 function t1() {
+    let i =  0;
     let r = '';
 
-    while(r != 50) {
-        r++;
-        out1.innerHTML += `${r}_`;
+    while(i <= 50) {
+        i++;
+        r += `${i}_`;
     }
+    out1.innerHTML += r;
 }
 
 document.querySelector('.b-1').onclick = t1;
@@ -32,14 +34,16 @@ const btn2 = document.querySelector('.b-2');
 const out2 = document.querySelector('.out-2');
 
 function t2() {
+    let i =  0;
     let r = '';
-    while(r != 46) {
-        r++;
+    while(i != 46) {
+        i++;
         // console.log(r);
-        if(r % 2 === 0){
-            out2.innerHTML += `${r}_`;
+        if(i % 2 === 0){
+            r += `${i}_`;
         }
     }
+    out2.innerHTML = r;
 }
 
 document.querySelector('.b-2').onclick = t2;
@@ -56,11 +60,14 @@ const btn3 = document.querySelector('.b-3');
 const out3 = document.querySelector('.out-3');
 
 function t3() {
-    let r = 26;
-    while(r != 7){
-        r--;
-        out3.innerHTML += `${r}_`;
+    let i = 26;
+    let r = '';
+
+    while(i != 7){
+        i--;
+        r += `${i}_`;
     }
+    out3.innerHTML = r;
 }
 
 document.querySelector('.b-3').onclick = t3;
@@ -76,14 +83,16 @@ const btn4 = document.querySelector('.b4');
 const out4 = document.querySelector('.out-4');
 
 function t4() {
-    let r = 77;
-    while(r >= 35){
-        console.log(r);
-        out4.innerHTML += `${r}_`;
-        r--;
-        r--;
-        r--;
+    let i = 77;
+    let r = '';
+
+    while(i >= 35){
+        r += `${i}_`;
+        i--;
+        i--;
+        i--;
     }
+    out4.innerHTML = r;
 }
 
 document.querySelector('.b-4').onclick = t4;
@@ -98,17 +107,19 @@ const btn5 = document.querySelector('.b-5');
 const out5 = document.querySelector('.out-5');
 
 function t5() {
-    let r = 0;
-    while(r != 17){
-        r++;
-        out5.innerHTML += `${r}_`;
-        if(r % 2 === 0){
-            out5.innerHTML += `**`;
+    let i =  0;
+    let r = '';
+
+    while(i != 17){
+        i++;
+        r += `${i}_`;
+        if(i % 2 === 0){
+            r += `**`;
         } else {
-            out5.innerHTML += `*`;
+            r += `*`;
         }
     }
-
+    out5.innerHTML = r;
 }
 
 document.querySelector('.b-5').onclick = t5;
@@ -128,14 +139,14 @@ const out6 = document.querySelector('.out-6');
 
 function t6() {
     let in6 = document.querySelector('.i-6').value;
+    let i   = '';
     let r   = '';
-    let m   = '';
 
-    while(r < in6){
-        r++;
-        m += `******<br>`;
+    while(i < in6){
+        i++;
+        r += `******<br>`;
     }
-    out6.innerHTML += m;
+    out6.innerHTML += r;
 }
 
 document.querySelector('.b-6').onclick = t6;
@@ -167,15 +178,29 @@ document.querySelector('.b-7').onclick = t7;
 
 
 //  Task 8
-// Есть input .i-81 и .i-82 куда пользователь может ввести числа больше нуля (проверок не делаем, принимаем как факт).
+// Есть input .i-81 и .i-82 куда пользователь может ввести числа больше нуля
+// (проверок не делаем, принимаем как факт).
 // Считаем, что второе число всегда больше первого.
-// По нажатию кнопки .b-8  должна запускаться функция f8, которая выводит в .out-8 числа от первого введенного включительно до второго включительно, с шагом 1.
+// По нажатию кнопки .b-8  должна запускаться функция f8, которая
+// выводит в .out-8 числа от первого введенного включительно до второго включительно, с шагом 1.
 // Разделитель знак подчеркивания. Если пользователь ввел 4 и 8  и нажал кнопку, мы получим:
 //     4_5_6_7_8_
 // Задача решается с помощью цикла  while.
 
-function t8() {
+const btn8 = document.querySelector('.b-8');
+const out8 = document.querySelector('.out-8');
 
+function t8() {
+    let i81 = document.querySelector('.i-81').value;
+    let i82 = document.querySelector('.i-82').value;
+    let res = '';
+
+    while(i81 <= i82){
+        res += `${i81}_`;
+        console.log(res);
+        i81++;
+    }
+    out8.innerHTML = res;
 }
 
 document.querySelector('.b-8').onclick = t8;
@@ -183,15 +208,37 @@ document.querySelector('.b-8').onclick = t8;
 
 //  Task 9
 // Есть input .i-91 и .i-92 куда пользователь может ввести числа.
-// По нажатию кнопки .b-9 должна запускаться функция f9, которая выводит в .out-9 числа от меньшего введенного до большего включительно, с шагом 1.
+// По нажатию кнопки .b-9 должна запускаться функция f9, которая выводит
+// в .out-9 числа от меньшего введенного до большего включительно, с шагом 1.
 // Разделитель знак подчеркивания. Если пользователь ввел 4 и 8  и нажал кнопку, мы получим:
 //     4_5_6_7_8_
 // если ввел 8 и 6, то получим
 // 6_7_8_
-// Задача решается с помощью цикла. Подсказка - вначале делаем проверку и при необходимости поменять местами значения в переменных местами, а потом запускаем цикл  while.
+// Задача решается с помощью цикла. Подсказка - вначале делаем проверку и
+// при необходимости поменять местами значения в переменных местами, а потом
+// запускаем цикл  while.
+
+const btn9 = document.querySelector('.b-9');
+const out9 = document.querySelector('.out-9');
 
 function t9() {
+    let i91 = document.querySelector('.i-91').value;
+    let i92 = document.querySelector('.i-92').value;
+    let res = '';
 
+    if(i91 <= i92){
+        while(i91 <= i92){
+            res += `${i91}_`;
+            i91++;
+            console.log(i91);
+        }
+    } else if(i91 > i92){
+        while(i92 <= i91){
+            res += `${i92}_`;
+            i92++;
+        }
+    }
+    out9.innerHTML = res;
 }
 
 document.querySelector('.b-9').onclick = t9;
@@ -201,8 +248,19 @@ document.querySelector('.b-9').onclick = t9;
 // Кнопка .b-10 запускает функцию t10. Функция должна выводить в .out-10 четные годы от 1950 до 1966 включительно.
 // Разделитель знак подчеркивания. Задача решается через цикл, а четность - через шаг (равный 2).
 
-function t10() {
+const btn10 = document.querySelector('.b-10');
+const out10 = document.querySelector('.out-10');
 
+function t10() {
+    let r = '';
+    let i = 1949;
+    while(i <= 1966){
+        i++;
+        if(i % 2 ===0){
+            r += `${i}_`;
+        }
+    }
+    out10.innerHTML = r;
 }
 
 document.querySelector('.b-10').onclick = t10;
