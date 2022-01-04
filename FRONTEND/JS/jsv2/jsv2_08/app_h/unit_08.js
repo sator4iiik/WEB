@@ -273,8 +273,18 @@ document.querySelector('.b-10').onclick = t10;
 //     В результате должно получиться так:
 //     one_3_4_two_
 
+let out11 = document.querySelector('.out-11');
 
 function t11() {
+    let  divs11 = document.querySelectorAll('.div-11');
+    let l = 0;
+    str11 = '';
+    while(l < divs11.length){
+        str11 += divs11[l].textContent + '_';
+        l++;
+    }
+
+out11.textContent = str11;
 
 }
 
@@ -288,7 +298,12 @@ document.querySelector('.b-11').onclick = t11;
 
 
 function t12() {
-
+    let elem = document.getElementsByClassName('div-12');
+    let i    = 0;
+    while(i < elem.length){
+        elem[i].style.background = 'orange';
+        i++;
+    }
 }
 
 document.querySelector('.b-12').onclick = t12;
@@ -300,7 +315,13 @@ document.querySelector('.b-12').onclick = t12;
 // применить к каждому elem[i].value, причем к value первого должно равняться 1, второго - 2, третьего - 3...
 
 function t13() {
+    let inp = document.querySelectorAll('.i-13');
+    let i   = 0;
 
+    while(i < inp.length){
+        inp[i].value += i + 1;
+        i++;
+    }
 }
 
 document.querySelector('.b-13').onclick = t13;
@@ -311,20 +332,46 @@ document.querySelector('.b-13').onclick = t13;
 // перебрать их с помощью цикла  while. Обращение к элементу выглядит так elem[i]
 // вывести в .out-14 value выбранного. Проверить выбран ли элемент можно с помощью elem[i].checked.
 
+const btn14 = document.querySelector('.b-14');
+const out14 = document.querySelector('.out-14');
 
 function t14() {
-
+    let i14 = document.querySelectorAll('.i-14');
+    let i = 0;
+    while(i < i14.length){
+        if(i14[i].checked){
+            out14.innerHTML = i14[i].value;
+        }
+        i++;
+    }
 }
 
 document.querySelector('.b-14').onclick = t14;
 
 //  Task 15
-// Кнопка .b-15 запускает функцию t15  Функция должна выводить следующую последовательность в .out-15:
+// Кнопка .b-15 запускает функцию t15  Функция должна выводить следующую
+// последовательность в .out-15:
 // 77_88_99_77_88_99_77_88_99_
 // Для вывода использовать цикл  while. Разделитель подчеркивание.
 
-function t15() {
+const btn15 = document.querySelector('.b-15');
+const out15 = document.querySelector('.out-15');
 
+
+function t15() {
+    let r = '';
+    let m = 0;
+
+
+    while(m < 3){
+        let k = 77;
+        while(k <= 99){
+            r += k + '_';
+            k = k + 11;
+        }
+        m++;
+    }
+    out15.innerHTML = r;
 }
 
 document.querySelector('.b-15').onclick = t15;
