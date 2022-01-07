@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
+    <link rel="stylesheet" href="./css">
+    <style >
         body {
             font-family: 'Roboto', sans-serif;
         }
@@ -22,18 +23,45 @@
         .one {
             background: bisque;
         }
+        .two {
+            background: orange;
+        }
+        .three {
+            border: 2px solid red;
+        }
     </style>
     <title>Document</title>
 
 </head>
 <body>
-    <p class="one">Test</p>
+    <p class="one" data="privet">Test</p>
+    <button class="toggle">Toggle</button>
+
     <script>
         const one = document.querySelector('.one');
 
         one.style.width = '150px';
-        one.style.paddingBottom = '150px';
+        one.style.paddingBottom = '40px';
 
+        one.classList.add('two', 'three'); // добавить
+        one.classList.remove('three'); // удалить класс
+
+        // теперь можно делать включающиеся выключающиеся окна
+        // всплывающие уплывающие, выключатели которые отображают видимость
+        // скрывают видимость, елементы которые скрывают состояние объекта
+
+        // console.log(one.style);
+
+        const toggle = document.querySelector('.toggle');
+
+        toggle.onclick = function(){
+            this.classList.toggle('three');   // получив доступ через this эта функция не хранит в себе никакой информации на странице это всего лишь кнопка и мы знаем что она или нажата или отжата
+        }
+        // атрибуты data
+        console.log(one.getAttribute('data')); //доступно два свойства создавать и читать
+        console.log(document.querySelectorAll('link')[1].getAttribute('href'));
+
+        one.setAttribute
 
     </script>
 </body>
