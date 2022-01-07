@@ -4,10 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto', sans-serif;
+        }
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .one {
+            background: bisque;
+        }
+    </style>
     <title>Document</title>
+
 </head>
 <body>
+    <p class="one">Test</p>
     <script>
+        const one = document.querySelector('.one');
+
+        one.style.width = '150px';
+        one.style.paddingBottom = '150px';
+
 
     </script>
 </body>
