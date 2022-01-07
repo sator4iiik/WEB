@@ -36,8 +36,26 @@
 <body>
     <p class="one" data="privet">Test</p>
     <button class="toggle">Toggle</button>
+    <p>Выберете тип бензина:</p>
+    <input type="text" class="gallons">
+    <div>
+        <button class="gas" data="1.2">A 92</button>
+        <button class="gas" data="1.6">A 95</button>
+        <button class="gas" adta="1.9">A 98</button>
+    </div>
+
+    <div class="test">text</div>
 
     <script>
+        let gas = document.querySelectorAll('.gas');
+        for (let i = 0; i < gas.length; i++) {
+            gas[i].onclick = function (){
+                let gallons = document.querySelector('.gallons').value;
+                let amount = this.getAttribute('data');
+                console.log (gallons * amount)
+            }
+        }
+
         const one = document.querySelector('.one');
 
         one.style.width = '150px';
@@ -58,11 +76,23 @@
             this.classList.toggle('three');   // получив доступ через this эта функция не хранит в себе никакой информации на странице это всего лишь кнопка и мы знаем что она или нажата или отжата
         }
         // атрибуты data
-        console.log(one.getAttribute('data')); //доступно два свойства создавать и читать
-        console.log(document.querySelectorAll('link')[1].getAttribute('href'));
+        // console.log(one.getAttribute('data')); //доступно два свойства создавать и читать
+        // console.log(document.querySelectorAll('link')[1].getAttribute('href'));
 
-        one.setAttribute
+        one.setAttribute;
 
+        ///////////////////
+
+        let a = document.createElement('div');
+        a.innerHTML = 'Hello!';
+        a.classList.add('one');
+        a.onclick = function (){
+            alert('World!')
+        }
+
+        document.querySelector('.test').appendChild(a);
+
+        console.log(a);
     </script>
 </body>
 </html>
