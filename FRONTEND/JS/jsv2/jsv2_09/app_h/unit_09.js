@@ -14,7 +14,7 @@ document.querySelector('.b-1').onclick = f1;
 // По нажатию на кнопку .b-2 функция f2, которая присваивает блоку .out-2 класс .bg-orange.
 
 function f2() {
-    const out2  =document.querySelector('.out-2');
+    const out2 = document.querySelector('.out-2');
     out2.classList.add('bg-orange');
 }
 
@@ -25,7 +25,8 @@ document.querySelector('.b-2').onclick = f2;
 // По нажатию кнопки .b-3 запускайте функцию f3, которая удаляет у блока .out-3 класс .bg-orange.
 
 function f3() {
-
+    const out3 = document.querySelector('.out-3');
+    out3.classList.remove('bg-orange');
 }
 
 document.querySelector('.b-3').onclick = f3;
