@@ -30,7 +30,7 @@ function App(){
             </Header>
             <Main data={mainData}/>
             <Sidebar/>
-            {goodsDat.map( item =>  <Goods title={item.title} cost={item.cost} image={item.image}/>)}
+            {goodsDat.map( item => <Goods title={item.title} cost={item.cost} image={item.image}/>)}
             {/* <Goods title={goodsDat[0].title} cost={goodsDat[0].cost} image={goodsDat[0].image}/> */}
             <Footer tridParaProps="3 данные которые прогнал пропс"/>
         </div>
