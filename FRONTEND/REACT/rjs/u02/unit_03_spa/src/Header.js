@@ -1,29 +1,19 @@
 import {Link} from "react-router-dom";
 
 function Header(props) {
-
+    let dataP = props.site_nav;
+    const listItem = dataP.map( item => <li key="hey"><a href={item.link}>{item.text}</a></li>);
     return(
         <>
             <nav>
                 <ul>
-                    <Nav nav={props.dataNav.site_nav} />
+                    {listItem}
                 </ul>
             </nav>
         </>
     );
 }
 
-function Nav(props) {
-    let dataP = props.site_nav;
-    const listItem = dataP.map( item => <li key="hey"><a href={item.link}>{item.text}</a></li>);
-    return(
-        <>
-            <ul>
-                    {listItem}
-            </ul>
-        </>
-    );
-}
 
 export default Header;
 

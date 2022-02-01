@@ -1,17 +1,18 @@
-import { useRouteMatch } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 function Category() {
-    let url = useRouteMatch();
-    console.log(url);
+    let url = useLocation();
+    let categoryNav = props.dataCateNav;
+    const listItem2 = categoryNav.map( item => <li key="hey"><a href={item.link}>{item.text}</a></li>);
+
     return(
         <>
             <h1>Category</h1>
             <a href="/category">Назад</a>
             <ul>
-                <li><Link to="/cat/notebook">Ноутбуки</Link></li>
-                <li><Link to="/cat/monitor">Мониторы</Link></li>
-                <li><Link to="/cat/cellphone">Мобильные приложения</Link></li>
+                {listItem2}
+
             </ul>
         </>
     );
