@@ -8,11 +8,25 @@ import Error from "./Error";
 
 import { BrowserRouter as Router, Switch, Route, Link, useRouteMatch} from 'react-router-dom';
 
+const dataSiteNav = {
+        site_nav : [
+            { "link" : "/",         "text" : "Ноутбуки"},
+            { "link" : "/about",    "text2" : "О сайте"},
+            { "link" : "/category", "text2" : "Категории"},
+        ]
+};
+
+// const dataCateNav = {
+//         cate_nav : [
+
+//         ]
+// };
+
 function App() {
     return (
         <>
-        <Header />
         <Router>
+        <Header dataNav={dataSiteNav}/>
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/about" component={About} />

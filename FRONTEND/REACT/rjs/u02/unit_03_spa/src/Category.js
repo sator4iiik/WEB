@@ -9,9 +9,9 @@ function Category() {
             <h1>Category</h1>
             <a href="/category">Назад</a>
             <ul>
-                <li><a href="/cat/notebook">Ноутбуки</a></li>
-                <li><a href="/cat/monitor">Мониторы</a></li>
-                <li><a href="/cat/cellphone">Мобильные приложения</a></li>
+                <li><Link to="/cat/notebook">Ноутбуки</Link></li>
+                <li><Link to="/cat/monitor">Мониторы</Link></li>
+                <li><Link to="/cat/cellphone">Мобильные приложения</Link></li>
             </ul>
         </>
     );

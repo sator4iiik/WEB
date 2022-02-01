@@ -3,7 +3,7 @@ function Header() {
         <>
             <nav>
                 <ul>
-                    <li><a href="/">Главная</a></li>
+                    <li><a href="/">Главная MPA</a></li>
                     <li><a href="/about">О сайте</a></li>
                     <li><a href="/category">Категории</a></li>
                 </ul>
