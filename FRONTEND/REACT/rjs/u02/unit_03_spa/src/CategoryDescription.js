@@ -4,7 +4,8 @@ function CategoryDescription() {
     let {catName} = useParams();
     return(
         <div>
-            <h1>CategoryName</h1>
+            <a href="/category">Назад</a>
+            <h1>Category: {catName}</h1>
         </div>
     );
 }

@@ -12,31 +12,30 @@ import { BrowserRouter as Router, Switch, Route, Link, useRouteMatch} from 'reac
 
 function App() {
 
-    const dataSiteNav = {
-        site_nav : [
+
+    const site_nav = [
             { "link" : "/",     "text" : "Главная"},
             { "link" : "/about", "text" : "О сайте"},
             { "link" : "/cat", "text" : "Категории"}
         ]
-};
 
-const dataCateNav = {
-        cate_nav : [
+
+    const cate_nav = [
             { "link" : "/cat/notebook", "text" : "Ноутбуки"},
             { "link" : "/cat/monitor", "text" : "Мониторы"},
             { "link" : "/cat/cellphone", "text" : "Мобильные"}
         ]
-};
+
 
     return (
         <>
-        <Header dataNav={dataSiteNav}/>
         <Router>
+        <Header dataNav={site_nav}/>
             <Switch>
                 <Route exact path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/category" element={<Category dataCateNav = {dataCateNav} />} />
-                <Route path="/cat/:catName" element={categoryDescription} />
+                <Route path="/category" element={<Category dataNav={cate_nav} />} />
+                <Route path="/category/:catName" element={categoryDescription} />
                 <Route path="/Footer" element={<Footer />} />
                 <Route path='*' element={<Error />} />
             </Switch>
