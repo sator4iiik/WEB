@@ -1,5 +1,6 @@
 npx create-react-app
 npx create-react-app@5.0.0 my_app_rjs_unit00
+pm i react-router-dom
 npm start
 
 структура папок
