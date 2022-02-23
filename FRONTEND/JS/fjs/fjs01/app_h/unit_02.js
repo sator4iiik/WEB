@@ -107,7 +107,7 @@ document.querySelector('.b-5').addEventListener('click', function () {
 const out6 = document.querySelector('.out-6');
 
 function t6(arr, block) {
-
+    block.innerHTML = arr.join(' ');
 }
 
 document.querySelector('.b-6').addEventListener('click', function () {
@@ -125,8 +125,12 @@ document.querySelector('.b-6').addEventListener('click', function () {
 
 const out7 = document.querySelector('.out-7');
 
-function t7(arr, block) {
-
+function t7(arr = [], block) {
+    if(arr != []){
+        block.innerHTML = false;
+    } else {
+        block.innerHTML = arr.join(' ');
+    }
 }
 
 document.querySelector('.b-7').addEventListener('click', function () {
@@ -143,7 +147,8 @@ document.querySelector('.b-7').addEventListener('click', function () {
 const out8 = document.querySelector('.out-8');
 
 function t8(block, text) {
-
+    let res = text.trim();
+    block.innerHTML = res.toLowerCase();
 }
 
 document.querySelector('.b-8').addEventListener('click', function () {
@@ -154,13 +159,23 @@ document.querySelector('.b-8').addEventListener('click', function () {
 
 
 // Task 9
-// Давайте напишем функцию t9, которая позволяет выводить текст переданный ей в качестве аргумента text в блок block. При этом переданный текст с помощью trim очищается от пробелов до и после и переводится в нижний регистр. Зададим значение по умолчанию для text - пустую строку, это позволит нам избежать ошибок, если данный аргумент упустили, и добавим в функцию проверку - если block не существует, то функция ничего не выводит.
+// Давайте напишем функцию t9, которая позволяет выводить текст переданный
+// ей в качестве аргумента text в блок block. При этом переданный текст с
+// помощью trim очищается от пробелов до и после и переводится в нижний
+// регистр.
+
+// Зададим значение по умолчанию для text - пустую строку, это
+// позволит нам избежать ошибок, если данный аргумент упустили, и добавим
+// в функцию проверку - если block не существует, то функция ничего не выводит.
 
 
 const out9 = document.querySelector('.out-9');
 
-function t9(text, block) {
-
+function t9(text = '', block) {
+    let res = text.trim();
+    if(block){
+        block.innerHTML = res.trim().toLocaleLowerCase();
+    }
 }
 
 document.querySelector('.b-9').addEventListener('click', function () {
@@ -171,12 +186,14 @@ document.querySelector('.b-9').addEventListener('click', function () {
 
 
 // Task 10
-// Напишите функцию, t10, которая выводит в out-10 количество переданных ей аргументов (число).
+// Напишите функцию, t10, которая выводит в out-10 количество переданных ей
+// аргументов (число).
 
 const out10 = document.querySelector('.out-10');
 
-function t10() {
-
+function t10(...argc) {
+    let res = argc.length;
+    out10.innerHTML = res;
 }
 
 document.querySelector('.b-10').addEventListener('click', function () {
@@ -185,12 +202,13 @@ document.querySelector('.b-10').addEventListener('click', function () {
 
 
 // Task 11
-// Напишите функцию, t11, которая выводит в out-11 cумму переданных ей аргументов (число). Используем arguments.
+// Напишите функцию, t11, которая выводит в out-11 cумму переданных ей
+// аргументов (число). Используем arguments.
 
 const out11 = document.querySelector('.out-11');
 
 function t11() {
-
+    out11.innerHTML = arguments.length;
 }
 
 document.querySelector('.b-11').addEventListener('click', function () {
@@ -198,12 +216,13 @@ document.querySelector('.b-11').addEventListener('click', function () {
 })
 
 // Task 12
-// Напишите функцию, t12, которая выводит в out-12 cумму переданных ей аргументов (число). Используем rest.
+// Напишите функцию, t12, которая выводит в out-12 cумму переданных ей
+// аргументов (число). Используем rest.
 
 const out12 = document.querySelector('.out-12');
 
-function t12() {
-
+function t12(...argc) {
+    out12.innerHTML = argc.length;
 }
 
 document.querySelector('.b-12').addEventListener('click', function () {
@@ -212,12 +231,13 @@ document.querySelector('.b-12').addEventListener('click', function () {
 
 
 // Task 13
-// Напишите функцию, t13, которая выводит в out-13 массив (переданный как аргумент arr) c помощью функции funcArg (переданной как аргумент).
+// Напишите функцию, t13, которая выводит в out-13 массив (переданный
+// как аргумент arr) c помощью функции funcArg (переданной как аргумент).
 
 const out13 = document.querySelector('.out-13');
 
 function t13(arr, funcArg) {
-
+    out13.innerHTML = arr.showArrSpace();
 }
 
 // функции для вывода уже заготовлены
@@ -236,7 +256,9 @@ document.querySelector('.b-13').addEventListener('click', function () {
 
 
 // Task 14
-// Напишите функцию, t14, которая выводит в блок block (переданный как аргумент) массив (переданный как аргумент arr) c помощью функции funcArg (переданной как аргумент).
+// Напишите функцию, t14, которая выводит в блок block (переданный как аргумент)
+// массив (переданный как аргумент arr) c помощью функции funcArg (переданной
+// как аргумент).
 
 const out14 = document.querySelector('.out-14');
 
