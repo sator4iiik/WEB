@@ -115,10 +115,10 @@ function even() {
 
 function t5() {
     let inp = document.querySelector('.i-5').value;
-    if(inp % 2 == 0){
-        odd();
-    } else {
+    if(inp % 2 === 0){
         even();
+    } else {
+        odd();
     }
 
 }
@@ -151,9 +151,9 @@ function t6() {
     let ou2 = document.querySelector('.out-2').textContent;
 
     if(ou2 % 2 === 0){
-        odd();
-    } else {
         even();
+    } else {
+        odd();
     }
 
 }
@@ -194,19 +194,15 @@ const digit = ['нуль', 'один', 'два', 'три', 'четыре', 'пя
 let z8 = 0;
 
 function showNumber() {
-    out8.innerHTML = digit[z8];
+    out8.textContent = digit[z8];
 }
 
 function t8() {
-    if(z8 < 9){
-        z8++;
-        out8.innerHTML = z8;
-    } else if(z8 == 9){
+    z8++;
+    if(z8 === 9){
         z8 = 0;
-        out8.innerHTML = z8;
-    } else {
-        return;
     }
+    showNumber();
 }
 
 document.querySelector('.b-8').addEventListener('click', t8);
