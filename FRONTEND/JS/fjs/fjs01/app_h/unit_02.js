@@ -126,12 +126,8 @@ document.querySelector('.b-6').addEventListener('click', function () {
 const out7 = document.querySelector('.out-7');
 
 function t7(arr = [], block) {
-<<<<<<< HEAD
 
     if (arr != []) {
-=======
-    if(arr != []){
->>>>>>> e9cbef5d89c3b42f73d559e3741fe2338a60a569
         block.innerHTML = false;
     } else {
         block.innerHTML = arr.join(' ');
@@ -167,33 +163,20 @@ document.querySelector('.b-8').addEventListener('click', function () {
 // Давайте напишем функцию t9, которая позволяет выводить текст переданный
 // ей в качестве аргумента text в блок block. При этом переданный текст с
 // помощью trim очищается от пробелов до и после и переводится в нижний
-<<<<<<< HEAD
 // регистр. Зададим значение по умолчанию для text - пустую строку, это
 // позволит нам избежать ошибок, если данный аргумент упустили, и добавим
 // в функцию проверку - если block не существует, то функция ничего не
 // выводит.
-=======
-// регистр.
->>>>>>> e9cbef5d89c3b42f73d559e3741fe2338a60a569
+
 
 // Зададим значение по умолчанию для text - пустую строку, это
 // позволит нам избежать ошибок, если данный аргумент упустили, и добавим
 // в функцию проверку - если block не существует, то функция ничего не выводит.
 
 
-<<<<<<< HEAD
 function t9(text, block) {
     let res = text.trim();
     block.innerHTML = res.toLowerCase();
-=======
-const out9 = document.querySelector('.out-9');
-
-function t9(text = '', block) {
-    let res = text.trim();
-    if(block){
-        block.innerHTML = res.trim().toLocaleLowerCase();
-    }
->>>>>>> e9cbef5d89c3b42f73d559e3741fe2338a60a569
 }
 
 document.querySelector('.b-9').addEventListener('click', function () {
@@ -204,26 +187,15 @@ document.querySelector('.b-9').addEventListener('click', function () {
 
 
 // Task 10
-<<<<<<< HEAD
 // Напишите функцию, t10, которая выводит в out-10 количество переданных
 // ей аргументов (число).
 
 const out10 = document.querySelector('.out-10');
 
 function t10(...args) {
-    let res = args.length;
-    out10.innerHTML =+ res;
-    console.log(res);
-=======
-// Напишите функцию, t10, которая выводит в out-10 количество переданных ей
-// аргументов (число).
-
-const out10 = document.querySelector('.out-10');
-
-function t10(...argc) {
-    let res = argc.length;
-    out10.innerHTML = res;
->>>>>>> e9cbef5d89c3b42f73d559e3741fe2338a60a569
+        let res = args.length;
+        out10.innerHTML =+ res;
+        console.log(res);
 }
 
 document.querySelector('.b-10').addEventListener('click', function () {
@@ -238,15 +210,11 @@ document.querySelector('.b-10').addEventListener('click', function () {
 const out11 = document.querySelector('.out-11');
 
 function t11() {
-<<<<<<< HEAD
     let res = 0;
     for (let i = 0; i < arguments.length; i++) {
         res += arguments[i];
     }
     out11.innerHTML = res;
-=======
-    out11.innerHTML = arguments.length;
->>>>>>> e9cbef5d89c3b42f73d559e3741fe2338a60a569
 }
 
 document.querySelector('.b-11').addEventListener('click', function () {
@@ -259,17 +227,12 @@ document.querySelector('.b-11').addEventListener('click', function () {
 
 const out12 = document.querySelector('.out-12');
 
-<<<<<<< HEAD
 function t12(...args) {
     let res = 0;
     for (let i = 0; i < args.length; i++) {
         res += args[i];
     }
     out12.innerHTML = res;
-=======
-function t12(...argc) {
-    out12.innerHTML = argc.length;
->>>>>>> e9cbef5d89c3b42f73d559e3741fe2338a60a569
 }
 
 document.querySelector('.b-12').addEventListener('click', function () {
@@ -278,23 +241,14 @@ document.querySelector('.b-12').addEventListener('click', function () {
 
 
 // Task 13
-<<<<<<< HEAD
 // Напишите функцию, t13, которая выводит в out-13 массив
 // (переданный как аргумент arr) c помощью функции funcArg
 // (переданной как аргумент).
-=======
-// Напишите функцию, t13, которая выводит в out-13 массив (переданный
-// как аргумент arr) c помощью функции funcArg (переданной как аргумент).
->>>>>>> e9cbef5d89c3b42f73d559e3741fe2338a60a569
 
 const out13 = document.querySelector('.out-13');
 
 function t13(arr, funcArg) {
-<<<<<<< HEAD
     funcArg(arr);
-=======
-    out13.innerHTML = arr.showArrSpace();
->>>>>>> e9cbef5d89c3b42f73d559e3741fe2338a60a569
 }
 
 // функции для вывода уже заготовлены
