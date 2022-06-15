@@ -2,20 +2,19 @@
     margin: 0;
 }
 
-.html {
+html {
     background-color: #000;
     color: #fff;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 150%;
 }
 
 .container {
     max-width: 1200px;
-    width: 80%;
-    margin: 40px auto 40px auto;
+    margin: 40 auto;
 }
 
-.article {
+article {
     background-color: #1a1a1a;
     box-shadow: 0 0 0 1px #272727;
     padding: 40px;
@@ -40,9 +39,10 @@ h1 {
     color: #757575;
     font-size: 12px;
     text-align: center;
+
 }
 
-.article-img {
+img {
     display: block;
     max-width: 80%;
     margin: 20px auto;
@@ -53,5 +53,5 @@ p {
 }
 
 .tag {
-    background-color: #757575;
+    color: #757575;
 }
