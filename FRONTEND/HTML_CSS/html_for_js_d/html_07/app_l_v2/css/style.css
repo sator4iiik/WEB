@@ -1,0 +1,40 @@
+.wrap {
+    margin: 50px;
+    border: 3px solid rgb(0, 81, 82);
+    min-height: 10px;
+}
+
+.one {
+    width: 200px;
+    height: 200px;
+    background: rgb(0, 107, 119);
+    float: left;
+}
+
+/* float принимает два значения лефт и райт при этом он позволяет
+всплывать над страницей на уровень вверх и потому никто не знает что
+этот элемент есть потому он задвигается на место того где был применен
+флоат*/
+
+.two {
+    width: 220px;
+    height: 220px;
+    background: rgb(12, 48, 46);
+    float: left;
+}
+
+.three {
+    width: 200px;
+    height: 200px;
+    background: rgb(1, 72, 80);
+    float: left;
+}
+/* clear недает флоату подныривать за элементы родителей
+этот эффект называют еще очисткой потока */
+
+.clearfix {
+    clear: both;
+    /* то что ниже просто подсвечивает место клиара */
+    height: 1px;
+    background: brown;
+}
