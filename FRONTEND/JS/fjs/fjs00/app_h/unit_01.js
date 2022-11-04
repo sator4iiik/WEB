@@ -11,7 +11,6 @@ function getRandomInt(){
     const max = 132;
     let rand = Math.floor(min + Math.random() * (max +1 - min));
     out1.innerHTML = rand;
-
 }
 getRandomInt();
 
