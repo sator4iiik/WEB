@@ -121,7 +121,7 @@ document.querySelector('.b-8').onclick = f8;
 
 function f9() {
     //this.classList...  // все решается одной строкой
-    this.classList.toggle('bg-orange');
+    this.classList.add('bg-orange');
 }
 
 let div9 = document.querySelectorAll('.out-9');

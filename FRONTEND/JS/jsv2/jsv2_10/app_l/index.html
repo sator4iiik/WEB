@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+    </style>
+    <div class="container">
+        <h1 class="text-center">Массивы в JavaScript</h1>
+        <div class="out-1"></div>
+        <div class="out-2"></div>
+        <div class="out-3"></div>
+    </div>
+
+
+    <script>
+        let a = 'Николай';
+        let b = '37';
+        let z7 = 'Стрелец';
+        // массив это обьедененные данные
+        let r = ['Николай', 37, 'Стрелец'];
+        // [.. 37, ..] это значение массива
+        let d = [];
+        console.log(r[0]);
+        console.log(r[1]);
+        console.log(r[2]);
+        // console.log(r[5]); // undefined так как элемента нет в массиве
+        // одна из форм дебага
+        console.log(r);
+        console.log(r.length); // конвертирует с индекса в число от одного до ..
+
+
+        let a34 = 'Grigiriy';
+        let b34 = '43';
+        let in3 = 2324;
+
+        let zodiac = ['Kozerog', 1, 1, 19]
+        let man    = ['Ivan', 'male', 176, 93, 'Ivanov'];
+        console.log(zodiac);
+        console.log(man);
+        console.log('Длина Массива');
+        console.log(zodiac.length);
+        console.log(man.length);
+        console.log(man[4]);
+        man[0] = 'Sergey';
+        console.log(man);
+// поменять местами элементы в массиве
+        let a56 = [1, 2, 3, 4, 5, 6];
+        console.log(a56);
+
+        let temp = a56[0]; // 1
+        a56[0] = a56[3];
+        a56[3] = temp;
+        console.log(a56);
+
+// вариант 2 с неизвестным количеством эелементов
+        let x = [1, 2, 3, 4, 5, 6];
+        console.log(x);
+
+        let t = x[0]
+        x[0] = x[x.length - 1]
+        x[x.length - 1] = t
+        console.log(x);
+        // -1 необходим для предотвращение ошибки undeefined так как чисел
+        // 6 а по индексу с 0 - пять
+
+// вывод массива
+//способ 1 но он плох потому что каждый раз дергается страница как крутится цикл
+        // for (let i = 0; i < x.length; i++) {
+        //     document.querySelector('.out-1').innerHTML += x[i] = ' ';
+        // }
+// способ 2
+        let out = '';
+        console.log(out)
+        // i <= x.length в таком случае выдаст undefined ибо обращается к 6 индексу из 5
+        for (let i = 0; i < x.length; i++) {
+            // if (x[i] % 2 === 0){ // вывод четных
+                out += x[i] + ' ';
+            // }
+        }
+        document.querySelector('.out-2').innerHTML = out;
+
+        ////////////////////минимальный/максимальный элемент в массиве
+
+        let u = [4, 2];
+        let max = u[0]; // внутри макс сейчас лежит 4
+
+//      (i имеет блочную область видимости, ибо не обьявлена более глобально)
+        for (let i = 0; i < u.length; i++) {
+            if (u[i] > max) { // нахождение минимума отличается только знаком <
+                max = u[i];
+            }
+        }
+        console.log('max: ' + max)
+
+// //////////////////////нахождение суммы //////
+
+        let out3 = '';
+        let sum = 0;
+        for (let i = 0; i < u.length; i++) {
+            sum = sum + u[i] // сумма всех элементов
+        }
+        console.log('sum all in arr: ' + sum);
+        document.querySelector('.out-3').innerHTML += 'sum all in arr: ' + sum;
+
+// важная деталь, умение думать о ошибках / проверять
+// дебажить и переверять на своих кейсах
+
+    </script>
+</body>
+</html>

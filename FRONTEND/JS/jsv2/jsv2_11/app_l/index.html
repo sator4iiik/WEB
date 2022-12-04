@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+    </style>
+    <div class="constainer">
+        <h1>Unit 11</h1>
+    </div>
+    <script>
+        const a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        const b = ['a', 'b', 'c', 'd', 'e', 'f'];
+
+        console.log(a.length);
+        console.log( a.push(10, 11, 44, 55, 66) );
+        console.log(a);
+
+        b.push('j', 'e'); // метод пуш добавляет элементы в конец массива
+
+        b.pop() // будучи вызваным этот метод удаляет последний элемент в конце массива
+        console.log(b);
+
+        /////////////////работа внутри массива//////////////////////////
+        delete a[3]; // [1, 2, 3, empty, 5, 6, 7, 8, 9, 10, 11, 44, 55, 66]
+        // образует дырку но длину массива не трогает, но это не очень удобная операция
+        console.log(a);
+
+        a.splice(3, 3, 'hi');
+        // (c третего - три элемента) создает новый массив и пересчитывает его
+        // так же добавляет на место вырезанных после двух обязательных параметров
+        // [1, 2, 3, 'hi', 7, 8, 9, 10, 11, 44, 55, 66]
+        console.log(a);
+
+        // так же существуют операторы shift unshift позволяет добавлять и удалять
+        // элементы в начале массива, логика идентична пуш и поп
+    </script>
+</body>
+</html>
