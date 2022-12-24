@@ -109,13 +109,15 @@ document.querySelector('.b-6').onclick = f6;
 // Вывод - по нажатию кнопки b-7
 // Вывод в out-7
 
+
 let d7 = ['china', 'india', 'brazil', 'japan', 'egypt'];
 
 function f7() {
-    t = [];
-    for (let i = 0; i < d7.length; i++) {
-        t += d7[i];
-    }
+    let t = [];
+        t[0] = '';
+        for (let i = 0; i < d7.length - 1; i++) {
+            t[i + 1] = d7[i];
+        }
     d7 = t;
     showArr('.out-7', d7);
 }
@@ -132,9 +134,12 @@ document.querySelector('.b-7').onclick = f7;
 let d8 = [2, '4', 12, 67, 'hello'];
 
 function f8() {
-    let input = document.querySelector('.i-8').value;
-    d8[0] = input;
-
+    let t = [];
+        t[0] = document.querySelector('.i-8').value;
+        for (let i = 0; i < d8.length; i++) {
+            t[i + 1] = d8[i];
+        }
+    d8 = t;
     showArr('.out-8', d8);
 }
 
@@ -149,7 +154,11 @@ document.querySelector('.b-8').onclick = f8;
 let d9 = [100, 200, 300, 400, 700, 121];
 
 function f9() {
-
+    let t = [];
+    for (let i = 1; i < d9.length; i++) {
+        t[i - 1] = d9[i];
+    }
+    d9 = t;
     showArr('.out-9', d9);
 }
 
@@ -165,8 +174,7 @@ document.querySelector('.b-9').onclick = f9;
 let d10 = [3, 14, 15, 92, 6];
 
 function f10() {
-
-    showArr('.out-10', d10);
+    showArr('.out-10', d10.reverse());
 }
 
 document.querySelector('.b-10').onclick = f10;
@@ -183,14 +191,19 @@ document.querySelector('.b-10').onclick = f10;
 let d11 = [2, 3, 4, 5, 6, 7];
 
 function f11() {
-
+    let out = ''
+    let input = +document.querySelector('.i-11').value;
+        out = d11.indexOf(input);
+        document.querySelector('.out-11').innerHTML = out;
 }
 
 document.querySelector('.b-11').onclick = f11;
 
 
 // Task 12
-// Напишите функцию f12, которая эмулирует работу метода indexOf - ищет введенное число в массиве d12 (перебором). Если числа нет - выводит -1, если есть - его позицию в массиве.
+// Напишите функцию f12, которая эмулирует работу метода indexOf - ищет
+// введенное число в массиве d12 (перебором). Если числа нет - выводит -1,
+// если есть - его позицию в массиве.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-12
 // Вывод в out-12
@@ -198,13 +211,25 @@ document.querySelector('.b-11').onclick = f11;
 let d12 = [6, 62, 60, 70, 1, 5];
 
 function f12() {
+    let out = '';
+    let input = +document.querySelector('.i-12').value;
+    for (let i = 0; i < d12.length; i++) {
+        if (d12[i] === input) {
+            out = i;
+        }
+    }
+    if (out === '') {
+        out = -1;
+    }
+    document.querySelector('.out-12').innerHTML = out;
 
 }
 
 document.querySelector('.b-12').onclick = f12;
 
 // Task 13
-// Напишите функцию f13, которая эмулирует работу метода reverse. Т.е. создает новый массив на основе d13 с обратным порядком элементов и выводит в out-13.
+// Напишите функцию f13, которая эмулирует работу метода reverse. Т.е.
+// создает новый массив на основе d13 с обратным порядком элементов и выводит в out-13.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-13
 // Вывод в out-13
@@ -213,15 +238,21 @@ document.querySelector('.b-12').onclick = f12;
 let d13 = [6, 0, 22, 1, 4, 76];
 
 function f13() {
-
-    showArr('.out-13', d13);
+    let out = [];
+    for (let i = d13.length - 1; i > -1; i--) {
+        out += `${d13[i]} `;
+    }
+    document.querySelector('.out-13').innerHTML = out;
 }
 
 document.querySelector('.b-13').onclick = f13;
 
 
 // Task 14
-// Напишите функцию, которая получает i-14, переводит в число, а потом заполняет массив d14 так, что количество элементов равно введенному числу, и каждый элемент равен 1. Т.е. пользователь ввел 5, массив будет [1,1,1,1,1]. Выведите массив в out-14.
+// Напишите функцию, которая получает i-14, переводит в число, а потом
+// заполняет массив d14 так, что количество элементов равно введенному
+// числу, и каждый элемент равен 1. Т.е. пользователь ввел 5, массив будет
+// [1,1,1,1,1]. Выведите массив в out-14.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-14
 // Вывод в out-14
@@ -229,14 +260,20 @@ document.querySelector('.b-13').onclick = f13;
 let d14 = [];
 
 function f14() {
-
+    let out = '';
+    let input = +document.querySelector('.i-14').value;
+    for (let i = 0; i < input; i++) {
+        d14[d14.length] = 1;
+    }
     showArr('.out-14', d14);
 }
 
 document.querySelector('.b-14').onclick = f14;
 
 // Task 15
-// Напишите функцию f15, которая вначале проверяет, есть ли элемент из i-15 в массиве d15  (переводим в число), а потом - если нет - добавляет его в массив.
+// Напишите функцию f15, которая вначале проверяет, есть ли элемент из
+// i-15 в массиве d15  (переводим в число), а потом - если нет -
+// добавляет его в массив.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-15
 // Вывод в out-15
@@ -244,8 +281,16 @@ document.querySelector('.b-14').onclick = f14;
 let d15 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
 
 function f15() {
-
-
+    let out = [];
+    let input = +document.querySelector('.i-15').value;
+    for (let i = 0; i < d15.length; i++) {
+        if (d15[i] === input) {
+            return;
+        } else {
+            out = input;
+        }
+    }
+    d15[d15.length] = out;
     showArr('.out-15', d15);
 }
 
@@ -258,19 +303,21 @@ document.querySelector('.b-15').onclick = f15;
 // Вывод - по нажатию кнопки b-16
 // Вывод в out-16
 
-let d16 = [];
+let d16  = [];
 let d161 = [5, 6, 7, 8, 9];
 let d162 = [23, 24, 56, 87];
 
 function f16() {
-
+    d16 = d161.concat(d162);
     showArr('.out-16', d16);
 }
 
 document.querySelector('.b-16').onclick = f16;
 
 // Task 17
-// Напишите функцию f17, которая эмулирует работу метода concat. Функция должна объедиять массивы d171 и d172 и записывать результат в d17. Для эмуляции используйт цикл.
+// Напишите функцию f17, которая эмулирует работу метода concat.
+// Функция должна объедиять массивы d171 и d172 и записывать результат
+// в d17. Для эмуляции используйт цикл.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-17
 // Вывод в out-17
@@ -280,7 +327,12 @@ let d171 = ['a', 'b', 'c', 'd'];
 let d172 = [1, 2, 3, 4, 5];
 
 function f17() {
-
+    for (let i = 0; i < d171.length; i++) {
+        d17 += d171[i];
+    }
+    for (let i = 0; i < d172.length; i++) {
+        d17 += d172[i];
+    }
     showArr('.out-17', d17);
 }
 
@@ -288,7 +340,9 @@ document.querySelector('.b-17').onclick = f17;
 
 
 // Task 18
-// Напишите функцию f18, которая получает значение из i-18 и проверяет есть ли такое значение в массиве d18 c использованием метода include. Результат применения метода - выводится в .out-18.
+// Напишите функцию f18, которая получает значение из i-18 и проверяет
+// есть ли такое значение в массиве d18 c использованием метода include.
+// Результат применения метода - выводится в .out-18.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-18
 // Вывод в out-18
@@ -296,26 +350,39 @@ document.querySelector('.b-17').onclick = f17;
 let d18 = ['b', 'c', '45', 'e', 'z', 'y'];
 
 function f18() {
-
+    let out = '';
+    let input = document.querySelector('.i-18').value;
+    out = d18.includes(input);
+    document.querySelector('.out-18').innerHTML = out;
 }
 
 document.querySelector('.b-18').onclick = f18;
 
 
 // Task 19
-// Напишите фукнцию f19, которая выводит самую длинную строку maxString из массива d19 в out-19.
+// Напишите фукнцию f19, которая выводит самую длинную строку maxString
+// из массива d19 в out-19.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-19
 // Вывод в out-19
 
-let d19 = ['Your', 'payment', 'method', 'will', 'automatically', 'be', 'charged', 'in', 'advance', 'every'];
+let d19 = ['Your', 'payment', 'method', 'will', 'automatically', 'be',
+                                     'charged', 'in', 'advance', 'every'];
 let maxString = '';
 
 function f19() {
-
+    let stringCounter = '';
+    for (let i = 0; i < d19.length; i++) {
+        if (d19[i].length > stringCounter) {
+            stringCounter = d19[i].length;
+            maxString = d19[i];
+        }
+    }
+    document.querySelector('.out-19').innerHTML = maxString;
 }
 
 document.querySelector('.b-19').onclick = f19;
+console.log(d19[1].length);
 
 // Task 20
 // Напишите функцию f20, которая применяет к массиву d20 метод join с
@@ -329,7 +396,9 @@ document.querySelector('.b-19').onclick = f19;
 let d20 = [4, 5, 6, 7, 8, 9, 10];
 
 function f20() {
-
+    let out = [];
+    out = d20.join('');
+    document.querySelector('.out-20').innerHTML = out;
 }
 
 document.querySelector('.b-20').onclick = f20;

@@ -126,7 +126,8 @@ document.querySelector('.b-6').addEventListener('click', function () {
 const out7 = document.querySelector('.out-7');
 
 function t7(arr = [], block) {
-    if(arr != []){
+
+    if (arr != []) {
         block.innerHTML = false;
     } else {
         block.innerHTML = arr.join(' ');
@@ -162,20 +163,20 @@ document.querySelector('.b-8').addEventListener('click', function () {
 // Давайте напишем функцию t9, которая позволяет выводить текст переданный
 // ей в качестве аргумента text в блок block. При этом переданный текст с
 // помощью trim очищается от пробелов до и после и переводится в нижний
-// регистр.
+// регистр. Зададим значение по умолчанию для text - пустую строку, это
+// позволит нам избежать ошибок, если данный аргумент упустили, и добавим
+// в функцию проверку - если block не существует, то функция ничего не
+// выводит.
+
 
 // Зададим значение по умолчанию для text - пустую строку, это
 // позволит нам избежать ошибок, если данный аргумент упустили, и добавим
 // в функцию проверку - если block не существует, то функция ничего не выводит.
 
 
-const out9 = document.querySelector('.out-9');
-
-function t9(text = '', block) {
+function t9(text, block) {
     let res = text.trim();
-    if(block){
-        block.innerHTML = res.trim().toLocaleLowerCase();
-    }
+    block.innerHTML = res.toLowerCase();
 }
 
 document.querySelector('.b-9').addEventListener('click', function () {
@@ -186,14 +187,15 @@ document.querySelector('.b-9').addEventListener('click', function () {
 
 
 // Task 10
-// Напишите функцию, t10, которая выводит в out-10 количество переданных ей
-// аргументов (число).
+// Напишите функцию, t10, которая выводит в out-10 количество переданных
+// ей аргументов (число).
 
 const out10 = document.querySelector('.out-10');
 
-function t10(...argc) {
-    let res = argc.length;
-    out10.innerHTML = res;
+function t10(...args) {
+        let res = args.length;
+        out10.innerHTML =+ res;
+        console.log(res);
 }
 
 document.querySelector('.b-10').addEventListener('click', function () {
@@ -208,7 +210,11 @@ document.querySelector('.b-10').addEventListener('click', function () {
 const out11 = document.querySelector('.out-11');
 
 function t11() {
-    out11.innerHTML = arguments.length;
+    let res = 0;
+    for (let i = 0; i < arguments.length; i++) {
+        res += arguments[i];
+    }
+    out11.innerHTML = res;
 }
 
 document.querySelector('.b-11').addEventListener('click', function () {
@@ -221,8 +227,12 @@ document.querySelector('.b-11').addEventListener('click', function () {
 
 const out12 = document.querySelector('.out-12');
 
-function t12(...argc) {
-    out12.innerHTML = argc.length;
+function t12(...args) {
+    let res = 0;
+    for (let i = 0; i < args.length; i++) {
+        res += args[i];
+    }
+    out12.innerHTML = res;
 }
 
 document.querySelector('.b-12').addEventListener('click', function () {
@@ -231,13 +241,14 @@ document.querySelector('.b-12').addEventListener('click', function () {
 
 
 // Task 13
-// Напишите функцию, t13, которая выводит в out-13 массив (переданный
-// как аргумент arr) c помощью функции funcArg (переданной как аргумент).
+// Напишите функцию, t13, которая выводит в out-13 массив
+// (переданный как аргумент arr) c помощью функции funcArg
+// (переданной как аргумент).
 
 const out13 = document.querySelector('.out-13');
 
 function t13(arr, funcArg) {
-    out13.innerHTML = arr.showArrSpace();
+    funcArg(arr);
 }
 
 // функции для вывода уже заготовлены
@@ -250,7 +261,7 @@ function showArrUnderscore(arr) {
 }
 
 document.querySelector('.b-13').addEventListener('click', function () {
-    t13([3, 4, 5], showArrSpace);
+    t13([3, 4, 5], showArrUnderscore);
     // попробуйте также вместо showArrSpace поставить showArrUnderscore
 })
 
@@ -263,31 +274,38 @@ document.querySelector('.b-13').addEventListener('click', function () {
 const out14 = document.querySelector('.out-14');
 
 function t14(arr, funcArg, block) {
-
+    funcArg(arr, block);
 }
 
 // функции для вывода уже заготовлены
 function showArrSpace2(arr, block) {
     // вывод в блок пишите как в предыдущем примере
+    block.innerHTML = arr.join(' ');
 }
 
 function showArrUnderscore2(arr, block) {
     // вывод в блок пишите как в предыдущем примере
+    block.innerHTML = arr.join('_');
 }
 
 document.querySelector('.b-14').addEventListener('click', function () {
-    t14([3, 4, 5], showArrSpace, out14);
+    t14([2, 4, 7], showArrUnderscore2, out14);
     // попробуйте также вместо showArrSpace2 поставить showArrUnderscore2
 })
 
 
 // Task 15
-// Напишите функцию, t15, которая в зависимости от четности аргумента num запускает функцию even, или odd.
+// Напишите функцию, t15, которая в зависимости от четности аргумента num
+//запускает функцию even, или odd.
 
 const out15 = document.querySelector('.out-15');
 
 function t15(num, even, odd) {
-
+    if (num % 2 === 0) {
+        even();
+    } else {
+        odd();
+    }
 }
 
 function showOne() {

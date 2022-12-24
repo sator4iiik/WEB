@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    </style>
+
+    <div class="container">
+        <h1 align="center">
+            Unit 13 Ассоциативные массивы
+        </h1>
+        <div class="out-1"></div>
+    </div>
+    <script>
+        // ассоциативный массив
+        const a = {
+            "a" : 5,
+            "b" : 'Hello',
+            "z2" : 'Hi',
+            y43: 1999,
+            'villa de': 3040,
+            // ключ : значение
+        };
+        // отличие обычного массива от массива ассоциативного в том что у обычного
+        // индексом выступает число, а в асоциативном как число так и строка
+        a.yyyy = 555;
+        a.b = 'uuu'
+        delete a.a;
+        // попытка обращения к несуществующему элементу возвращает undefined но не error соответсвтвенно
+        // можно делать проверку на undefined;
+        console.log(a.a); // undefined, значит что элемента не существует
+        console.log(a);
+        console.log(a.z2);
+        let k = 'y45';
+        console.log(a[k]);
+
+        // document.querySelector('.out-1').innerHTML = a;
+        // [object Object] потому что этот массив уже нельзя так вывести
+        let out = '';
+        for (let key in a) {
+            // out += key; // если ключи
+            // out += a[key]; // если значения
+            out += key + ':' + a[key] + '<br> '; // если ключ + значения
+            // такие массивы могут быть двухмерными
+            // можно делать обычном массив в асоциативном массиве в и наоборот
+        }
+        document.querySelector('.out-1').innerHTML = out;
+    </script>
+</body>
+</html>

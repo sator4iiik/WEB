@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    background-color: olive;
+    padding: 10px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+/* что бы родитель не схлопывался */
+.container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.one, .two, .three {
+    float: left;
+    height: 50vh;
+}
+
+.one {
+    background: rgb(197, 236, 0);
+    width: 33%;
+}
+
+.two {
+    background: rgb(136, 161, 13);
+    width: 33%;
+}
+
+.three {
+    background: rgb(101, 117, 21);
+    width: 33%;
+}
+
+
+@media (max-width: 800px){
+    .container{
+        background: greenyellow;
+    }
+    .one, .two {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+    .three {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px){
+    .container{
+        background: rgb(234, 255, 47);
+    }
+    .one, .two {
+        width: 100%;
+    }
+}

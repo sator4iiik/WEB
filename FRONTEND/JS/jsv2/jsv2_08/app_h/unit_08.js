@@ -278,7 +278,7 @@ let out11 = document.querySelector('.out-11');
 function t11() {
     let  divs11 = document.querySelectorAll('.div-11');
     let l = 0;
-    str11 = '';
+    let str11 = '';
     while(l < divs11.length){
         str11 += divs11[l].textContent + '_';
         l++;

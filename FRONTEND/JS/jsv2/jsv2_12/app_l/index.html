@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 12</title>
+</head>
+<body>
+    <style>
+
+    </style>
+    <h1 align="center">UNIT 12</h1>
+    <div class="out"></div>
+    <div>
+        <button class="b-1">Push</button>
+        <div class="out-2"></div>
+    </div>
+    <div>
+        <button class="b-2">Push 2</button>
+        <div class="out-3"></div>
+    </div>
+    <div align="center">
+        <button class="b-3">Push 3</button>
+        <div class="out-4"></div>
+    </div>
+    <script>
+        let a = [4, 5, 6];
+        // двумерный массив
+        let b = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9],
+        ];
+        console.log(b);
+
+        // for (let i = 0; i < b.length; i++) {
+        //     // console.log(b[i]);
+        //     let c = b[i]; // если форма записи b[i] сбивает с толку то можно просто в переменную засунуть
+        //     // c - массив [1, 2, 3]
+        //     ////////////////////////////////////////
+        //     // for (let k = 0; k < c.length; k++) {
+        //     //     console.log(c[k]);
+        //     //     // выводим 3 массива внутри
+        //     // } //////////////////////////////////
+
+        //     for (let k = c.length - 1; k >= 0; k--) {
+        //         console.log(c[k]);
+        //         // выводим 3 массива внутри в обратном порядке
+        //     }
+        // }
+
+        // for (let i = 0; i < b.length; i++) {
+        //     for (let k = 0; k < b[i].length; k++) {
+        //         console.log(b[i][k]);
+        //         // b[0] == [1, 2, 3],
+        //         // b[1] == [4, 5, 6],
+        //         // b[2] == [7, 8, 9],
+        //         // b[i][k] == [1, 2, 3],
+        //         // b[0][0] == [1, ., .],
+        //         // b[0][2] == [., ., 3],
+        //         // b[1][1] == [., 5, .],
+        //     }
+        // }
+
+        let out = '';
+        for (let i = 0; i < b.length; i++) {
+            for (let k = 0; k < b[i].length; k++) {
+                // console.log(b[i][k]);
+                out += b[i][k] + ' ';
+                // if (b[i][k] > 4) {
+                //     out += b[i][k] + ' ';
+                // }
+            }
+            out += '<br>' // перенос строки после отработки внутренеего цикла
+        }
+        document.querySelector('.out').innerHTML = out;
+
+////////////////////////////////////////////////////////////////////////
+        // перемещаем еденицу по массиву;
+        let d = [1, 0, 0, 0, 0];
+        let k = 0;
+        document.querySelector('.b-1').onclick = () => {
+            // самое сложное тут это проверка
+            if (k + 1 < 5) {
+                d[k] = 0;
+                d[k + 1] = 1;
+                k++;
+            }
+            document.querySelector('.out-2').innerHTML = d;
+        }
+        // перемещаем еденицу по массиву c конца в начало;
+        let m = [0, 0, 0, 0, 1];
+        let n = 0;
+        document.querySelector('.b-2').onclick = () => {
+            // самое сложное тут это проверка
+            if (n + 1 > - 3) {
+                m[n + 4] = 0;
+                m[n + 3] = 1;
+                n--;
+            }
+            document.querySelector('.out-3').innerHTML = m;
+        }
+////////////////////////////////////////////////////////////////////////
+
+        // перемещаем еденицу туда и обратно;
+        let s = [1, 0, 0, 0, 0];
+        let q = 0;
+        document.querySelector('.b-3').onclick = () => {
+            if (q + 1 < 5) {
+                s[q] = 0;
+                s[q + 1] = 1;
+                q++;
+                    if (s[4] === 1) {
+                        console.log(s[q]);
+                        // перестает работать в этой строке
+                        if (s + 1 > - 3) {
+                            s[q + 4] = 0;
+                            s[q + 3] = 1;
+                            q--;
+                        }
+                    }
+            }
+
+            document.querySelector('.out-4').innerHTML = s;
+        }
+
+    </script>
+</body>
+</html>

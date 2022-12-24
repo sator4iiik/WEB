@@ -1,0 +1,22 @@
+.t {
+    width: 600px;
+    height: 300px;
+    border: 1px solid black;
+    margin: 200px auto;
+}
+
+/* left right top bottom не работают без свойства position */
+/* position relative(относительно своей позиции) absolute(выпадает из
+документа вообще поверх всего но в иерархии потока документа так же реагирует на
+родительский position relative если назначить выше)*/
+
+.s {
+    width: 50px;
+    height: 50px;
+    background: orangered;
+    position: fixed; /* зафиксировать на странице при скроле */
+    right: 30px;
+    bottom: 40px;
+    /* left: 100px;
+    top: 50px; */
+}

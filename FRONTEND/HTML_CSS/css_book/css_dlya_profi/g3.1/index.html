@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: #eee;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        header {
+            color: #fff;
+            background-color: #0072b0;
+            border-radius: .5em;
+        }
+
+        main {
+            display: block;
+        }
+
+        .main {
+            float: left;
+            width: 70%;
+            background-color: #fff;
+            border-radius: .5em;
+        }
+
+        .sidebar {
+            float: right;
+            width: calc(30% - 3em);
+            /* Избегаем волшебных чисел // magic numbers */
+            padding: 1.5em;
+            background-color: #fff;
+            border-radius: .5em;
+        }
+    </style>
+    <header>
+        <h1>Бегущий город</h1>
+    </header>
+    <div class="container">
+        <main class="main">
+            <h2>Прибегайте!</h2>
+            <p>
+                Начало мероприятия "Бегущий город" в субботу в 10:00
+                на проспекте Степана Бандеры. Маршрут будет
+                предоставлен перед началом пробега, расстояние около 10 км.
+            </p>
+        </main>
+        <aside class="sidebar">
+            <div class="widget"></div>
+            <div class="widget"></div>
+            <div class="gizmo"></div>
+        </aside>
+    </div>
+</body>
+</html>

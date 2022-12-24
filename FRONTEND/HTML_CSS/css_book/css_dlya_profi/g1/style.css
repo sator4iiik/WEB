@@ -1,0 +1,145 @@
+:root {
+    font-size: 0.75em;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 1.5em;
+}
+
+h1 {
+    color: #2f4f4f;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+/* 0 0 1 */
+
+.nav {
+    margin-top: 10px;
+    list-style: none;
+    padding-left: 0;
+}
+/* 0 1 0 */
+
+.nav li {
+    display: inline;
+    margin-right: 10px;
+}
+/* 0 1 1 */
+
+.nav a {
+    color: white;
+    background-color: #13a4a4;
+    padding: 10px 15px;
+    border-radius: 2px;
+    text-decoration: none;
+}
+/* 0 1 1 */
+
+a.featured {
+    background-color: orange;
+}
+/* 0 2 0  */
+
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:hover {
+    color: red;
+}
+
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+.footer {
+    color: #666;
+    background-color: #ccc;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer a {
+    color: initial;
+    text-decoration: underline;
+}
+
+.nav .featured {
+    background-color: orange;
+    box-shadow: 10px 2px #6f9090;
+}
+
+.padded {
+    font-size: 16px;
+    padding: 2em;
+}
+
+.box {
+    padding: 1em;
+    border-radius: 1em;
+    background-color: lightgray;
+}
+
+.box-small {
+    font-size: 12px;
+}
+
+.box-large {
+    font-size: 18px;
+}
+
+.slogan {
+    font-size: 1.2em;
+    padding: 1.2em;
+    background: #ccc;
+}
+
+ul {
+    font-size: 0.8em;
+}
+
+.fixed ul {
+    font-size: 1em;
+}
+
+.panel {
+    font-size: 1rem;
+    padding: 1em;
+    border: 1px solid #999;
+    border-radius: 0.5em;
+}
+
+.panel > h2 {
+    margin-top: 0;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.panel.large {
+    font-size: 1.2em;
+}
+
+@media (min-width: 800px) {
+    :root {
+        font-size: 0.875em;
+    }
+}
+
+@media (min-width: 1200px) {
+    :root {
+        font-size: 1em;
+    }
+}
