@@ -113,11 +113,66 @@ p {
 
 
 /* ================ task 1 ========================= */
-@media (max-width: 800px){
+
+.out-1 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+}
+
+.out-1 .block-1 {
+    width: 100%;
+}
+
+.out-1 .block-2 {
+    width: 100%;
+}
+
+.out-1 .block-3 {
+    width: 100%;
+}
+
+.out-1 .block-4 {
+    width: 100%;
+}
+
+@media (max-width: 800px) {
     .out-1 {
+        grid-template-areas:
+            'block-1 block-2'
+            'block-3 block-4';
+        grid-gap: 10px;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100px 100px 1fr;
+        padding: 10px 10px 0 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .out-1 {
+        display: flex;
+        flex-flow: row wrap;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: baseline;
         width: 100%;
     }
 
+    .out-1 .block-1 {
+        width: 100%;
+    }
+
+    .out-1 .block-2 {
+        width: 100%;
+    }
+
+    .out-1 .block-3 {
+        width: 100%;
+    }
+
+    .out-1 .block-4 {
+        width: 100%;
+    }
 }
 /* ================ task 2 ========================= */
 
