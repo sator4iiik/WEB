@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 1 indexOf</title>
+</head>
+<body>
+    <h5>Unit 1 indexOf JS</h5>
+    <p>открой консоль</p>
+
+    <script>
+        // indexOf позволяет искать значения в массиве и возвращает индекс первого найденного значения
+        const a = [9, 8, 7, 5, 7, 5, 2, -2, -7];
+        const b = ['Hi', 'Hello', 'bye', 'Goodbye']; // нужно учитывать регистр иначе -1
+        // два ньюанса первый это использование индексов требует приведение типа и второй учитывать регистр
+        // -1 выведет если будет ненайдено значение
+        console.log(a.indexOf(6));
+        console.log(b.indexOf('Hello'));
+        // проверка на то существует ли значение в массиве
+        if (a.indexOf(9) !== -1) {
+            console.log('Значение найдено');
+        } else {
+            console.log('Значение не найдено');
+        }
+
+        console.table(a);
+        console.log(a.indexOf(5));
+        // найдет первое значение и вернет его, вторую 5 проигнорит
+        console.log(a.indexOf(5, 4));
+        // еще можем использовать необязательный параметр(после запятой) с какой позиции начинать поиск
+        // в таком случае достучался до второй 5 на позиции 5
+        // можно так же указывать отрицательные числа
+
+        function indexOfEmul(ar, item, from = 0) {
+            let result = -1;
+        for (let i = from; i < ar.length; i++) {
+            if (ar[i] === item) {
+                return i;
+            }
+        }
+        return result;
+        }
+        console.log(indexOfEmul(a, 5, 5));
+    </script>
+</body>
+</html>

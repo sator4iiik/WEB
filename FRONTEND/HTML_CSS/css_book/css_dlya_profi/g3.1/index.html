@@ -8,6 +8,16 @@
 </head>
 <body>
     <style>
+        :root {
+            box-sizing: border-box;
+        }
+
+        *,
+        ::before,
+        ::after {
+            box-sizing: inherit;
+        }
+
         body {
             background-color: #eee;
             font-family: Helvetica, Arial, sans-serif;
@@ -32,11 +42,17 @@
 
         .sidebar {
             float: right;
-            width: calc(30% - 3em);
+            width: calc(29% - 1.5em);
+            margin-left: 1.5em;
+            /* width: calc(30% - 3em); */
             /* Избегаем волшебных чисел // magic numbers */
             padding: 1.5em;
             background-color: #fff;
             border-radius: .5em;
+        }
+
+        .third-party-component {
+            box-sizing: content-box;
         }
     </style>
     <header>
