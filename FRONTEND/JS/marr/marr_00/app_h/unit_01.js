@@ -77,7 +77,7 @@ const f4 = (arr, elem) => {
     let input = document.querySelector('.i-4').value;
 
     out = arr.indexOf(elem);
-    // out = arr.indexOf(input);
+    //out = arr.indexOf(input);
     document.querySelector('.out-4').innerHTML = out;
 }
 

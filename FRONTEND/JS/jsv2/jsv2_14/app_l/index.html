@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+        .text-center {
+        text-align: center;
+        }
+
+    </style>
+
+    <div class="container">
+        <div class="row">
+            <div class="col coll-lg-12 text-center">
+                <h2>Unit 14 JSV2.0</h2>
+            </div>
+        </div>
+
+        <div class="pricing-table row">
+            <div class="package featured">
+                <p class="package-name">Kyiv</p>
+                <hr>
+                <p class="price">10&deg;</p>
+                <p class="disclaimer">Clouds</p>
+                <hr>
+                <ul class="features">
+                    <li>Feature 1</li>
+                </ul>
+                <button class="button=primary">Go</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /////////////////////// API ////////////////////////////////////
+        // API это программный интерфейс который предоставляют сайты, программы
+        // для того что бы мы имели возможность к ним обращаться
+
+        // обычно к апи обращаются на стороне
+        // бекенда так как на стороне джава скрипта это такое себе действие
+        // так как тут очень много разных ньюансов со стороны безопасности
+        // но если к примеру это получение JSON погоды то почему нет
+
+        // исследование строки
+        //https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
+
+        // https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22
+        // https://samples.openweathermap.org - адрес сервера который предоставляет api
+        // /data/ - адрес который отвечает за апи(чаще всего он будет называться api)
+        // 2.5/   - версия Api
+        // weather - это все еще URL адресс
+
+        // а вот это уже пошел гет запрос "?" а "&" это параметры гет запроса
+
+        // ? - начало гет запроса
+        // q=London,uk - 1 параметр
+        // &
+        // appid=b6907d289e10d714a6e88b30761fae22 - 2 параметр (тот самый ключ апи)
+        // фетч запрос всегда асинхронен
+        // джаваскрипт предоставляет красивую обертку над промисами в виде фетча
+        // гет параметры используются для того что бы конфигурировать запрос
+
+        // фетч это интрефейс JS для работы с запросами и ответами HTTP
+
+        // это так называемы then
+        fetch('https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=2bc9e956ded54f3fad6259b3997e9e04')
+            // можно потом и красиво и хорошо сделать специальный массив с параметрами и слеплять их в красивую строку
+            .then(function (resp) { return resp.json() }) // Convert data to json (эта функция получит результат ответа фетч и переобразует в JSON формат, получит строку и переобразует в масив)
+            .then(function (date) { // следующий then выполнится после этой функции и получит уже обработанные данные
+                console.log(data);
+            })
+            .catch(function () {
+                //catch any errors
+            })
+        // конфигурация запросов погоды преисходит через GET запросы
+    </script>
+</body>
+</html>

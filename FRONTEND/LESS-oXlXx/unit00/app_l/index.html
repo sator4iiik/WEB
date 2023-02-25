@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заголовок документа</title>
+</head>
+<body>
+    <h1>Заголовок содержания</h1>
+    <h2>Заголовок содержания</h2>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit est
+        consequuntur, aliquam deleniti quam saepe blanditiis quae repudiandae
+        reprehenderit qui, incidunt assumenda vero veritatis praesentium minima
+        maxime eius, dicta placeat?
+    </p>
+    <!-- блочный в нормальном потоке документа -->
+    <span>Этот элемент</span>
+    <!-- заполнитель span промежуток-->
+    <!-- строчный (выстраиваются все в строчку) -->
+    <a href="http://google.com" target="_blank">Поиск</a>
+    <!-- сайт это абсолютный путь к URL адресу -->
+    <a href="">эта страница</a>
+    <!-- путь относительный -->
+    <!-- обновление страницы (переход на тот же самый индекс)-->
+    <button>Кнопка</button>
+    <!-- 3 тип элемента строчно-блочный (инлайн) но ему можно задать размер -->
+    <img src="picture.png" alt="картинка" width="300px" height="50px">
+    <!-- замещаемый элемент (строчно-блочный) -->
+    <!-- семантическое ядро  -->
+    <!-- краулер crawler поисковый павук -->
+    <textarea cols="30" rows="2" placeholder="введите ваш отзыв"></textarea>
+
+    <select name="city">
+        <option value="kyiv">Киев</option>
+        <option value="kharkiv">Харьков</option>
+        <option value="odassa">Одесса</option>
+        <option value="uzhgorod" selected>Ужгород</option>
+        <option value="lviv">Львов</option>
+    </select>
+
+    <a href="http://instagram.com">
+        <!-- <img src="picture.png" width="100px" alt="картинка"> -->
+        <button>Истаграм</button>
+    </a>
+
+    <a href="http://instagram.com">
+        <h1>Инстаграм</h1>
+        <!-- так делать не рекомендуется так как это блочный эл -->
+    </a>
+
+    <div>
+        <span>строчка внутри обёртки</span>
+    </div>
+    <div>
+        <span>строчка внутри обёртки</span>
+    </div>
+    <!-- блочные переносим строчные нет -->
+    <!-- обертки задают нормальную структуру документа-->
+
+    <!-- https://whatwg.org -> это те кто стоит над WC3 -->
+
+</body>
+</html>

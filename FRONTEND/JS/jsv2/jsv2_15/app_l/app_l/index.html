@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 15</title>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0;
+        }
+
+    </style>
+
+<div class="container">
+
+</div>
+
+    <script>
+        ////////////////////////НАБОРЫ - Set/////////////////////////////
+        // Сеты это новые обьекты которые могут содержать только уникальные обьекты
+        // Вы запоминаете только те операции которые делаете каждый день
+
+        let a = new Set();
+        a.add(1);    // добавить еденицу (тут также есть индекс)
+        a.add(4);
+        a.add('Hello');
+        a.add('World');
+        // при добавлении элементов происходит строгая проверка
+        // если такой элемент есть, он не добавляется внутрь набора
+        // если добавить массив внутрь набора то мы получаем колекцию уникальных елементов
+        a.add(2);
+        a.add('2'); // ===
+        // a.clear();
+        a.delete('Hello'); // удаляет
+        console.log(a);
+        console.log(a[0]); // попытки обращаться к сету таким образом непроходят
+        console.log(a.length); // так тоже не стоит обращаться к обьекту
+        console.log(a.size); // количество элементов
+        console.log('has num:', a.has(2)); // есть такой елемент num ? true
+        console.log('has str:', a.has('2')); // есть такой елемен str? true
+
+        // for (let i = 0; i < a.size; i++) a[i] // это не подойдет и не будет
+        // for (let i in a) {
+        //     console.log(i);
+        // }
+        // работать так как это не массив, альтернатива:
+
+        for (let item of a){
+            console.log(item)
+        }
+
+        // как применять на практике?
+        let arr = [1, 2, ,3, 4, 5, 'hello', 6, 1, 3];
+        // мы передали массив в качестве параметра
+        let b = new Set(arr);
+        // Set обработал и создал новый набор на основе этого массива
+        console.log(b);
+
+        let bArr = Array.from(b);
+        console.log(bArr);
+        console.log(bArr[0]); // раньше не работало, то теперь работает
+                            // изза передачи массива в качестве параметра
+
+
+    </script>
+
+</body>
+</html>

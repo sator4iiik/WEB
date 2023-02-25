@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>каскадные таблицы стилей</title>
+    <style>
+        /*
+        выбиратель
+        селектор это некая вещь которая выбирает
+        определенный элемент на странице
+        */
+
+        html {
+            height: 100%;
+            /* width: 80%; */
+            /* нельзя взять проценты не от чего и это актуально для высоты
+            так как элемент будет запрашивать параметры высоты
+            */
+            /* все блочные элементы растягиваются по ширине */
+            /* все размеры устанавливаются относительно родительского элемента */
+        }
+
+        body {
+            height: 100%;
+            /* width: 50%; */
+        }
+
+        p {
+            /* правила  */
+            font-size: 24px;
+            font-family: monospace;
+            /* моноширишный одинаковое количество символов */
+            /* засечки используются для много текста как направляющие */
+            /* сохраняем шрифты одного типа */
+            color: blueviolet;
+            /* background-color: cornflowerblue; */
+            border: 1px solid;
+            padding: 5px;
+            text-align: center;
+            width: 50%;
+            /* white-space: nowrap; */
+            overflow: scroll;
+            text-overflow: normal;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            height: 100%;
+            /* текст выравнивается относительно текущего елемента */
+        }
+
+    </style>
+</head>
+<body>
+    <p>Параграф (от греческого: Параграф "написанное рядом")</p>
+</body>
+</html>
