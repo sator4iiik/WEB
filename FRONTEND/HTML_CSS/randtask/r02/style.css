@@ -6,6 +6,10 @@
     font-family: 'poppins', sans-serif;
 }
 
+html {
+    background-color: rgb(67, 73, 86)
+}
+
 section {
     display: flex;
     justify-content: center;
