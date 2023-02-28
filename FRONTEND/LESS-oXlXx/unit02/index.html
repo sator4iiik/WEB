@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        select {
+            font-family: 'Courier New', Courier, sans-serif;
+        }
+
+        option {
+            font-family: 'Courier New', Courier, sans-serif;
+        }
+
+        textarea {
+            font-family: 'Courier New', Courier, sans-serif;
+        }
+
+        #paragraph_first {
+            font-family: 'Courier New', Courier, sans-serif;
+            color: yellowgreen;
+        }
+
+        .wrapper {
+            margin: 0 auto;
+            /* автоматические отступы с лева и с права  */
+            color: yellowgreen;
+            width: 80%;
+            border: 3px solid;
+        }
+
+        .main {
+            color: violet;
+            border: 3px solid;
+            height: 150px;
+            overflow: hidden;
+            overflow-y: auto;
+            /* прокрутка не будет резервировать место под скролл overflow-y: auto*/
+        }
+
+        .block {
+            color: wheat;
+            border: 3px solid;
+            height: 300px;
+        }
+
+        [href="http://instagram.com"] {
+            font-size: 24px;
+            font-weight: bold;
+            color: fuchsia;
+        }
+
+        [name="user_comment"] {
+            background: greenyellow;
+        }
+
+        [class="block"] {
+            background-color: rgb(218, 203, 165);
+        }
+/*  class|= позволяет обратится ко всем элементаб блок как через регулярку*/
+        [class|="block"] {
+            width: 50%;
+            border: 1px solid;
+        }
+
+    </style>
+</head>
+<body>
+    <select>
+        <option>Lorem</option>
+        <option>Ipsum</option>
+        <option>Dolor</option>
+    </select>
+
+    <textarea></textarea>
+
+    <p id="paragraph_first text_green">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        Accusamus dolorum modi, suscipit laboriosam dolores
+        laudantium doloremque ad quod temporibus tempora eum
+        perspiciatis harum cum odit repellendus vero neque non
+        alias.
+    </p>
+
+    <div class="wrapper">
+        <div class="main">
+            <div class="block_yellow">
+                <!-- работает регулярка только на дефис -->
+                1
+            </div>
+            <div class="block-pink">
+                2
+            </div>
+            <div class="block-red">
+                3
+            </div>
+            <div class="block-cyan">
+                4
+            </div>
+            <div class="block-brown">
+                5
+            </div>
+        </div>
+    </div>
+
+    <a href="http://instagram.com">Instagram</a>
+    <a href="http://facebook.com">Facebook</a>
+    <a href="http://google.com">Google</a>
+
+    <textarea name="user_comment" cols="30" rows="10"></textarea>
+</body>
+</html>
