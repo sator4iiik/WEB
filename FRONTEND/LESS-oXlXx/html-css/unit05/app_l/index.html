@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <style>
+        /*
+        если убрать > и поставить пробел то выберет все спаны и покрасит все
+                .main span {
+            color: fuchsia;
+        }
+        */
+
+        .main > span {
+            color: fuchsia;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div>
+            <p>
+                <span>hello</span>
+            </p>
+        </div>
+    </div>
+    <div class="main">
+        <p>
+            <span>world</span>
+        </p>
+    </div>
+    <div class="main">
+        <span>!</span>
+    </div>
+</body>
+</html>

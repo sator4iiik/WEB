@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Переменная</title>
+    <style>
+        /* button { */
+            /* переменные регистрозависимые(если будет с большой буквы то это другая переменнная) */
+            /* --button_background_color: #00b156; */
+            /* --btn_bg_clr: #4000ff; */
+            /* --Btn_bg_clr: #858585; */
+            /* background-color: var(--btn_bg_clr); */
+            /* color: var(--Btn_bg_clr, white); */
+        /* } */
+
+        #btn_login {
+            /* переменные создаються для элементов но не для селекторов */
+            /* --btn_bg_clr: blue; */
+            --btn_bg_clr: green;
+        }
+
+        #btn_login_second {
+            --btn_bg_clr: orange;
+        }
+/*
+        #btn_login_admin {
+            --btn_bg_clr: orange;
+        } */
+
+        .button-small {
+            background-color: var(--btn_bg_clr, tomato);
+        }
+
+    </style>
+</head>
+<body>
+    <button class="button-small" id="btn_login">Вход</button>
+    <input  class="button-small" id="btn_login_second" type="button" value="Вход">
+    <a      class="button-small" id="btn_login_admin" href="">Вход</a>
+</body>
+</html>

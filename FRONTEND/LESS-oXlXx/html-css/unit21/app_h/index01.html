@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIT21 homework</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #234;
+        }
+
+        .row {
+            font-size: 0;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .row > div {
+            display: inline-block;
+            font-size: 16px;
+            height: 100%;
+            vertical-align: top;
+            overflow: hidden;
+            white-space: normal;
+        }
+
+        /* ////////////////////////////// */
+
+        div {
+            border: 1px solid darkred;
+            /* padding: 25px; */
+        }
+
+        /* ////////////////////////////// */
+
+        .box {
+            margin: 0 auto;
+            width: 800px;
+            height: 600px;
+        }
+
+        .box > .left {
+            width: 40%;
+        }
+
+        .box > .right {
+            width: 60%;
+        }
+
+        .box > .left > .top {
+            height: 80%;
+            border: 0;
+        }
+
+        .box > .left > .bottom {
+            height: 20%;
+        }
+
+        .box > .right > .top {
+            height: 20%;
+        }
+
+        .box > .right > .bottom {
+            height: 80%;
+        }
+
+        .box > .right > .bottom > .left {
+            width: 30%;
+        }
+
+        .box > .right > .bottom > .right {
+            width: 70%;
+        }
+
+        .box > .right > .bottom > .right > .top {
+            height: calc(100% / 3);
+        }
+
+        .box > .right > .bottom > .right > .middle {
+            height: calc(100% / 3);
+        }
+
+        .box > .right > .bottom > .right > .bottom {
+            height: calc(100% / 3);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box row">
+            <div class="left">
+                <div class="top"></div>
+                <div class="bottom"></div>
+            </div>
+            <div class="right">
+                <div class="top"></div>
+                <div class="bottom row">
+                    <div class="left"></div>
+                    <div class="right">
+                        <div class="top"></div>
+                        <div class="middle"></div>
+                        <div class="bottom"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

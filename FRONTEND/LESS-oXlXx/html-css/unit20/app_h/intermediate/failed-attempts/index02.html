@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        .row {
+            font-size: 0;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .col {
+            display: inline-block;
+            font-size: 16px;
+            height: 100%;
+            vertical-align: top;
+            overflow: hidden;
+        }
+
+        .two_rows {
+            background-color: chartreuse;
+            border: darkred 1px solid;
+            height: 300px;
+        }
+
+        /* ///////////////////////////////////////// */
+
+        .h10perc {
+            height: 10%;
+        }
+
+        .h20perc {
+            height: 20%;
+        }
+
+        .h30perc {
+            height: 30%;
+        }
+
+        .h40perc {
+            height: 40%;
+        }
+
+        .h50perc {
+            height: 50%;
+        }
+
+        .h60perc {
+            height: 60%;
+        }
+
+        .h80perc {
+            height: 80%;
+        }
+
+        /* ///////////////////////////////////////// */
+
+        .horisontal {
+            display: block;
+            border: darkred 1px solid;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="main">
+
+        <div class="two_rows">
+            <div class="row">
+                <div class="col left">
+                    <div class="col h20perc horisontal">
+                        <div class="blackline">d</div>
+                    </div>
+                    <div class="col h80perc horisontal">
+                        <div class="blackline">d</div>
+                    </div>
+                </div>
+                <div class="col right">
+                    <div class="col h80perc horisontal">
+                        <div class="blackline">d</div>
+                    </div>
+                    <div class="col h20perc horisontal">
+                        <div class="blackline">d</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

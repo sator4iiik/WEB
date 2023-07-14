@@ -1,0 +1,367 @@
+* {
+    box-sizing: border-box;
+    user-select: none;
+    margin: 0;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #234;
+    font-size: 18px;
+}
+
+.submit input[type="submit"] {
+    color: #234;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+    padding: 20px;
+}
+
+p {
+    padding: 8px;
+    text-indent: 7px;
+}
+
+form {
+    font-size: 12px;
+    margin: 4px;
+    align-items: middle;
+    color: rgb(255, 255, 255);
+}
+
+.row {
+    font-size: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.row > div {
+    display: inline-block;
+    font-size: 1rem;
+    height: 100%;
+    vertical-align: top;
+    overflow: hidden;
+    white-space: normal;
+}
+
+.first_form {
+    margin: 0 auto;
+    padding: 30px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 0 3px 0 #234;
+    background: linear-gradient(-45deg, #bbd2c5, #536976);
+
+}
+
+input[type="submit"] {
+    padding: 10px 25px;
+    font-size: 24px;
+    font-weight: 800;
+    border-radius: 20px;
+    background-color: #536976;
+    border: transparent;
+    box-shadow: 0 0 3px 0 #234;
+    text-shadow: 0 0 5px rgb(141, 145, 164);
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(102, 125, 255);
+    transition-duration: 300ms;
+    box-shadow: 0 0 25px 0 rgb(119, 139, 255);
+}
+
+.contact {
+    background-color: rgb(146, 217, 253);
+}
+
+.contact > .bottom > .first_form {
+    width: 60%;
+}
+
+.contact > .bottom > .first_form > form > input {
+    text-align: center;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+}
+
+
+.description {
+    overflow-y:auto;
+}
+
+/* /////////////////////////////////////// */
+
+.pave {
+    text-align: center;
+
+}
+
+.bottom > .left > .wrap_img > img {
+    width: 86px;
+    top: 40px;
+    padding-left: 5px;
+}
+
+.tile_comment {
+    width: 250px;
+    height: 100px;
+}
+
+.tile_comment > .top > span {
+    font-size: 10px;
+    padding-left: 5px;
+}
+
+.tile_comment > .bottom > .right > p {
+    /* position: relative; */
+    font-size: 10px;
+    /* left: 50px;
+    bottom: 75px; */
+    padding-right: 10px;
+}
+
+.pave > div {
+    border: rgb(132, 199, 234) solid 2px;
+    background-color: rgb(73, 108, 126);
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    text-align: left;
+    margin: 5px;
+}
+
+.bottom > .left {
+    width: 20%;
+}
+
+.bottom > .right {
+    width: 80%;
+}
+
+/* /////////////////////////////////////// */
+
+.wrap_img {
+    height: 100%;
+    text-align: center;
+}
+
+img {
+    position: relative;
+    /* border: red 1px solid; */
+    max-width: 100%;
+    max-height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+dt {
+    padding: 20px;
+}
+
+/* /////////////////////////////////////// */
+
+/* div {
+    border: 1px #a00 solid;
+} */
+
+/* /////////////////////////////////////// */
+
+.main > div {
+    height: 90vh;
+    min-height: 500px;
+    min-width: 800px;
+}
+
+.overview > .left {
+    width: 60%;
+}
+
+.overview > .right {
+    width: 40%;
+}
+
+.overview > .left > .top {
+    height: 15%;
+}
+
+.overview > .left > .middle {
+    height: calc(100% - 15% - 15%);
+    /* для того что бы удобно было писать размеры если изменятся */
+}
+
+.overview > .left > .bottom {
+    height: 15%;
+}
+
+.overview > .right > .middle {
+    height: 40%;
+}
+
+.description > .top {
+    height: 15%;
+}
+
+.description > .bottom {
+    height: 85%;
+    margin: 0 8px;
+}
+
+.offer > .left {
+    width: calc(100% / 3);
+}
+
+.offer > .center {
+    width: calc(100% / 3);
+}
+
+.offer > .right {
+    width: calc(100% / 3);
+}
+
+.offer > .center > .top {
+    height: calc(100% / 3);
+}
+
+.offer > .center > .center {
+    height: calc(100% / 3);
+}
+
+.offer > .center > .bottom {
+    height: calc(100% / 3);
+}
+
+.feedback > .top {
+    height: 15%;
+}
+
+.feedback > .bottom {
+    height: 85%;
+}
+
+.set > .left {
+    width: calc(100% / 3);
+}
+
+.set > .center {
+    width: calc(100% / 3);
+}
+
+.set > .right {
+    width: calc(100% / 3);
+}
+
+.set > .left > .top {
+    height: 15%;
+}
+
+.set > .left > .bottom {
+    height: 85%;
+}
+
+.set > .right > .top {
+    height: 15%;
+}
+
+.set > .right > .bottom {
+    height: 85%;
+}
+
+.contact > .top {
+    height: 15%;
+}
+
+.contact > .bottom {
+    height: 85%;
+}
+
+.order > .top {
+    height: 15%;
+}
+
+.order > .bottom {
+    height: 85%;
+}
+
+/* /////////////////////////////////////// */
+
+.description {
+    background: linear-gradient(-30deg, #bbd2c5, #536976);
+    color: white;
+}
+
+.offer > .left {
+    /* background-color: rgb(121, 209, 252); */
+}
+
+.offer > .center {
+    /* background-color: rgb(146, 217, 252); */
+}
+
+.feedback {
+    background: linear-gradient(-30deg, #bbd2c5, #536976);
+    color: white;
+}
+
+.set > .left {
+    /* background-color: rgb(72, 108, 126); */
+    color: #536976;
+}
+
+.set > .right {
+    /* background-color: rgb(121, 209, 252); */
+}
+
+/* /////////////////////////////////////// */
+
+.field_text > input {
+    width: 100%;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.submit {
+    text-align: center;
+}
+
+/* /////////////////////////////////////// */
+
+/*
+
+top middle bottom
+по вертикали
+или ряды
+сверху вниз
+====
+left center right
+по горизонтали
+или колонки
+слева направо
+
+*/
+
+
+/* /////////////////////////////////////// */
+
+h1,
+h2 {
+    background: linear-gradient(-45deg, #bbd2c5, #536976);
+    background-clip: text;
+    box-decoration-break: clone;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #59ffd6;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first button {
+            background-color: cyan;
+        }
+
+        span + button {
+            border: solid 5px black;
+        }
+
+        .main textarea {
+            background-color: limegreen;
+        }
+
+        .third span + textarea {
+            background-color: pink;
+        }
+
+        a ~ textarea {
+            border: 5px dotted greenyellow;
+            /* выберет все сестринские эелементы вниз (если тег текстерия будет выше то проигнорирует) */
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="first">
+            <p>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <a href="">a</a>
+                <span>span</span>
+                <button>button</button>
+            </p>
+            <button>3</button>
+        </div>
+        <div class="second">
+            <p>
+                <span>span</span>
+                <a href="">a</a>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <button>button</button>
+            </p>
+        </div>
+        <div class="third">
+            <p>
+                <a href="">a</a>
+                <button>button</button>
+                <span>span</span>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

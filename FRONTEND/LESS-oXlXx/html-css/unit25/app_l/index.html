@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Title</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header row">
+            <div class="left">
+                <div class="wrap_img">
+                    <img src="./logo.png" alt="logo">
+                </div>
+            </div>
+            <div class="center">
+                <div class="wrap row">
+                    <input type="search" name="search" id="search" value="Что ищем?">
+                    <input type="submit" value="🔍">
+                </div>
+            </div>
+            <div class="right">
+                <form action="">
+                    <div>
+                        <span>Нажмите кнопку</span>
+                    </div>
+                    <div>
+                        <input type="submit" value="Войти">
+                    </div>
+                    <div>
+                        <span>Либо <a href="_blank">зарегистируйтесь</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="navigation">
+            <span>></span>
+            <a href="">Каталог</a>
+            <span>></span>
+            <a href="">Электроника</a>
+            <span>></span>
+            <a href="">Компьютерная техника</a>
+            <span>></span>
+            <a href="">Собранные кромпьютеры</a>
+            <span>></span>
+        </div>
+        <div class="main row">
+            <div class="left">
+                <div class="aside">
+                    <form action="">
+                        <dl>
+                            <dt>
+                                <p>
+                                    <b>Бренд</b>
+                                </p>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="asus" name="brand" value="asus">
+                                <label for="asus">ASUS</label>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="acer" name="brand" value="acer">
+                                <label for="acer">Acer</label>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="apple" name="brand" value="apple">
+                                <label for="apple">Apple</label>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="dell" name="brand" value="dell">
+                                <label for="dell">Dell</label>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="hp" name="brand" value="dell">
+                                <label for="hp">HP</label>
+                            </dt>
+                            <dt>
+                                <p>
+                                    <b>
+                                        Цена
+                                    </b>
+                                </p>
+                            </dt>
+                            <dt>
+                                <label for="costof">От:</label>
+                                <div class="wrap_range">
+                                    <input type="range" name="costfrom" id="costof" value="20" min="0" max="100">
+                                </div>
+                                <label for="costto">До:</label>
+                                <div class="wrap_range">
+                                    <input type="range" name="costto" id="costto" value="80" min="0" max="100">
+                                </div>
+                            </dt>
+                            <dt>
+                                <p>
+                                    <b>
+                                        Процессор
+                                    </b>
+                                </p>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="ry3" name="processor" value="ry3">
+                                <label for="ry3">AMD Ryzen 3</label>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="ry5" name="processor" value="ry5">
+                                <label for="ry5">AMD Ryzen 5</label>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="ry7" name="processor" value="ry7">
+                                <label for="ry7">AMD Ryzen 7</label>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="i5" name="processor" value="i5">
+                                <label for="i5">Intel Core i5</label>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="i7" name="processor" value="i7">
+                                <label for="i7">Intel Core i7</label>
+                            </dt>
+                            <dt>
+                                <p>
+                                    <b>
+                                        ОЗУ
+                                    </b>
+                                </p>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="4ram" name="ram" value="4ram">
+                                <label for="4ram">4 Gb</label>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="8ram" name="ram" value="8ram">
+                                <label for="8ram">8 Gb</label>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="16ram" name="ram" value="16gram">
+                                <label for="16ram">16 Gb</label>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="32ram" name="ram" value="32ram">
+                                <label for="32ram">32 Gb</label>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="64ram" name="ram" value="64ram">
+                                <label for="64ram">64 Gb</label>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="128ram" name="ram" value="128ram">
+                                <label for="128ram">128 Gb</label>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="250ram" name="ram" value="250ram">
+                                <label for="250ram">250 Gb</label>
+                            </dt>
+                            <dt>
+                                <p>
+                                    <b>
+                                        Видеокарта
+                                    </b>
+                                </p>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="hd" name="videocard" value="hd">
+                                <label for="hd">Radeon HD</label>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="r" name="videocard" value="r">
+                                <label for="r">Radeon R</label>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="rx" name="videocard" value="rx">
+                                <label for="rx">Radeon RX</label>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="gtx" name="videocard" value="gtx">
+                                <label for="gtx">GeForce GTX</label>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="rtx" name="videocard" value="rtx">
+                                <label for="rtx">GeForce RTX</label>
+                            </dt>
+                            <dt>
+                                <p>
+                                    <b>
+                                        Накопитель
+                                    </b>
+                                </p>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="250gb" name="hdd" value="250gb">
+                                <label for="250gb">250 Gb</label>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="500gb" name="hdd" value="500gb">
+                                <label for="500gb">500 Gb</label>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="1tb" name="hdd" value="1tb">
+                                <label for="1tb">1 Tb</label>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="2tb" name="hdd" value="2tb">
+                                <label for="2tb">2 Tb</label>
+                            </dt>
+                            <dt>
+                                <input type="checkbox" id="4tb" name="hdd" value="4tb">
+                                <label for="4tb">4 Tb</label>
+                            </dt>
+                        </dl>
+                        <input type="submit" value="Фильтровать">
+                    </form>
+                </div>
+
+            </div>
+            <div class="right">
+                <div class="section">
+                    <div class="top">
+                        <div class="products pave">
+                            <div class="tile">
+                                <div class="top">
+                                    <p> Компьютер 001</p>
+                                </div>
+                                <div class="middle">
+                                    <img src="./monitor.png" alt="comp">
+                                </div>
+                                <div class="bottom">
+                                    <input type="submit" value="В корзину">
+                                </div>
+                            </div>
+                            <div class="tile">
+                                <div class="top">
+                                    <p> Компьютер 002</p>
+                                </div>
+                                <div class="middle">
+                                    <img src="./monitor.png" alt="comp">
+                                </div>
+                                <div class="bottom">
+                                    <input type="submit" value="В корзину">
+                                </div>
+                            </div>
+                            <div class="tile">
+                                <div class="top">
+                                    <p> Компьютер 003</p>
+                                </div>
+                                <div class="middle">
+                                    <img src="./monitor.png" alt="comp">
+                                </div>
+                                <div class="bottom">
+                                    <input type="submit" value="В корзину">
+                                </div>
+                            </div>
+                            <div class="tile">
+                                <div class="top">
+                                    <p> Компьютер 004</p>
+                                </div>
+                                <div class="middle">
+                                    <img src="./monitor.png" alt="comp">
+                                </div>
+                                <div class="bottom">
+                                    <input type="submit" value="В корзину">
+                                </div>
+                            </div>
+                            <div class="tile">
+                                <div class="top">
+                                    <p> Компьютер 005</p>
+                                </div>
+                                <div class="middle">
+                                    <img src="./monitor.png" alt="comp">
+                                </div>
+                                <div class="bottom">
+                                    <input type="submit" value="В корзину">
+                                </div>
+                            </div>
+                            <div class="tile">
+                                <div class="top">
+                                    <p> Компьютер 006</p>
+                                </div>
+                                <div class="middle">
+                                    <img src="./monitor.png" alt="comp">
+                                </div>
+                                <div class="bottom">
+                                    <input type="submit" value="В корзину">
+                                </div>
+                            </div>
+                            <div class="tile">
+                                <div class="top">
+                                    <p> Компьютер 007</p>
+                                </div>
+                                <div class="middle">
+                                    <img src="./monitor.png" alt="comp">
+                                </div>
+                                <div class="bottom">
+                                    <input type="submit" value="В корзину">
+                                </div>
+                            </div>
+                            <div class="tile">
+                                <div class="top">
+                                    <p> Компьютер 008</p>
+                                </div>
+                                <div class="middle">
+                                    <img src="./monitor.png" alt="comp">
+                                </div>
+                                <div class="bottom">
+                                    <input type="submit" value="В корзину">
+                                </div>
+                            </div>
+                            <div class="tile">
+                                <div class="top">
+                                    <p> Компьютер 009</p>
+                                </div>
+                                <div class="middle">
+                                    <img src="./monitor.png" alt="comp">
+                                </div>
+                                <div class="bottom">
+                                    <input type="submit" value="В корзину">
+                                </div>
+                            </div>
+                            <div class="tile">
+                                <div class="top">
+                                    <p> Компьютер 010</p>
+                                </div>
+                                <div class="middle">
+                                    <img src="./monitor.png" alt="comp">
+                                </div>
+                                <div class="bottom">
+                                    <input type="submit" value="В корзину">
+                                </div>
+                            </div>
+                            <div class="tile">
+                                <div class="top">
+                                    <p> Компьютер 011</p>
+                                </div>
+                                <div class="middle">
+                                    <img src="./monitor.png" alt="comp">
+                                </div>
+                                <div class="bottom">
+                                    <input type="submit" value="В корзину">
+                                </div>
+                            </div>
+                            <div class="tile">
+                                <div class="top">
+                                    <p> Компьютер 012</p>
+                                </div>
+                                <div class="middle">
+                                    <img src="./monitor.png" alt="comp">
+                                </div>
+                                <div class="bottom">
+                                    <input type="submit" value="В корзину">
+                                </div>
+                            </div>
+                            <div class="tile">
+                                <div class="top">
+                                    <p> Компьютер 013</p>
+                                </div>
+                                <div class="middle">
+                                    <img src="./monitor.png" alt="comp">
+                                </div>
+                                <div class="bottom">
+                                    <input type="submit" value="В корзину">
+                                </div>
+                            </div>
+                            <div class="tile">
+                                <div class="top">
+                                    <p> Компьютер 014</p>
+                                </div>
+                                <div class="middle">
+                                    <img src="./monitor.png" alt="comp">
+                                </div>
+                                <div class="bottom">
+                                    <input type="submit" value="В корзину">
+                                </div>
+                            </div>
+                            <div class="tile">
+                                <div class="top">
+                                    <p> Компьютер 015</p>
+                                </div>
+                                <div class="middle">
+                                    <img src="./monitor.png" alt="comp">
+                                </div>
+                                <div class="bottom">
+                                    <input type="submit" value="В корзину">
+                                </div>
+                            </div>
+                            <div class="tile">
+                                <div class="top">
+                                    <p> Компьютер 016</p>
+                                </div>
+                                <div class="middle">
+                                    <img src="./monitor.png" alt="comp">
+                                </div>
+                                <div class="bottom">
+                                    <input type="submit" value="В корзину">
+                                </div>
+                            </div>
+                            <div class="tile">
+                                <div class="top">
+                                    <p> Компьютер 017</p>
+                                </div>
+                                <div class="middle">
+                                    <img src="./monitor.png" alt="comp">
+                                </div>
+                                <div class="bottom">
+                                    <input type="submit" value="В корзину">
+                                </div>
+                            </div>
+                            <div class="tile">
+                                <div class="top">
+                                    <p> Компьютер 018</p>
+                                </div>
+                                <div class="middle">
+                                    <img src="./monitor.png" alt="comp">
+                                </div>
+                                <div class="bottom">
+                                    <input type="submit" value="В корзину">
+                                </div>
+                            </div>
+                            <div class="tile">
+                                <div class="top">
+                                    <p> Компьютер 019</p>
+                                </div>
+                                <div class="middle">
+                                    <img src="./monitor.png" alt="comp">
+                                </div>
+                                <div class="bottom">
+                                    <input type="submit" value="В корзину">
+                                </div>
+                            </div>
+                            <div class="tile">
+                                <div class="top">
+                                    <p> Компьютер 020</p>
+                                </div>
+                                <div class="middle">
+                                    <img src="./monitor.png" alt="comp">
+                                </div>
+                                <div class="bottom">
+                                    <input type="submit" value="В корзину">
+                                </div>
+                            </div>
+                            <div class="tile">
+                                <div class="top">
+                                    <p> Компьютер 021</p>
+                                </div>
+                                <div class="middle">
+                                    <img src="./monitor.png" alt="comp">
+                                </div>
+                                <div class="bottom">
+                                    <input type="submit" value="В корзину">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="pagination">
+                            <a href="">[1]</a>
+                            <a href="">[2]</a>
+                            <a href="">[3]</a>
+                            <a href="">[4]</a>
+                            <a href="">[5]</a>
+                            <a href="">[6]</a>
+                            <a href="">[7]</a>
+                            <a href="">[8]</a>
+                            <a href="">[9]</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="top row">
+                <div class="left">
+                    <div><a href="">О нас</a></div>
+                    <div><a href="">Контакты</a></div>
+                    <div><a href="">Новости</a></div>
+                    <div><a href="">Отзывы</a></div>
+                    <div><a href="">Акции</a></div>
+                </div>
+                <div class="right">
+                    <div><a href="">Гарантия</a></div>
+                    <div><a href="">Возврат товара</a></div>
+                    <div><a href="">Кредит</a></div>
+                    <div><a href="">Подарочные сертификаты</a></div>
+                    <div><a href="">Стать партнером</a></div>
+                </div>
+            </div>
+            <div class="bottom">
+                <span>Lorem Ipsum &copy; 2023 Все права защищены</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

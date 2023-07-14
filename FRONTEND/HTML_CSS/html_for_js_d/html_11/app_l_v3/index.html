@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        /* от 700 до 1200 */
+        .main {
+            max-width: 1200px;
+            background-color: burlywood;
+            padding: 10px;
+            margin: 0 auto;
+            height: 100vh;
+            color: rgb(137, 70, 82);
+        }
+
+        .one,
+        .two,
+        .three {
+            float: left;
+            height: 50vh;
+        }
+
+        .main::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .one {
+            background-color: rgb(221, 213, 128);
+            width: calc(100% / 3);
+        }
+
+        .two {
+            background-color: rgb(229, 221, 172);
+            width: calc(100% / 3);
+        }
+
+        .three {
+            background-color: rgb(255, 202, 241);
+            width: calc(100% / 3);
+        }
+
+        /* от 500 до 700 */
+        @media (max-width: 700px){
+            .main {
+                background: greenyellow;
+            }
+
+            .one,
+            .two {
+                width: 50%;
+                margin-bottom: 20px;
+            }
+
+            .three {
+                width: 100%;
+            }
+        }
+
+        /* от нуля до 500 */
+        @media (max-width: 500px){
+            .main {
+                background: rgb(90, 255, 181);
+            }
+
+            .one,
+            .two,
+            .three {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="one">one</div>
+        <div class="two">two</div>
+        <div class="three">three</div>
+    </div>
+</body>
+</html>

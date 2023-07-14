@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>формы пользовательского ввода</title>
+    <style>
+        label {
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="http://34.71.150.163/form/get_test.php" target="_blank">
+        <label for="username">ваше имя пользователя:</label>
+        <!-- /FRONTEND/LESS-oXlXx/unit06/index.html?username=baaaaaa  -->
+        <input type="text" name="username" id="username">
+        <!-- FRONTEND/LESS-oXlXx/unit06/index.html?username=baaaaaa&is_agree=on -->
+        <input type="checkbox" name="is_agree" id="is_agree">
+        <!--  name="is_agree" id="is_agree" они не пересекаются-->
+        <label for="is_agree">Я согласен с условиями</label>
+        <input type="submit" value="send">
+    </form>
+</body>
+</html>

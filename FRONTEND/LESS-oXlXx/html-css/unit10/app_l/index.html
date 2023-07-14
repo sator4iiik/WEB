@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Размещаем div`ы в ряд</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .row {
+            font-size: 0;
+        }
+
+        .col {
+            border: 1px solid;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        .left {
+            /* 33.3 не подходит или 5% 25% 70%*/
+            /* width: calc(100% / 3) - калькулятор */
+            width: 30%;
+            width: calc(100% / 4)
+        }
+
+        .center_1 {
+            width: 40%;
+            width: calc(100% / 4)
+        }
+
+        .center_2 {
+            width: 40%;
+            width: calc(100% / 4)
+        }
+
+        .right {
+            width: 30%;
+            width: calc(100% / 4)
+        }
+
+    </style>
+</head>
+<body>
+    <!-- row - значит ряд слева на право col колонка -->
+    <div class="row">
+        <div class="col left">
+            <h2>
+                Подзаголовок_1
+            </h2>
+        </div>
+        <div class="col center_1">
+            <h2>
+                Подзаголовок_2
+            </h2>
+        </div>
+        <div class="col center_2">
+            <h2>
+                Подзаголовок_3
+            </h2>
+        </div>
+        <div class="col right">
+            <h2>
+                Подзаголовок_4
+            </h2>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- связаная таблица стилей  -->
+    <link rel="stylesheet" href="./style.css">
+    <!--
+            какой первый подключится тот будет иметь самый низкий приоритет
+            потому что документ читается сверху в низ
+    -->
+
+    <style>
+        /* звездочка это универсалный селектор */
+        * {
+            box-sizing: border-box;
+            color: dodgerblue;
+        }
+        /* внутренняя таблица стилей */
+
+        /*
+        у html специфичность 1 а у
+        универсального селектора * специфичности нет
+        универсальный селектор проставляет каждому персонально
+        (а не из наследования)
+        */
+
+        html {
+            font-size: 28px;
+        }
+
+        span {
+            text-decoration: underline;
+        }
+
+        p, span {
+            border: 1px solid darkred;
+        }
+
+        /* span {
+            color: crimson;
+        } */
+
+        div {
+            color: orangered;
+        }
+
+        p {
+            /* color: lime; */
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        qwerty
+        <p>
+            <!-- инлайновая таблица стилей -->
+            <span style="text-decoration: none"> Hello World! </span>
+            Bye ...
+        </p>
+    </div>
+</body>
+</html>

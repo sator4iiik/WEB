@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обтекаемый блок (блок - плот)</title>
+    <style>
+        html {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 100%;
+            color: #2c3e50;
+        }
+
+        .main {
+            width: 90%;
+            margin: 0 auto;
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .float {
+            /* блочные будут подтекать под плот */
+            /* строчные будут обтекать как ряска плот (строчноблочные так же) */
+            /* для того что бы блок не подтекал под плот есть свойство clear: left; */
+            float: left;
+            /* float: right; */
+            width: 150px;
+            height: 200px;
+            margin: 15px;
+            padding: 5px;
+            background-color: rgb(86, 80, 75);
+            color: white;
+        }
+
+        .float-r {
+            height: 100px;
+            float: left;
+        }
+
+        .water {
+            padding: 5px;
+            background-color: skyblue;
+        }
+
+        .coast {
+            /* clear: left;
+            clear: right; */
+            clear: both;
+            padding: 5px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Обтекаемый блок (блок - плот)</h1>
+        <div class="float">
+            <p>Плот</p>
+        </div>
+        <div class="float float-r">
+            <p>Плот2</p>
+        </div>
+        <p class="water">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, nihil? Natus nam, facilis quasi facere qui ipsa? Eius praesentium, eaque dolorum quia iure eum vitae. Autem inventore maxime repellat accusantium?
+        </p>
+        <p class="water">
+            Perferendis dolor voluptas illum maiores eius et, nemo harum dolorum, blanditiis laboriosam cupiditate rem quidem molestias similique rerum magnam voluptate. Ipsum sapiente doloremque laborum illum veritatis vel saepe, inventore quia?
+        </p>
+        <p class="coast">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus provident eum placeat atque aspernatur, iste omnis voluptates expedita molestias nesciunt natus! Delectus voluptate temporibus cupiditate, ipsam neque atque rerum veritatis.
+        </p>
+        <p class="coast">
+            Nulla autem, eos vero natus a nihil nobis laborum iste asperiores iusto temporibus sequi recusandae aut tempore est in. Error doloribus reprehenderit earum nobis quos in, aspernatur recusandae numquam et.
+        </p>
+    </div>
+</body>
+</html>

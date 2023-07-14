@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* общий комбинатор дочерних селекторов */
+        /* позволяет выбрать вложенный элемент */
+        .main > .wrap > p {
+            color: orangered;
+        }
+
+        .main > .wrap > p > span {
+            color: black;
+        }
+
+        .main > p > span {
+            border: solid 1px fuchsia;
+        }
+
+        .main > .wrap > span {
+            background: crimson;
+        }
+
+        .main > .wrap + .wrap > p + span + a {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        /* таким образом с пробелом я выберу все элементы а которые находятся внутри
+        врап на любом уровне вложенности*/
+        .wrap a {
+            font-size: 26px;
+        }
+
+        /* 26px */
+
+        /* БЭМ тейл-вин атомик css */
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="wrap">
+            <p>
+                Параграф_1
+                <span>Строчка_1</span>
+                <a href="">Ссылка_1</a>
+            </p>
+            <span>Строчка_01</span>
+            <a href="">Ссылка_01</a>
+        </div>
+        <div class="wrap">
+            <p>
+                Параграф_2
+                <span>Строчка_2</span>
+                <a href="">Ссылка_2</a>
+            </p>
+            <span>Строчка_02</span>
+            <a href="">Ссылка_02</a>
+        </div>
+        <p>
+            Параграф_3
+            <span>Строчка_3</span>
+            <a href="">Ссылка_3</a>
+        </p>
+        <span>Строчка_4</span>
+        <a href="">Ссылка_4</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit19 t00 homework</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 4px;
+        }
+
+        .row {
+            font-size: 0;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .col {
+            display: inline-block;
+            font-size: 16px;
+            height: 100%;
+            overflow: hidden;
+            white-space: normal;
+            border: 2px solid white;
+            vertical-align: top;
+        }
+
+        .base_col {
+            width: calc(100% / 3);
+            height: 400px;
+        }
+
+        /* ////////////////////////////////////// */
+
+        .first > .top {
+            height: calc(100% / 2);
+        }
+
+        .first > .bottom {
+            height: calc(100% / 2);
+        }
+
+        /* ////////////////////////////////////// */
+
+        .second > .top {
+            height: calc(100% / 3);
+        }
+
+        .second > .middle {
+            height: calc(100% / 3);
+        }
+
+        .second > .bottom {
+            height: calc(100% / 3);
+        }
+
+        /* ////////////////////////////////////// */
+
+        .third > .top {
+            height: calc(100% / 4);
+        }
+
+        .third > .middle_top {
+            height: calc(100% / 4);
+        }
+
+        .third > .middle_bottom {
+            height: calc(100% / 4);
+        }
+
+        .third > .bottom {
+            height: calc(100% / 4);
+        }
+
+        /* ////////////////////////////////////// */
+
+        .first {
+            background-color: rgb(1, 255, 0);
+        }
+
+        .second {
+            background-color: fuchsia;
+        }
+
+        .third {
+            background-color: cyan;
+        }
+
+        /* ////////////////////////////////////// */
+
+        .w10perc {
+            width: 10%;
+        }
+
+        .w20perc {
+            width: 20%;
+        }
+
+        .w30perc {
+            width: 30%;
+        }
+
+        .w40perc {
+            width: 40%;
+        }
+
+        .w50perc {
+            width: 50%;
+        }
+
+        .w60perc {
+            width: 60%;
+        }
+
+        .w80perc {
+            width: 80%;
+        }
+
+        /* ////////////////////////////////////// */
+
+        .blackline {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: black;
+            height: 35px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="wrap">
+            <div class="row base_row">
+                <div class="col base_col first">
+                    <div class="row top">
+                        <div class="col w80perc">
+                            <div class="blackline"></div>
+                        </div>
+                        <div class="col w20perc">
+                            <div class="blackline"></div>
+                        </div>
+                    </div>
+                    <div class="row bottom">
+                        <div class="col w20perc">
+                            <div class="blackline"></div>
+                        </div>
+                        <div class="col w80perc">
+                            <div class="blackline"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col base_col second">
+                    <div class="row top">
+                        <div class="col w20perc">
+                            <div class="blackline"></div>
+                        </div>
+                        <div class="col w60perc">
+                            <div class="blackline"></div>
+                        </div>
+                        <div class="col w20perc">
+                            <div class="blackline"></div>
+                        </div>
+                    </div>
+                    <div class="row middle">
+                        <div class="col w20perc">
+                            <div class="blackline"></div>
+                        </div>
+                        <div class="col w20perc">
+                            <div class="blackline"></div>
+                        </div>
+                        <div class="col w60perc">
+                            <div class="blackline"></div>
+                        </div>
+                    </div>
+                    <div class="row bottom">
+                        <div class="col w60perc">
+                            <div class="blackline"></div>
+                        </div>
+                        <div class="col w20perc">
+                            <div class="blackline"></div>
+                        </div>
+                        <div class="col w20perc">
+                            <div class="blackline"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col base_col third">
+                    <div class="row top">
+                        <div class="col w10perc">
+                            <div class="blackline"></div>
+                        </div>
+                        <div class="col w10perc">
+                            <div class="blackline"></div>
+                        </div>
+                        <div class="col w50perc">
+                            <div class="blackline"></div>
+                        </div>
+                        <div class="col w30perc">
+                            <div class="blackline"></div>
+                        </div>
+                    </div>
+                    <div class="row middle_top">
+                        <div class="col w20perc">
+                            <div class="blackline"></div>
+                        </div>
+                        <div class="col w40perc">
+                            <div class="blackline"></div>
+                        </div>
+                        <div class="col w20perc">
+                            <div class="blackline"></div>
+                        </div>
+                        <div class="col w20perc">
+                            <div class="blackline"></div>
+                        </div>
+                    </div>
+                    <div class="row middle_bottom">
+                        <div class="col w50perc">
+                            <div class="blackline"></div>
+                        </div>
+                        <div class="col w10perc">
+                            <div class="blackline"></div>
+                        </div>
+                        <div class="col w30perc">
+                            <div class="blackline"></div>
+                        </div>
+                        <div class="col w10perc">
+                            <div class="blackline"></div>
+                        </div>
+                    </div>
+                    <div class="row bottom">
+                        <div class="col w10perc">
+                            <div class="blackline"></div>
+                        </div>
+                        <div class="col w20perc">
+                            <div class="blackline"></div>
+                        </div>
+                        <div class="col w10perc">
+                            <div class="blackline"></div>
+                        </div>
+                        <div class="col w60perc">
+                            <div class="blackline"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

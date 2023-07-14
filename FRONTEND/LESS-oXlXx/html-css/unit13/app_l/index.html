@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* выше есть узел window, узлы выбирать не могу с помощью css но в js да */
+
+        * {
+            user-select: none;
+        }
+
+        html {
+            font-family: sans-serif;
+            font-size: 100%;
+            color: #2c3e50;
+            margin: 16px;
+            position: relative;
+            /* overflow: hidden; */
+        }
+
+        body {
+            position: relative;
+        }
+
+        .main {
+            position: relative;
+            width: 70%;
+            /* max-width && min-width выше приоритет чем у width */
+            max-width: 600px;
+            min-width: 300px;
+            margin: 0 auto;
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .blocks {
+            margin-bottom: 5px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            background-color: lightblue;
+        }
+
+        .block2 {
+            background-color: lightseagreen;
+            position: absolute;
+            top: 0;
+            left: 200px;
+            width: 200px;
+            z-index: 9999;
+            /* z-index: 9999;  это пространство для маневра что бы не душить себя слоями*/
+        }
+
+        .block3 {
+            background-color: lightpink;
+            /* width: 100%; */
+            /* height: 50%; */
+            /* position: static; */
+            /* relative сдвиг от относительной позиции */
+            /* position: relative; */
+            position: absolute;
+            /* top: 0; */
+            /* left: 0; */
+            /* сдвиг левой позиции на 50px */
+            /* left: 50px; */
+            /* top: 50px; */
+            /* right: 50px; */
+            /* bottom: 50px; */
+            /*  left: -50px; отрицатильные значения позволяют вылезти за родителя */
+            /* left: 15px; */
+            /* width: 50%;  */
+            top: 15px;
+            right: 15px;
+            width: 300px;
+            z-index: 1;
+            /* relative действует относительно своей невидимой копии на предыдущем(базовом) месте */
+        }
+
+        .block5 {
+            background-color: lightslategray;
+            position: absolute;
+            top: 15px;
+            left: 150px;
+            width: 300px;
+            z-index: 2;
+        }
+
+        .block9 {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            width: calc(100% - 40px);
+        }
+    </style>
+</head>
+<body>
+    <a href="#myhash">перейти</a>
+    <div class="main">
+        <div class="header">
+            <h1>title</h1>
+        </div>
+        <div class="content">
+            <div class="blocks block1">
+                <div class="head">
+                    <h2>block1</h2>
+                </div>
+                <div class="body">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa impedit facilis asperiores eveniet aperiam enim iusto maiores eum minima quae, reprehenderit repellat autem magni consectetur dolorum necessitatibus qui quam sint.</p>
+                </div>
+            </div>
+            <div class="blocks block2">
+                <div class="head">
+                    <h2>block2</h2>
+                </div>
+                <div class="body">
+                    <p>Impedit at fugit laudantium, porro corrupti eligendi vero dolorum! Quia mollitia iste sequi omnis quibusdam corporis velit rem pariatur alias laboriosam facilis, modi praesentium sed ipsum, nam nulla suscipit ab.</p>
+                </div>
+            </div>
+            <div class="blocks block3">
+                <div class="head">
+                    <h2>block3</h2>
+                </div>
+                <div class="body">
+                    <p>Ipsum tenetur similique </p>
+                </div>
+            </div>
+            <div class="blocks block4" style="background-color: lightpink;">
+                <div class="head">
+                    <h2>block4</h2>
+                </div>
+                <div class="body">
+                    <p>Nulla rerum praesentium et aspernatur ut aperiam maiores voluptate quidem quam, natus consequuntur aliquam iste eius harum vel doloribus illum tenetur excepturi labore deleniti odio officia. Aspernatur nesciunt nihil tempora?</p>
+                </div>
+            </div>
+            <div class="blocks block5">
+                <div class="head">
+                    <h2>block5</h2>
+                </div>
+                <div class="body">
+                    <p>Magnam rerum adipisci dolore quisquam tempore repellendus aspernatur perspiciatis cupiditate illo atque itaque sunt, nulla mollitia dicta vel commodi. Fugiat animi sit eveniet, vel reprehenderit nemo voluptas ipsa eum veniam!</p>
+                </div>
+            </div>
+            <div class="blocks block6">
+                <div class="head">
+                    <h2>block6</h2>
+                </div>
+                <div class="body">
+                    <p>Ex non labore fugiat repudiandae. Incidunt sed amet ut. Commodi, atque, ducimus voluptates facilis dolore consequatur aut quasi sed odio, qui quo quibusdam veritatis non ipsum aliquam. Assumenda, nostrum exercitationem.</p>
+                </div>
+            </div>
+            <div class="blocks block7">
+                <div class="head">
+                    <h2>block7</h2>
+                </div>
+                <div class="body">
+                    <p>Nobis facere, quidem ratione minus ipsum dolores harum magni qui eligendi fuga, quos, officia temporibus nihil nostrum accusamus voluptatibus nam repudiandae quas numquam aliquam odit nulla corrupti accusantium exercitationem. Dolore!</p>
+                </div>
+            </div>
+            <div class="blocks block8">
+                <div class="head">
+                    <h2>block8</h2>
+                </div>
+                <div class="body">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa impedit facilis asperiores eveniet aperiam enim iusto maiores eum minima quae, reprehenderit repellat autem magni consectetur dolorum necessitatibus qui quam sint.</p>
+                </div>
+            </div>
+            <div class="blocks block9">
+                <div class="head">
+                    <h2>block9</h2>
+                </div>
+                <div class="body">
+                    <p>Impedit at fugit</p>
+                </div>
+            </div>
+            <div class="blocks block10">
+                <div class="head">
+                    <h2>block10</h2>
+                </div>
+                <div class="body">
+                    <p>Ipsum tenetur similique </p>
+                </div>
+            </div>
+            <div class="blocks block11" style="background-color: lightpink;">
+                <div class="head">
+                    <h2>block11</h2>
+                </div>
+
+                <div class="body">
+                    <p>Nulla rerum praesentium et aspernatur ut aperiam maiores voluptate quidem quam, natus consequuntur aliquam iste eius harum vel doloribus illum tenetur excepturi labore deleniti odio officia. Aspernatur nesciunt nihil tempora?</p>
+                </div>
+            </div>
+            <div class="blocks block12" id="myhash">
+                <div class="head">
+                    <h2>block12</h2>
+                </div>
+                <div class="body">
+                    <p>Magnam rerum adipisci dolore quisquam tempore repellendus aspernatur perspiciatis cupiditate illo atque itaque sunt, nulla mollitia dicta vel commodi. Fugiat animi sit eveniet, vel reprehenderit nemo voluptas ipsa eum veniam!</p>
+                </div>
+            </div>
+            <div class="blocks block13">
+                <div class="head">
+                    <h2>block13</h2>
+                </div>
+                <div class="body">
+                    <p>Ex non labore fugiat repudiandae. Incidunt sed amet ut. Commodi, atque, ducimus voluptates facilis dolore consequatur aut quasi sed odio, qui quo quibusdam veritatis non ipsum aliquam. Assumenda, nostrum exercitationem.</p>
+                </div>
+            </div>
+            <div class="blocks block14">
+                <div class="head">
+                    <h2>block14</h2>
+                </div>
+                <div class="body">
+                    <p>Nobis facere, quidem ratione minus ipsum dolores harum magni qui eligendi fuga, quos, officia temporibus nihil nostrum accusamus voluptatibus nam repudiandae quas numquam aliquam odit nulla corrupti accusantium exercitationem. Dolore!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

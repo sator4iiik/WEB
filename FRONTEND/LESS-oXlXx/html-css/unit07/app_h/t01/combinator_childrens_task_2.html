@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html {
+      font-family: 'Franklin Gothic', Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      color: #fff;
+    }
+    a {
+      color: #fff;
+    }
+    p {
+      padding: 5px;
+      background-color: #555;
+    }
+    .container {
+      border: 2px solid #aaa;
+      padding: 5px;
+      margin-bottom: 5px;
+    }
+    .wrap {
+      border: 1px dashed #aaa;
+      padding: 5px;
+      margin-bottom: 5px;
+    }
+
+    /* добавлять стили только сюда */
+
+    .main > .container > .wrap {
+      width: 80%;
+    }
+
+    .main > .container > .wrap > p + p {
+      background-color: black;
+    }
+
+    .main > .container > .wrap + .wrap {
+      width: 60%;
+    }
+
+    .main > .container > .wrap > p {
+      background-color: rgb(165, 255, 75);
+    }
+
+    .main > .container + .container {
+      width: 50%;
+    }
+
+    .main > .container + .wrap {
+      width: 50%;
+    }
+
+    .main > .container + .wrap > p {
+      background-color: rgb(165, 255, 75);
+      text-align: center;
+    }
+
+    .main > .container + .wrap > p + p {
+      background-color: rgb(224, 53, 193);
+    }
+
+    .container > .wrap + .wrap > p {
+      background-color: rgb(224, 53, 193);
+    }
+
+    .container + .container > .wrap > p {
+      background-color: cyan;
+    }
+
+    .container + .container > .wrap + .wrap > p {
+      background-color: crimson;
+    }
+    .container + .container > .wrap + .wrap > p + p {
+      background-color: black;
+    }
+
+    .main + .container > .wrap > p {
+      background-color: black;
+      text-align: center;
+    }
+
+    .main + .container > .wrap > p + p {
+      background-color: rgb(165, 255, 75);
+    }
+
+    .main + .container > .wrap + .wrap > p + p {
+      background-color: rgb(224, 53, 193);
+    }
+
+    .main + .container + .wrap > p {
+      background-color: black;
+      text-align: end;
+    }
+
+    .main + .container + .wrap > p + p {
+      background-color: cyan;
+    }
+
+    .main + .container + .wrap + p {
+      background-color: black;
+      text-align: end;
+    }
+
+    .main + .container + .wrap + p + p {
+      background-color: crimson;
+      text-align: end;
+    }
+
+    /* ниже этой строчки ничего не изменять */
+  </style>
+</head>
+<body>
+
+  <div class="main">
+
+    <div class="container">
+      <div class="wrap">
+        <p>paragraph <span>text</span> <a href="http://google.com">link</a></p>
+        <p>paragraph <span>text</span> <a href="http://google.com">link</a></p>
+      </div>
+      <div class="wrap">
+        <p>paragraph <span>text</span> <a href="http://google.com">link</a></p>
+        <p>paragraph <span>text</span> <a href="http://google.com">link</a></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="wrap">
+        <p>paragraph <span>text</span> <a href="http://google.com">link</a></p>
+        <p>paragraph <span>text</span> <a href="http://google.com">link</a></p>
+      </div>
+      <div class="wrap">
+        <p>paragraph <span>text</span> <a href="http://google.com">link</a></p>
+        <p>paragraph <span>text</span> <a href="http://google.com">link</a></p>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <p>paragraph <span>text</span> <a href="http://google.com">link</a></p>
+      <p>paragraph <span>text</span> <a href="http://google.com">link</a></p>
+    </div>
+
+  </div>
+
+  <div class="container">
+
+    <div class="wrap">
+      <p>paragraph <span>text</span> <a href="http://google.com">link</a></p>
+      <p>paragraph <span>text</span> <a href="http://google.com">link</a></p>
+    </div>
+    <div class="wrap">
+      <p>paragraph <span>text</span> <a href="http://google.com">link</a></p>
+      <p>paragraph <span>text</span> <a href="http://google.com">link</a></p>
+    </div>
+
+  </div>
+
+  <div class="wrap">
+    <p>paragraph <span>text</span> <a href="http://google.com">link</a></p>
+    <p>paragraph <span>text</span> <a href="http://google.com">link</a></p>
+  </div>
+
+  <p>paragraph <span>text</span> <a href="http://google.com">link</a></p>
+  <p>paragraph <span>text</span> <a href="http://google.com">link</a></p>
+
+
+
+
+
+
+</body>
+</html>

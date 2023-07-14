@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Комбинаторы селекторов</title>
+  <style>
+
+    html {
+      font-family: Calibri, Tahoma, sans-serif;
+      color: #2c3e50;
+    }
+
+    a {
+      font-style: italic;
+      color: gray;
+    }
+
+    p {
+      border: 1px solid #ccc;
+    }
+
+    /* добавлять код только в таблицу стилей */
+
+    h1 + a {
+      text-decoration: none;
+      font-weight: bold;
+      color: lime;
+      font-style: normal;
+      font-size: 20px;
+    }
+
+    h1 + a + a + a {
+      background-color: rgb(0, 115, 0);
+      color: honeydew;
+    }
+
+    a + p {
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-size: 24px;
+      text-decoration: underline;
+    }
+
+    h2 + a {
+      text-decoration: none;
+      font-style: normal;
+      font-weight: bold;
+      color: cyan;
+    }
+
+    h2 + a + a + a {
+      color: white;
+      background-color: blue;
+    }
+
+    a + p + p + p {
+      font-style: italic;
+      width: 25%;
+    }
+
+    [class="second"] + p + span {
+      font-style: italic;
+      font-size: 24px;
+      color: rgb(153, 0, 255);
+      font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    [class="second"] + p + span + span + span {
+      font-weight: bold;
+      border: rgb(255, 128, 0) 5px solid;
+    }
+
+    h3 + a {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 20px;
+      font-style: normal;
+      color: hotpink;
+    }
+
+    h3 + a + a + a {
+      color: ivory;
+      background-color: rgb(255, 117, 140);
+    }
+
+
+    /* html разметку страницы не трогать! */
+
+  </style>
+</head>
+<body>
+
+  <!-- html разметку страницы не трогать! -->
+
+  <div class="main">
+    <h1>h1</h1>
+    <a href="http://google.com">google_1</a>
+    <a class="second" href="http://google.com">google_2</a>
+    <a href="http://google.com">google_3</a>
+    <p>paragraph_001</p>
+    <p class="second">paragraph_002</p>
+    <p>paragraph_003</p>
+    <span>span_01</span>
+    <span class="second">span_02</span>
+    <span>span_03</span>
+    <h2>h2</h2>
+    <a href="http://facebook.com">facebook_1</a>
+    <a class="second" href="http://facebook.com">facebook_2</a>
+    <a href="http://facebook.com">facebook_3</a>
+    <p>paragraph_001</p>
+    <p class="second">paragraph_002</p>
+    <p>paragraph_003</p>
+    <span>span_01</span>
+    <span class="second">span_02</span>
+    <span>span_03</span>
+    <h3>h3</h3>
+    <a href="http://instagram.com">instagram_1</a>
+    <a class="second" href="http://instagram.com">instagram_2</a>
+    <a href="http://instagram.com">instagram_3</a>
+    <p>paragraph_001</p>
+    <p class="second">paragraph_002</p>
+    <p>paragraph_003</p>
+    <span>span_01</span>
+    <span class="second">span_02</span>
+    <span>span_03</span>
+  </div>
+
+</body>
+</html>

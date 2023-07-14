@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>box model</title>
+  <style>
+
+    /*
+    Суть этого урока показать какая бывает
+    проблемма с margin в блочной модели
+    и что решается она с помощью border: transparent 1px solid;
+    которая дает борт как помощь что бы оттолкнуться марджину
+    */
+
+    body {
+      margin: 0;
+      background-image: url('bg.png');
+    }
+    .content {
+      width: 100px;
+      height: 100px;
+      background-color: green;
+    }
+
+    .container {
+      /* display: inline-block; */
+      background-color: lightblue;
+
+      border: transparent 1px solid;
+      /* марджину нужно от чего то отталкиваться */
+    }
+
+
+    * {
+      /* box-sizing: content-box; */
+      box-sizing: border-box;
+    }
+    .wrap {
+      width: 300px;
+      height: 300px;
+      border: 50px solid;
+      padding: 50px;
+      margin: 50px;
+      background-color: khaki;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="wrap">
+      <div class="content"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="wrap">
+      <div class="content"></div>
+    </div>
+  </div>
+
+</body>
+</html>

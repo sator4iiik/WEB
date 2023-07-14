@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* для всего документа устанавливается через html а не через контейнер*/
+
+        * {
+            box-sizing: border-box;
+            /* запрещаем вылазить за свой контейнер */
+        }
+
+        html {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #234;
+        }
+
+        .container {
+            border: 1px solid;
+            width: 300px;
+            padding: 10px;
+        }
+
+        /* марджин используется в редких случаях */
+        .wrap_input_checkbox {
+            padding: 5px;
+        }
+
+        .wrap_input_text {
+            padding: 5px;
+        }
+
+        .wrap_input_text > input {
+            width: 100%;
+        }
+
+        label {
+            user-select: none;
+        }
+
+        .wrap_input_button  {
+            text-align: center;
+            padding: 5px;
+        }
+
+        /* проблемы с стратегией центровки */
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>
+            Отправка данных на сервер
+        </h3>
+        <form action="http://34.71.150.163/form/get_test.php" target="_blank">
+            <div class="wrap_input_text">
+                <label for="username">Ваше имя пользователя:</label>
+                <input type="text" name="username" id="username">
+            </div>
+            <div class="wrap_input_checkbox">
+                <input type="checkbox" name="is_agree" id="is_agree">
+                <label for="is_agree">Я согласен с условиями</label>
+            </div>
+            <div class="wrap_input_button">
+                <input type="submit" value="Отправить">
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>

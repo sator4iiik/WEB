@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            /* принято переменные обьявлять в html или в псевдокласс :root который ссылается на html */
+            --txt_size_medium: 26px;
+            --clr_bg: green;
+            --clr_text: #fff;
+        }
+
+        body {
+            --clr_bg: blue;
+        }
+
+        body > .container {
+            --clr_bg: fuchsia;
+        }
+
+        .main {
+            /* разные области видимости */
+            --clr_bg: red;
+        }
+
+        .main > .container {
+            /* разные области видимости */
+            --clr_bg: orange;
+        }
+
+        span {
+            font-size: var(--txt_size_medium, 10px);
+            background-color: var(--clr_bg);
+            color: var(--clr_text);
+        }
+
+        label {
+            font-size: var(--txt_size_medium, 10px);
+            background-color: var(--clr_text);
+            color: var(--clr_bg);
+        }
+
+        a {
+            font-size: var(--txt_size_medium, 10px);
+            background-color: var(--clr_bg);
+            color: var(--clr_text);
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <label class="button-small" id="btn_login">Вход1</label>
+            <span class="button-small" id="btn_login_second">Вход1</span>
+            <a class="button-small" id="btn_login_admin" href="">Вход1</a>
+        </div>
+        <label class="button-small" id="btn_login">Вход2</label>
+        <span class="button-small" id="btn_login_second">Вход2</span>
+        <a class="button-small" id="btn_login_admin" href="">Вход2</a>
+    </div>
+    <div class="container">
+        <label class="button-small" id="btn_login">Вход3</label>
+        <span class="button-small" id="btn_login_second">Вход3</span>
+        <a class="button-small" id="btn_login_admin" href="">Вход3</a>
+    </div>
+    <label class="button-small" id="btn_login">Вход4</label>
+    <span class="button-small" id="btn_login_second">Вход4</span>
+    <a class="button-small" id="btn_login_admin" href="">Вход4</a>
+</body>
+
+</html>

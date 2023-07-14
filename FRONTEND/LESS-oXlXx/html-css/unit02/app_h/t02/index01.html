@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding-top: 5px;
+        }
+
+        .container{
+            font-family: sans-serif;
+            color: rgb(80, 80, 80);
+            border: 1px solid;
+            padding: 5px;
+            width: 50%;
+        }
+
+        .container > div {
+            border: 1px solid rgb(80, 80, 80);
+            padding: 5px;
+            margin-bottom: 6px;
+        }
+
+        h1, h2 {
+            padding: 20px 0;
+        }
+
+        textarea {
+            width: 30%;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>
+                Оформление заказа
+            </h1>
+        </div>
+        <div class="mid">
+            <h2>
+                Содержимое заказа
+            </h2>
+            <span>Ваш заказ: </span>
+            <span> Монитор 3000грн (<a href="./monitor.png">карточка товара</a>), </span>
+            <span> Процессор 5000грн <a href="./cpu.png">карточка товара</a>, </span>w
+            <span>SSD 2000грн <a href="./ssd.png">карточка товара</a>, </span>
+            <span>ОЗУ 2500грн <a href="./gpu.png">карточка товара</a>, </span>
+            <span>Материнская плата 7000грн <a href="./monitor.png">карточка товара</a>, </span>
+            <div class="picture">
+                <image style="width: 15%;" src="./monitor.png"></image>
+                <image style="width: 15%;" src="./cpu.png"></image>
+                <image style="width: 15%;" src="./ssd.png"></image>
+                <image style="width: 15%;" src="./gpu.png"></image>
+                <image style="width: 15%;" src="./motherboard.png"></image>
+            </div>
+        </div>
+        <div class="delivery">
+            <h2>
+                Адресс доставки
+            </h2>
+            <select name="Выберете страну">
+                <option selected >Выберете страну</option>
+                <option value="Украина">Украина</option>
+                <option value="Польша">Польша</option>
+                <option value="Британия">Британия</option>
+            </select>
+            <select name="Выберете область">
+                <option selected >Выберете область</option>
+                <option value="district 1">область 1</option>
+                <option value="district 1">область 2</option>
+                <option value="district 1">область 3</option>
+            </select>
+            <select name="Выберете город">
+                <option selected >Выберете город</option>
+                <option value="city 1">Киев</option>
+                <option value="city 2">Харьков</option>
+                <option value="city 3">Одесса</option>
+                <option value="city 4">Тернополь</option>
+                <option value="city 5">Винница</option>
+            </select>
+            <select name="Выберете отделение почты">
+                <option selected >Выберете отделение почты</option>
+                <option value="n 1">n 1</option>
+                <option value="n 2">n 2</option>
+                <option value="n 3">n 3</option>
+            </select>
+        </div>
+        <div class="pay">
+            <h2>
+                Способ оплаты
+            </h2>
+            <select name="Выберете способ оплаты">
+                <option selected>Выберете способ оплаты</option>
+                <option  value="Наложным платежом">Наложным платежом</option>
+                <option value="Наличными курьеру">Наличными курьеру</option>
+                <option value="Наличными при самовывозе">Наличными при самовывозе</option>
+                <option value="Оплата картой">Оплата картой</option>
+                <option value="Банковский перевод">Банковский перевод</option>
+                <option value="Криптовалютой">Криптовалютой</option>
+            </select>
+        </div>
+        <div class="comment">
+            <h2>
+                Ваш комментарий
+            </h2>
+            <span>комментарий к заказу: </span>
+            <div class="wrapper">
+                <textarea></textarea>
+            </div>
+
+            <button>Заказать</button>
+        </div>
+    </div>
+</body>
+</html>

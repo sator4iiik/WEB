@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+
+            <fieldset>
+                <legend>
+                    План действий
+                </legend>
+                <ul>
+                    <li type="a"><b><u>Создать</u></b> упорядоченый список <i>а, b, с...</i> внутри элемента <b>fieldset</b>, в котором будет описан <u>план действий.</u></li>
+                    <li type="a"><b><u>Добавить</u></b> на страницу неупорядоченый список <b>ul</b> в котором будут <u>перечислены преимущества</u> форматирования по умолчанию для html элементов.</li>
+                    <li type="a"><b><u>Поместить</u></b> на странице <u>горизонтальную</u> линию <b>hr</b>.</li>
+                    <li type="a"><b><u>Разместить</u></b> после горизонтальной линии элемент списка определений <b>dl</b>, в котором дать определение терминам <u>html</u>, <u>css</u> u <u>javascript</u>.</li>
+                    <li type="a"><b><u>Вставить</u></b> элемент <b>progress</b> после нашего списка определений <b>dl</b>. <u>Затем</u> поставить разрыв строки <b>br</b>, что-бы визуально <i><u>отделить</u></i> контент на нашей странице.</li>
+                    <li type="a"><b><u>Попросить</u></b> пользователя выбрать <u>язык программирования</u> который он хочет изучить. К элементу ввода <b>input</b> подключить элемент списка данных <b>datalist</b>.</li>
+                    <li type="a"><b><u>Написать</u></b> листинг функции на <i><u>javascrpt</u></i>, которая выводит в консоль числа от 0 до 9. Использовать элемент <b>code</b>.</li>
+                    <li type="a"><b><u>Записать</u></b> математическое равенство <i><u>элиптическои кривой</u></i>. Использовать элемент <b>var</b>.</li>
+                    <li type="a"><b><u>Выписать</u></b> химическую формулу этилена.</li>
+                    <li type="a"><b><u>Спросить</u></b> у пользователя, является ли он роботом. Использовать элемент <b>fildset</b>.</li>
+                    <li type="a"><b><u>Выполнить</b></u> все пункты <i>плана</i>.</li>
+                </ul>
+            </fieldset>
+
+            <div class="wrap">
+                <p>Преимущества:</p>
+                <ul>
+                    <li type="square">Скорость создания <span title="HyperText Markup Language" style="text-decoration: underline dotted;">HTML</span> страницы</li>
+                    <li type="square">Отсутсвие необходимости создавать <span title="Cascading Style Sheets" style="text-decoration: underline dotted;">CSS</span> селекторы и добавлять стили, захламляя тем самым таблицу стилей</li>
+                    <li type="square">Упрощение читаемости <span title="HyperText Markup Language" style="text-decoration: underline dotted;">HTML</span> разметки</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <dl>
+                <dt>
+                    <b>html</b>
+                </dt>
+                <dd>
+                    <i>Стандартизированный язык гипертекстовой разметки документов для просмотра веб-странии в браузере.</i>
+                </dd>
+                <dt>
+                    <b>css</b>
+                </dt>
+                <dd>
+                    <i>Формальный язык описания внешнего вида веб-страницы, написанного с использованием языка разметки.</i>
+                </dd>
+                <dt>
+                    <b>javascript</b>
+                </dt>
+                <dd>
+                    <i>Мультипарадигменный язык программирования. Поддерживает объектно-ориентированный, императивный и финкицональный стили. Является реализацией спецификаиии EСMAScript (стандарт
+                        ECMA-262).</i>
+                </dd>
+            </dl>
+            <progress></progress>
+            <form>
+                <label for="prog_lang_choice">Какой <b>язык программирования</b> вы хотите изучить? </label>
+                <input list="prog_lang" id="prog_lang_choice" name="prog_lang_choice">
+
+                <datalist id="prog_lang">
+                    <option value="javascript"></option>
+                    <option value="python"></option>
+                    <option value="c"></option>
+                    <option value="java"></option>
+                    <option value="php"></option>
+                </datalist>
+            </form>
+
+            <hr>
+
+            <details>
+                <summary>
+                    Функция javascript
+                </summary>
+                <pre>
+                    <code>
+funtion showNumbers() {
+    for (let i = 0; i <= 9; i++) {
+        console.log(i);
+    }
+}
+                    </code>
+                </pre>
+            </details>
+            <details>
+                <summary>
+                    Каноническая форма эллиптической кривой
+                </summary>
+                <i>y<sup>2</sup> = x<sup>3</sup> + ax + b</i>
+            </details>
+
+            <details>
+                <summary>
+                    Не пейте это
+                </summary>
+                C<sub>2</sub>H<sub>5</sub>OH
+            </details>
+
+            <details>
+                <summary>
+                    Внезапно еще что то
+                </summary>
+                <pre>
+  L          TE
+    A       A
+      C    V
+       R A
+       DOU
+       LOU
+      REUSE
+      QUE TU
+      PORTES
+    ET QUI T'
+    ORNE O CI
+     VILISÉ
+    OTE-  TU VEUX
+     LA    BIEN
+    SI      RESPI
+            RER       - Apollinaire
+            </pre>
+
+            </details>
+            <form action="">
+                <fieldset>
+                    <legend>
+                        Подтвердите, что вы не робот
+                    </legend>
+                    <input type="checkbox" id="robot">
+                    <label for="robot">Я не робот</label>
+                    <input type="submit">
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

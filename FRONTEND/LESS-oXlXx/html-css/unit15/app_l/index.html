@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* дебаггинг цсс
+        1. не подключил таблицу стилей
+        2. не правильно написал селектор
+        3. свойство в селекторе проставленно неправельно
+        4. недостатачная специфичность стелектора (по этому что то переназначено поверх)
+        */
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .container {
+            width: 70%;
+            height: 150px;
+            margin: 0 auto;
+            background-color: green;
+        }
+
+        .container > div {
+            vertical-align: top;
+            width: calc(100% / 3);
+            border: 1px solid;
+            background-color: #0b0;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* браузер не проставил размеры строчным элементам */
+
+        /* .container > .center {
+            width: calc(100% / 3 + 1px);
+        } */
+
+        .container > .right {
+            background-color: transparent;
+        }
+
+        /* почему мы отделяем все колонки от всех рядов */
+
+        .row {
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: 0;
+        }
+
+        .row > div {
+            white-space: normal;
+            display: inline-block;
+            font-size: 16px;
+            height: 100%;
+            overflow: hidden;
+            vertical-align: top;
+        }
+
+        .wrap-h {
+            width: calc(100% / 6);
+        }
+
+        /* декларативность это декларация намерения */
+
+
+        .wrap-img {
+            width: calc(100% / 7);
+            padding: 5px;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container row">
+            <div class="left">
+                <p>left</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, ducimus necessitatibus quas molestiae cupiditate rem quibusdam? Aperiam veniam culpa nam reiciendis. Mollitia illo maiores incidunt molestias delectus velit accusamus. Fuga.</p>
+            </div>
+            <div class="center">
+                <p>center</p>
+            </div>
+            <div class="right">
+                <p>right</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="wrap-h">
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex optio culpa in aut distinctio nam tempora voluptas tenetur sit exercitationem, magnam eos, praesentium ducimus, voluptates quia consectetur dolorem commodi laborum!</h1>
+        </div>
+        <div class="wrap-h">
+            <h2>Quia laudantium fuga sit assumenda placeat cum omnis quae soluta modi delectus est beatae iure vitae officiis nisi vel magnam quo, dolorem fugiat? Perspiciatis nam mollitia velit aut fugiat sit.</h2>
+        </div>
+        <div class="wrap-h">
+            <h3>Impedit nam, nulla iusto, explicabo harum eum est quibusdam, velit natus voluptatum tempora laudantium sed voluptatibus sunt corporis odit voluptates incidunt culpa laboriosam. Alias ut possimus temporibus, perferendis nisi iure.</h3>
+        </div>
+        <div class="wrap-h">
+            <h4>Aspernatur mollitia fugiat quia vel, aliquid nemo excepturi optio quisquam rem expedita id sed dolor atque blanditiis facilis repellat facere eaque eum corrupti. Eius, esse doloribus! Minus consequuntur rem omnis.</h4>
+        </div>
+        <div class="wrap-h">
+            <h5>Illum fugiat laudantium distinctio earum similique, repellendus atque sequi. Numquam quos adipisci vero libero nulla corporis fuga nihil sapiente veritatis magnam autem dolorum modi aut, accusamus earum ut soluta cum!</h5>
+        </div>
+        <div class="wrap-h">
+            <h6>Ipsum sequi aspernatur laudantium sint, asperiores repellat quos! Ex ut accusamus, sequi sapiente nobis quia quae commodi voluptatem est minus vitae tempora quos voluptate repellat necessitatibus nesciunt sit tempore. Aliquid?</h6>
+        </div>
+    </div>
+    <div class="row">
+        <div class="wrap-img"><img src="./2.png" alt=""></div>
+        <div class="wrap-img"><img src="./4.png" alt=""></div>
+        <div class="wrap-img"><img src="./3.png" alt=""></div>
+        <div class="wrap-img"><img src="./4.png" alt=""></div>
+        <div class="wrap-img"><img src="./5.png" alt=""></div>
+        <div class="wrap-img"><img src="./6.png" alt=""></div>
+        <div class="wrap-img"><img src="./4.png" alt=""></div>
+    </div>
+</body>
+</html>

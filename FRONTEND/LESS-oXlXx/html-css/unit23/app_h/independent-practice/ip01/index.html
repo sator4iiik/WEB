@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit23 homework [independent-practice 01]</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #234;
+        }
+
+        .row {
+            font-size: 0;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .row > div {
+            display: inline-block;
+            font-size: 16px;
+            height: 100%;
+            vertical-align: top;
+            overflow: hidden;
+            white-space: normal;
+        }
+
+        /* /////////////////////// */
+
+        div {
+            border: 1px solid darkred;
+        }
+
+        /* /////////////////////// */
+
+        .box {
+            margin: 0 auto;
+            width: 360px;
+            height: 648px;
+        }
+
+        /* /////////////////////// */
+
+        .box > .top {
+            height: 30%;
+        }
+
+        .box > .middle {
+            height: 60%;
+        }
+
+        .box > .bottom {
+            height: 10%;
+        }
+
+        .box > .middle > .left {
+            width: 70%;
+        }
+
+        .box > .middle > .right {
+            width: 30%;
+        }
+
+        .box > .middle > .left > .top {
+            height: 100%;
+        }
+
+        .box > .middle > .left > .top > .left {
+            width: 30%;
+        }
+
+        .box > .middle > .left > .top > .right {
+            width: 70%;
+        }
+
+        .box > .middle > .right > .top {
+            height: calc(100% / 4);
+        }
+
+        .box > .middle > .right > .middle_top {
+            height: calc(100% / 4);
+        }
+
+        .box > .middle > .right > .middle_bottom {
+            height: calc(100% / 4);
+        }
+
+        .box > .middle > .right > .bottom {
+            height: calc(100% / 4);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+            <div class="top"></div>
+            <div class="middle row">
+                <div class="left">
+                    <div class="top row">
+                        <div class="left"></div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="top"></div>
+                    <div class="middle_top"></div>
+                    <div class="middle_bottom"></div>
+                    <div class="bottom"></div>
+                </div>
+            </div>
+            <div class="bottom"></div>
+        </div>
+    </div>
+</body>
+</html>

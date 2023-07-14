@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .row {
+            font-size: 0;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .row > div {
+            display: inline-block;
+            font-size: 16px;
+            height: 100%;
+            vertical-align: top;
+            overflow: hidden;
+            white-space: normal;
+        }
+
+        div {
+            border: 1px solid rgb(0, 0, 0);
+        }
+
+        .green_box {
+            background-color: lime;
+            height: 500px;
+        }
+
+        .w50perc {
+            width: 50%;
+        }
+
+        .h20perc {
+            height: 20%;
+        }
+
+        .h80perc {
+            height: 80%;
+        }
+
+        .top {
+            height: 300px;
+        }
+
+        .top > div {
+            width: calc(100% / 3);
+        }
+    </style>
+</head>
+<body>
+    <div class="green_box row">
+        <div class="w50perc">
+            <div class="h20perc"></div>
+            <div class="h80perc"></div>
+        </div>
+        <div class="w50perc">
+            <div class="h80perc"></div>
+            <div class="h20perc"></div>
+        </div>
+    </div>
+
+    <div class="top row">
+        <div class="green_box row">
+            <div class="w50perc">
+                <div class="h20perc"></div>
+                <div class="h80perc"></div>
+            </div>
+            <div class="w50perc">
+                <div class="h80perc"></div>
+                <div class="h20perc"></div>
+            </div>
+        </div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

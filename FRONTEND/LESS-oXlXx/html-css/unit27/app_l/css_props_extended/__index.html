@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      font-family: Calibri, sans-serif;
+      color: #234;
+      font-size: 26px;
+    }
+    body {
+      margin: 16px;
+    }
+    span {
+      border: 1px solid;
+    }
+    div {
+      border: 1px solid;
+    }
+    h1 {
+      text-align: center;
+    }
+
+
+
+/* марджин не влияет на высоту (есть рельсы по которым ездит) */
+    /* span {
+      margin: 10px;
+    } */
+
+    /* span {
+      padding: 10px;
+    } */
+
+    /* span {
+      padding: 10px;
+      margin: 10px;
+    } */
+
+    /* span {
+      display: inline-block;
+      padding: 10px;
+      margin: 10px;
+    } */
+
+
+
+
+    /* span {
+      display: inline-block;
+      width: 500px;
+      height: 70px;
+      text-align: center;
+    } */
+
+    /* span {
+      padding: 5px;
+    } */
+
+    /* span {
+      padding: 30px;
+    } */
+
+    /* span {
+      line-height: 70px;
+    } */
+
+    /* span {
+      height: 150px;
+      line-height: 150px;
+    } */
+
+    /* span {
+      height: 250px;
+    } */
+
+    /* body {
+      line-height: 250px;
+    } */
+
+
+
+
+    /* span {
+      border-radius: 10px;
+      border-bottom-left-radius: 19px;
+      display: inline-block;
+      width: 500px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+    } */
+
+    /* span {
+      border-radius: 25px;
+    } */
+
+    /* span {
+      border-radius: 125px;
+    } */
+
+
+
+
+
+
+
+    /* span {
+      box-shadow: 0 0 10px 0 black;
+      border: 0;
+      display: inline-block;
+      width: 500px;
+      height: 50px;
+      line-height: 50px;
+      border-radius: 10px;
+      text-align: center;
+      color: black
+    } */
+
+    span {
+      /* box-shadow: 0 0 0 10px black; */
+
+      /* box-shadow: 0 0 10px 10px black; */
+
+      /* box-shadow: 5px 5px 10px 10px black; */
+
+      /* box-shadow: 0 0 15px 0 chartreuse; */
+    }
+
+    /* body {
+      background: black;
+    } */
+
+    /* span {
+      background: rgb(89, 0, 148);
+    } */
+
+    /* span:hover {
+      box-shadow: 0 0 15px 0 rgb(89, 0, 148);
+    } */
+
+
+
+/*
+    div {
+      width: 00px;
+      height: 293px;
+      background: url(splash.png);
+    } */
+
+    /* div {
+      width: 600px;
+      height: 586px;
+      background: url(splash.png);
+    } */
+
+    div {
+      /* background: url(splash.png) center; */
+
+      /* background: url(wallpaper_pattern.jpg) center; */
+
+      /* background: url(wallpaper_pattern.jpg) center no-repeat; */
+
+      /* background: url(wallpaper_pattern.jpg) center / cover; */
+
+      /* background: url(ep_naturalwhite.webp) center; */
+
+      /* background: url(ep_naturalwhite.webp) center no-repeat; */
+
+      /* background: url(splash.png) center; */
+
+      /* background: url(splash.png) center / cover; */
+    }
+
+
+
+/*
+    div {
+      width: 600px;
+      height: 400px;
+      background: url(splash.png) center / cover;
+    }
+
+    div {
+      width: 600px;
+      height: 400px;
+      background: url(splash.png) center / contain;
+    }
+
+    div {
+      width: 600px;
+      height: 400px;
+      background: url(splash.png) center / contain no-repeat;
+    }
+
+    div {
+      width: 200px;
+      height: 400px;
+      background: url(splash.png) center / contain no-repeat;
+    }
+
+    div {
+      width: 200px;
+      height: 400px;
+      background: url(splash.png) center / contain;
+    }
+
+    div {
+      width: 200px;
+      height: 400px;
+      background: url(splash.png) center / 100% 100%;
+    } */
+
+
+
+
+    /* div {
+      background-color: black;
+
+      background-image: url(splash.png);
+
+      background-repeat: no-repeat;
+
+      background-position-x: 200px;
+
+      background-position-y: 50px;
+
+      background-size: 100px;
+    } */
+
+    /* div {
+      background: black url(splash.png) no-repeat 200px 50px / 100px;
+    } */
+
+    /* div {
+      background: 200px 50px / 100px url(splash.png) no-repeat black;
+    } */
+
+    /* div {
+      background-image: linear-gradient(lime, cyan);
+    } */
+
+    /* div {
+      background: linear-gradient(lime, cyan);
+    } */
+
+
+
+
+    /* span {
+      background: linear-gradient(lime, cyan);
+      border: 0;
+      display: inline-block;
+      width: 500px;
+      height: 50px;
+      line-height: 50px;
+      border-radius: 25px;
+      text-align: center;
+      color: #fff;
+    } */
+
+    span {
+      /* background: linear-gradient(180deg, lime, cyan); */
+
+      /* background: linear-gradient(270deg, lime, cyan); */
+
+      /* background: linear-gradient(-90deg, lime, cyan); */
+
+      /* background: linear-gradient(45deg, lime, cyan); */
+
+      /* box-shadow: 0 0 21px 0 rgb(103, 216, 128); */
+
+      /* box-shadow: 0 0 3px 0 #234; */
+
+      /* text-shadow: 0 0 5px black; */
+
+      /* text-shadow: 20px 20px 5px #999; */
+
+      /* text-shadow: 0 0 5px #789; */
+
+      /* text-transform: capitalize; */
+
+      /* text-transform: uppercase; */
+
+      /* text-transform: lowercase; */
+
+      /* letter-spacing: 2px; */
+    }
+
+
+
+/*
+    span {
+      box-shadow: 0 0 21px 0 #789;
+      text-shadow: 0px 0px 5px #789;
+      background: linear-gradient(45deg, lime, cyan);
+      border: 0;
+      display: inline-block;
+      width: 50px;
+      height: 500px;
+      line-height: 50px;
+      border-radius: 25px;
+      text-align: center;
+      color: #fff;
+    }
+
+    span {
+      writing-mode: vertical-rl;
+
+      text-orientation: upright;
+    } */
+
+
+
+
+    h1 {
+      background: linear-gradient(90deg,#59ffd6,#c8ff48);
+      background-clip: text;
+      box-decoration-break: clone;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: #59ffd6;
+    }
+
+    div {
+      background-color: hsl(162, 100%, 17%);
+    }
+
+  </style>
+</head>
+<body>
+  <!-- <span>Hello span!</span> -->
+
+  <div>
+    <h1>Hello Background!</h1>
+  </div>
+
+</body>
+</html>

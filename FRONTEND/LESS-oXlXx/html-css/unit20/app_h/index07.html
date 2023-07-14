@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        html {
+            background-color: black;
+            height: 100%;
+            min-height: 500px;
+        }
+
+        body {
+            margin: 4px;
+            font-size: 0;
+        }
+
+        .row {
+            font-size: 0;
+            display: inline-block;
+            white-space: nowrap;
+            /* overflow: hidden; */
+            height: 600px;
+        }
+
+        .col {
+            font-size: 0;
+            vertical-align: top;
+            height: 100%;
+            overflow: hidden;
+            border: 1px solid black;
+        }
+
+        .base-col {
+            font-size: 0;
+            display: inline-block;
+        }
+
+        /* ///////////////////////////////////////// */
+
+        .h10perc {
+            height: 10%;
+        }
+
+        .h20perc {
+            height: 20%;
+        }
+
+        .h30perc {
+            height: 30%;
+        }
+
+        .h40perc {
+            height: 40%;
+        }
+
+        .h50perc {
+            height: 50%;
+        }
+
+        .h60perc {
+            height: 60%;
+        }
+
+        .h80perc {
+            height: 80%;
+        }
+
+        .h100perc {
+            height: 100%;
+        }
+
+        /* ///////////////////////////////////////// */
+
+        .two-rows {
+            background-color: rgb(1, 255, 0);
+        }
+
+        .three_rows {
+            background-color: fuchsia;
+        }
+
+        .four_rows {
+            background-color: cyan;
+        }
+
+        /* ///////////////////////////////////////// */
+
+        .blackline {
+            position: relative;
+            left: calc(50% - 20px);
+            background-color: black;
+            width: 40px;
+        }
+
+        /* ///////////////////////////////////////// */
+
+        .w2c {
+            width: 150px;
+        }
+
+        .w3c {
+            width: 100px;
+        }
+
+        .w4c {
+            width: 75px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="wrap">
+            <div class="row">
+
+                <div class="col base-col four_rows">
+                    <div class="row left">
+                        <div class="col h30perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h50perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h10perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h10perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+                    <div class="row left_center">
+                        <div class="col h20perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h40perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+                    <div class="row right_center">
+                        <div class="col h10perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h30perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h40perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+                    <div class="row right">
+                        <div class="col h60perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h10perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h10perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col base-col three_rows">
+                    <div class="row left">
+                        <div class="col h20perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h60perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+                    <div class="row center">
+                        <div class="col h60perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+                    <div class="row right">
+                        <div class="col h20perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h60perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col base-col two-rows">
+                    <div class="row left">
+                        <div class="col h20perc w2c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h80perc w2c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+
+                    <div class="row right">
+                        <div class="col h80perc w2c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w2c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col base-col three_rows">
+                    <div class="row left">
+                        <div class="col h20perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h60perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+                    <div class="row center">
+                        <div class="col h60perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+                    <div class="row right">
+                        <div class="col h20perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h60perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col base-col two-rows">
+                    <div class="row left">
+                        <div class="col h20perc w2c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h80perc w2c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+
+                    <div class="row right">
+                        <div class="col h80perc w2c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w2c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col base-col four_rows">
+                    <div class="row left">
+                        <div class="col h30perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h50perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h10perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h10perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+                    <div class="row left_center">
+                        <div class="col h20perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h40perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+                    <div class="row right_center">
+                        <div class="col h10perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h30perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h40perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+                    <div class="row right">
+                        <div class="col h60perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h10perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h10perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col base-col two-rows">
+                    <div class="row left">
+                        <div class="col h20perc w2c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h80perc w2c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+
+                    <div class="row right">
+                        <div class="col h80perc w2c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w2c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col base-col four_rows">
+                    <div class="row left">
+                        <div class="col h30perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h50perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h10perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h10perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+                    <div class="row left_center">
+                        <div class="col h20perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h40perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+                    <div class="row right_center">
+                        <div class="col h10perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h30perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h40perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+                    <div class="row right">
+                        <div class="col h60perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h10perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h10perc w4c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col base-col three_rows">
+                    <div class="row left">
+                        <div class="col h20perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h60perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+                    <div class="row center">
+                        <div class="col h60perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+                    <div class="row right">
+                        <div class="col h20perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h20perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                        <div class="col h60perc w3c">
+                            <div class="blackline h100perc"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

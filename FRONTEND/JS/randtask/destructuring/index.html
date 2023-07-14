@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>destructuring</title>
+</head>
+<body>
+
+    <span>[destructuring] деструктурирующее присваивание</span>
+    <script>
+        // пример с переменной
+        const a = [100, 200, 300, 400];
+        let [m8, ...m9] = a;
+        // символы spread ...
+
+        console.log(m8); // $ 100
+        console.log(m9); // $ [200, 300, 400]
+
+        let [s10, s11] = a;
+        // 100 назначится для s10, остальное для s11
+        console.log(s10); // 100
+        console.log(s11); // 200
+
+        // let s12 = ar[0];
+        // let s13 = ar[1];
+        // destructuring позволяет писать код проще когда вытаскиваешь что то из массива
+        console.log('-------------');
+        // строка
+        let [s1, s2] = 'intel inside';
+        // итерируемый обьект значит обьект который можно перебирать
+        console.log(s1); // $ i
+        console.log(s2); // $ n
+
+        console.log('-------------');
+        let [s3, s4] = 'intel inside'.split(' ');
+        console.log(s3); // $ itel
+        console.log(s4); // $ inside
+
+        console.log('-------------');
+        let [s5, s6] = 'intel pentium inside'.split(' ');
+        console.log(s5); // $ itel
+        console.log(s6); // $ pentium
+
+        console.log('-------------');
+        let [s7, , s8] = 'intel pentium inside'.split(' ');
+        console.log(s7); // $ itel
+        console.log(s8); // $ inside
+
+        console.log('-------------');
+        // set
+        let [q3, q4] = new Set('hello');
+        console.log(q3); // $ h
+        console.log(q4); // $ e
+
+        console.log('-------------');
+        // set
+        let [,q1,,q2] = new Set('hello'); // одна l удалиться изза set
+        console.log(q1); // $ e
+        console.log(q2); // $ o
+
+        // значения по умолчанию
+        console.log('-------------');
+        let [q5, q6] = [777]
+        console.log(q5); // $ 777
+        console.log(q6); // $ undefined // так как значения нет
+
+        console.log('-------------');
+        let [q9 = 'hi', q10 = 'bye'] = []
+        console.log(q9); // $ 777
+        console.log(q10); // $ bye
+
+        console.log('-------------');
+        let [q7 = 'hi', q8 = 'bye'] = [777]
+        console.log(q7); // $ 777
+        console.log(q8); // $ bye
+
+        console.log('-------------');
+        let obj = {
+            fname : 'alex',
+            passport : true,
+            age : 87,
+            // best : 777
+        }
+
+        // в обьектах по другому, не важно где ты пропишешь ключ вытащиться такой ключ
+        let {age, ppp, fname} = obj;
+        console.log(age, ppp, fname, age);
+
+        console.log('-------------');
+        // деструктуризация по переменным
+        let {age : x, fname : y, passport : p, best : n = 55} = obj;
+        console.log(x, y, p, n);
+
+        // но как только появиться значение бест то оно сразу же переназначиться best : 777
+
+        console.log('-------------');
+
+    </script>
+</body>
+</html>

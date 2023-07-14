@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit23 homework [independent-practice 02]</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #234;
+        }
+
+        .row {
+            font-size: 0;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .row > div {
+            display: inline-block;
+            font-size: 16px;
+            height: 100%;
+            vertical-align: top;
+            overflow: hidden;
+            white-space: normal;
+        }
+
+        /* //////////////////////////// */
+
+        div {
+            border: 1px solid darkred;
+        }
+
+        /* //////////////////////////// */
+
+        .box {
+            margin: 0 auto;
+            width: 800px;
+            height: 600px;
+        }
+
+        /* //////////////////////////// */
+
+        .box > .top {
+            height: 10%;
+        }
+
+        .box > .middle {
+            height: 80%;
+        }
+
+        .box > .bottom {
+            height: 10%;
+        }
+
+        .box > .top > .left {
+            width: 20%;
+        }
+
+        .box > .top > .center {
+            width: 60%;
+        }
+
+        .box > .top > .right {
+            width: 60%;
+        }
+
+        .box > .middle > .left {
+            width: 20%;
+        }
+
+        .box > .middle > .center {
+            width: 60%;
+        }
+
+        .box > .middle > .right {
+            width: 20%;
+        }
+
+        .box > .middle > .left > .top {
+            height: 80%;
+        }
+
+        .box > .middle > .left > .bottom {
+            height: 20%;
+        }
+
+        .box > .middle > .center > .top {
+            height: 60%;
+        }
+
+        .box > .middle > .center > .bottom {
+            height: 40%;
+        }
+
+        .box > .middle > .right > .top {
+            height: 80%;
+        }
+
+        .box > .middle > .right > .bottom {
+            height: 20%;
+        }
+
+        .box > .middle > .right > .bottom > .top {
+            height: 50%;
+        }
+
+        .box > .middle > .right > .bottom > .bottom {
+            height: 50%;
+        }
+
+        .box > .middle > .center > .top > .left {
+            width: calc(100% / 3);
+        }
+
+        .box > .middle > .center > .top > .center {
+            width: calc(100% / 3);
+        }
+
+        .box > .middle > .center > .top > .right {
+            width: calc(100% / 3);
+        }
+
+        .box > .middle > .center > .top > .center > .top {
+            height: calc(100% / 3);
+        }
+
+        .box > .middle > .center > .top > .center > .middle {
+            height: calc(100% / 3);
+        }
+
+        .box > .middle > .center > .top > .center > .bottom {
+            height: calc(100% / 3);
+        }
+
+        .box > .middle > .center > .bottom > .left {
+            width: calc(100% / 3);
+        }
+
+        .box > .middle > .center > .bottom > .center {
+            width: calc(100% / 3);
+        }
+
+        .box > .middle > .center > .bottom > .right{
+            width: calc(100% / 3);
+        }
+
+        .box > .middle > .center > .bottom > .center > .top {
+            height: 70%;
+        }
+
+        .box > .middle > .center > .bottom > .center > .bottom {
+            height: 30%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+            <div class="top row">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+            </div>
+            <div class="middle row">
+                <div class="left">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                </div>
+                <div class="center">
+                    <div class="top row">
+                        <div class="left"></div>
+                        <div class="center">
+                            <div class="top"></div>
+                            <div class="middle"></div>
+                            <div class="bottom"></div>
+                        </div>
+                        <div class="right"></div>
+                    </div>
+                    <div class="bottom row">
+                        <div class="left"></div>
+                        <div class="center">
+                            <div class="top"></div>
+                            <div class="bottom"></div>
+                        </div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="top"></div>
+                    <div class="bottom">
+                        <div class="top"></div>
+                        <div class="bottom"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom"></div>
+        </div>
+    </div>
+</body>
+</html>

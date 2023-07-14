@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            font-family: Arial, sans-serif;
+            font-size: 100%;
+        }
+
+        p:nth-child(3) {
+            font-style: italic;
+        }
+
+        p:nth-child(odd) {
+            font-weight: lighter;
+        }
+
+        p:nth-child(even) {
+            font-weight: bold;
+        }
+
+        p:first-child {
+            color: green;
+        }
+
+        :last-child {
+            color: blue;
+        }
+
+        :nth-child(7) {
+            border: 1px solid darkred;
+        }
+
+        /*
+        : логическое и
+        если елемент является 7 по порядку среди своих сестринских то поставь ему рамку
+        :nth-child(7) (для всех)
+        div:nth-child(7) (для div)
+        p:nth-child(7) (для p)
+
+        nth - порядковый номер
+        ищет среди сестринских елементов
+        */
+
+        :nth-child(4) {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <p class="paragraph">Блок текста 1</p>
+    <p>Блок текста 2</p>
+    <p class="paragraph">Блок текста 3</p>
+    <p>Блок текста 4</p>
+    <p class="paragraph">Блок текста 5</p>
+    <p>Блок текста 6</p>
+    <div>
+        <p class="paragraph">Блок текста 1</p>
+        <p>Блок текста 2</p>
+        <p class="paragraph">Блок текста 3</p>
+        <p>Блок текста 4</p>
+        <p class="paragraph">Блок текста 5</p>
+        <p>Блок текста 6</p>
+        <p>Блок текста 7</p>
+    </div>
+</body>
+</html>

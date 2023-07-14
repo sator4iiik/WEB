@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #234;
+        }
+
+        div {
+            border: 1px solid darkred;
+        }
+
+        .row {
+            font-size: 0;
+            /* white-space: nowrap; */
+            /* overflow: hidden; */
+        }
+
+        .row > div {
+            display: inline-block;
+            font-size: 16px;
+            height: 100%;
+            vertical-align: top;
+            overflow: hidden;
+            white-space: normal;
+        }
+
+        .left {
+            width: 30%;
+        }
+
+        .right {
+            width: 70%;
+        }
+
+        .box {
+            height: 250px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- box это персональное название(уникальное для box), row это повидение(одинаковое для всех рядов) -->
+    <div class="box row">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>

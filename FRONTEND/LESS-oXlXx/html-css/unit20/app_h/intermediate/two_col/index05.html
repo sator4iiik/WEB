@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        html {
+            /* background-color: black; */
+            height: 100%;
+            min-height: 500px;
+        }
+
+        body {
+            height: 100%;
+            margin: 4px;
+            font-size: 0;
+        }
+
+        .row {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            height: 600px;
+        }
+
+        .col {
+            font-size: 16px;
+            height: 100%;
+            overflow: hidden;
+            border: 2px solid white;
+        }
+
+        .base-col {
+            font-size: 0;
+        }
+
+        /* ///////////////////////////////////////// */
+
+        .h20perc {
+            height: 20%;
+        }
+
+        .h80perc {
+            height: 80%;
+        }
+
+        .h100perc {
+            height: 100%;
+        }
+
+        /* ///////////////////////////////////////// */
+
+        .color {
+            background-color: rgb(1, 255, 0);
+        }
+
+        /* ///////////////////////////////////////// */
+
+        .blackline {
+            position: relative;
+            left: calc(50% - 20px);
+            background-color: black;
+            width: 40px;
+        }
+
+        .central {
+            width: 150px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="wrap">
+            <div class="row">
+                <div class="col base-col two-rows">
+                    <div class="row left">
+                        <div class="col h20perc color central">
+                            <div class="blackline h100perc">
+                            </div>
+                        </div>
+                        <div class="col h80perc color central">
+                            <div class="blackline h100perc">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row right">
+                        <div class="col h80perc color central">
+                            <div class="blackline h100perc">
+                            </div>
+                        </div>
+                        <div class="col h20perc color central">
+                            <div class="blackline h100perc">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

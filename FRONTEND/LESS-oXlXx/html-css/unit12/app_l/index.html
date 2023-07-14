@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            /* box-sizing: border-box; */
+        }
+
+        div {
+            border: 1px solid rgb(0, 0, 0);
+        }
+
+        .float {
+            float: right;
+            /* если нет бордер бокс - 2px что бы отнять от бордеров*/
+            width: calc(100% / 5 - 2px);
+        }
+
+        .container {
+            width: 70%;
+            overflow: hidden;
+            background-color: lightgreen;
+        }
+
+        div > div + div + div + div + div {
+            background-color: lightpink;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="float">
+            <p>Плот 1</p>
+        </div>
+        <div class="float">
+            <p>Плот 2</p>
+        </div>
+        <div class="float">
+            <p>Плот 3</p>
+        </div>
+        <div class="float">
+            <p>Плот 4</p>
+        </div>
+        <div class="float">
+            <p>Плот 5</p>
+        </div>
+    </div>
+    <!-- у button усть содержимое у input subbmit его нет  -->
+    <button>Отправить</button>
+</body>
+</html>

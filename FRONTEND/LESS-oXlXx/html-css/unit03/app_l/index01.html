@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img + p {
+            font-style: italic;
+        }
+
+        h6 + div {
+            border: solid 1px black;
+        }
+
+        #after_airplane + p {
+            color: lime;
+        }
+
+        #after_house + span + button {
+            background-color: cyan;
+        }
+
+        h6 + .third {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        [src="house.jpg"] + p + p {
+            border: dotted 3px fuchsia;
+        }
+    </style>
+</head>
+<body>
+    <img src="airplane.jpg" alt="">
+    <p>paragraph_01</p>
+    <p>paragraph_02</p>
+    <p id="after_airplane">paragraph_03</p>
+    <p>paragraph_04</p>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <span>span_01</span>
+    <span>span_02</span>
+    <span>span_03</span>
+    <span>span_04</span>
+    <button>launch</button>
+    <h6>subheading_01</h6>
+    <h6>subheading_02</h6>
+    <h6 class="third">subheading_03</h6>
+    <h6>subheading_04</h6>
+    <div>
+        <img src="house.jpg" alt="">
+        <p>paragraph_01</p>
+        <p>paragraph_02</p>
+        <p class="third">paragraph_03</p>
+        <p>paragraph_04</p>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <span>span_01</span>
+        <span>span_02</span>
+        <span id="after_house">span_03</span>
+        <span>span_04</span>
+        <button>rest</button>
+        <h6>subheading_01</h6>
+        <h6>subheading_02</h6>
+        <h6>subheading_03</h6>
+        <h6>subheading_04</h6>
+    </div>
+</body>
+</html>

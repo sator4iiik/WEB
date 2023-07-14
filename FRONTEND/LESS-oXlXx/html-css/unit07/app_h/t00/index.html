@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #234;
+            font-weight: 300;
+            user-select: none;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        .container_login {
+            border: 1px solid;
+            width: 290px;
+            padding: 10px;
+        }
+
+        .wrap_input_checkbox {
+            padding: 5px;
+            text-align: center;
+        }
+
+        .wrap_input_text {
+            padding: 5px;
+        }
+
+        .wrap_input_text > input {
+            width: 100%;
+            padding: 0px;
+        }
+
+        .wrap_input_subbmit {
+            text-align: center;
+            padding: 5px;
+        }
+       /* если шоколадка завернута и лежит блоках которая в коробке которая в
+       контейнерах, которое в кораблях контейнеровозах */
+
+    </style>
+</head>
+<body>
+    <div class="container_login">
+        <h3>
+            Вход в систему
+        </h3>
+        <form action="http://34.71.150.163/form/get_test.php" target="_blank">
+            <div class="wrap_input_text">
+                <label for="username">Ваш логин:</label>
+                <input type="text" name="username" id="username">
+            </div>
+            <div class="wrap_input_text">
+                <label for="password">Ваш пароль:</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <div class="wrap_input_checkbox">
+                <input type="checkbox" name="is_agree" id="is_agree">
+                <label for="is_agree">Я не робот</label>
+            </div>
+            <div class="wrap">
+                <input type="reset" value="Очистить">
+                <!-- очищает всю форму -->
+            </div>
+            <div class="wrap_input_subbmit">
+                <input type="submit" value="Войти">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

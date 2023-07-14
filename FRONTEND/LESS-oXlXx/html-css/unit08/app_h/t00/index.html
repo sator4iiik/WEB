@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>любимые</title>
+    <style>
+        .html {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            user-select: none;
+        }
+
+        h3 {
+            user-select: none;
+        }
+
+        label {
+            user-select: none;
+        }
+
+        .wrap_input_subbmit {
+            padding: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="">
+        <div class="wrap">
+            <h3>
+                мой любимый фильм:
+            </h3>
+            <div class="wrap">
+                <input type="radio" name="film" value="alien" id="alien">
+                <label for="alien">Alien</label>
+            </div>
+            <div class="wrap">
+                <input type="radio" name="film" value="matrix" id="matrix">
+                <label for="matrix">Matrix</label>
+            </div>
+            <div class="wrap">
+                <input type="radio" name="film" value="alien" id="alien">
+                <label for="alien">Dune</label>
+            </div>
+            <div class="wrap">
+                <input type="radio" name="film" value="prometeus" id="prometeus">
+                <label for="prometeus">Prometeus</label>
+            </div>
+            <div class="wrap">
+                <input type="radio" name="film" value="hannibal" id="hannibal">
+                <label for="hannibal">Hannibal</label>
+            </div>
+            <div class="wrap">
+                <input type="radio" name="film" value="avatar" id="avatar">
+                <label for="avatar">Avatar</label>
+            </div>
+            <div class="wrap">
+                <input type="radio" name="film" value="dontlookup" id="dontlookup">
+                <label for="dontlookup">Don't Look Up</label>
+            </div>
+        </div>
+
+        <div class="wrap">
+            <h3>
+                мои любимые песни:
+            </h3>
+        </div>
+        <!-- value ставится тогда когда элементов больше чем один -->
+        <div class="wrap">
+            <input type="checkbox" name="track" value="barhatnye" id="barhatnye">
+            <label for="barhatnye">Кэфтеме - бархатные тяги</label>
+        </div>
+
+        <div class="wrap">
+            <input type="checkbox" name="track" value="tigr" id="tigr">
+            <label for="tigr">Шома Тигр - Вот как то так но никак иначе</label>
+        </div>
+
+        <div class="wrap">
+            <input type="checkbox" name="track" value="shaurma" id="shaurma">
+            <label for="shaurma">Muler - Шаурма</label>
+        </div>
+
+        <div class="wrap_input_subbmit">
+            <input type="submit" value="Отправить">
+        </div>
+    </form>
+
+</body>
+</html>

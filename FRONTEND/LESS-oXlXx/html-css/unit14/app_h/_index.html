@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+    .row {
+      font-size: 0;
+    }
+    .row > div {
+      display: inline-block;
+      height: 100%;
+    }
+    .container {
+      width: 640px;
+      margin: 100px auto;
+
+    }
+    .container > div {
+      width: 160px;
+      height: 160px;
+      border: 1px solid #234;
+      position: relative;
+    }
+
+    .blue_top_left,
+    .blue_top_right,
+    .blue_bottom_left,
+    .blue_bottom_right {
+      background-color: blue;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="container row">
+      <div class="blue_top_left"></div>
+      <div></div>
+      <div></div>
+      <div class="blue_top_right"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="blue_bottom_left"></div>
+      <div></div>
+      <div></div>
+      <div class="blue_bottom_right"></div>
+    </div>
+  </div>
+
+</body>
+</html>

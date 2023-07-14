@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авиабилеты</title>
+    <style>
+        * {
+            margin: 0 auto;
+            user-select: none;
+        }
+
+        .container {
+            font-family: sans-serif;
+            color: rgb(80, 80, 80);
+            text-align: center;
+            width: 80%;
+        }
+
+        select {
+            background-color: rgb(50, 53, 198);
+            color: rgb(255, 255, 255);
+            font-weight: 900;
+            text-align: end;
+            width: 200px;
+        }
+
+        input {
+            background-color: rgb(50, 53, 198);
+            width: 196px;
+            color: rgb(255, 255, 255);
+            font-weight: 900;
+            outline: none;
+            border: none;
+        }
+
+        textarea {
+            background-color: rgb(50, 53, 198);
+            color: rgb(255, 255, 255);
+            font-weight: 900;
+            font-family: sans-serif;
+            width: 194px;
+            height: 100px;
+        }
+
+        div > h3 {
+            margin: 10px 0 10px;
+        }
+
+        div > h5 {
+            text-align: end;
+            margin: 50px 0 10px;
+        }
+
+        p {
+            font-size: 6px;
+            margin: 8px 0 8px;
+            font-weight: 800;
+        }
+
+        span {
+            font-weight: 800;
+            font-size: 6px;
+        }
+
+        .container > .container {
+            text-align: end;
+        }
+
+        .container > .container > p {
+            text-align: end;
+        }
+
+        .container > .container + .container {
+            text-align: start;
+        }
+
+        .container > .container + .container > h5 {
+            text-align: start;
+        }
+
+        .container > .container + .container select {
+            text-align: start;
+        }
+
+        .container > .container + .container > p {
+            text-align: start;
+        }
+
+        .container > .container + .container + .container {
+            text-align: center;
+        }
+
+        .container > .container + .container + .container > h5 {
+            text-align: center;
+        }
+
+        .container > .container + .container + .container select {
+            text-align: center;
+        }
+
+        button {
+            background-color: rgb(119, 214, 55);
+            color: rgb(255, 255, 255);
+            border: none;
+            padding: 5px 7px;
+            margin: 7px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>
+            Заказ Авиабилетов
+        </h3>
+        <div class="container">
+            <h5>
+                Откуда летите
+            </h5>
+            <div class="wrap">
+                <span>Выберете страну:</span>
+                <br>
+                <select name="country">
+                    <option selected></option>
+                    <option value="Украина">Украина</option>
+                    <option value="Польша">Польша</option>
+                    <option value="Англия">Англия</option>
+                </select>
+            </div>
+            <div class="wrap">
+                <span>Выберете Город:</span>
+                <br>
+                <select name="city">
+                    <option selected></option>
+                    <option value="Киев">Киев</option>
+                    <option value="Варшава">Варшава</option>
+                    <option value="Лондон">Лондон</option>
+                </select>
+            </div>
+            <div class="wrap">
+                <span>Выберете аэропорт:</span>
+                <br>
+                <select name="аirport">
+                    <option selected></option>
+                    <option value="Аэропорт южный">Аэропорт Южный</option>
+                    <option value="Аэропорт южный">Аэропорт Западный</option>
+                    <option value="Аэропорт южный">Аэропорт Центральный</option>
+                </select>
+            </div>
+            <div class="wrap">
+                <span>Введите промокод:</span>
+                <br>
+                <input type="text" name="promocode-1" id="promocode-1">
+            </div>
+            <div class="wrap">
+                <span>Ваши пожелания к вылету:</span>
+            </div>
+            <div class="wrap">
+                <textarea name="" id=""></textarea>
+            </div>
+            <p>
+                После выбора аэропорта для вылета вам станет
+                доступным выбор аэропорт для посадки
+            </p>
+            <hr>
+        </div>
+        <div class="container">
+            <h5>
+                Куда летите
+            </h5>
+            <div class="wrap">
+                <span>Выберете страну:</span>
+                <br>
+                <select name="country">
+                    <option selected></option>
+                    <option value="Украина">Украина</option>
+                    <option value="Польша">Польша</option>
+                    <option value="Англия">Англия</option>
+                </select>
+            </div>
+            <div class="wrap">
+                <span>Выберете Город:</span>
+                <br>
+                <select name="city">
+                    <option selected></option>
+                    <option value="Киев">Киев</option>
+                    <option value="Варшава">Варшава</option>
+                    <option value="Лондон">Лондон</option>
+                </select>
+            </div>
+            <div class="wrap">
+                <span>Выберете аэропорт:</span>
+                <br>
+                <select name="airport">
+                    <option selected></option>
+                    <option value="Аэропорт южный">Аэропорт Южный</option>
+                    <option value="Аэропорт южный">Аэропорт Западный</option>
+                    <option value="Аэропорт южный">Аэропорт Центральный</option>
+                </select>
+            </div>
+            <div class="wrap">
+                <span>Введите промокод:</span>
+                <br>
+                <input type="text" name="promocode-2" id="promocode-2">
+            </div>
+            <div class="wrap">
+                <span>Ваши пожелания к вылету:</span>
+            </div>
+            <div class="wrap">
+                <textarea name="" id=""></textarea>
+            </div>
+            <p>
+                После выбора аэропорта для посадки
+                вам станет доступным выбор класса
+            </p>
+            <hr>
+        </div>
+        <div class="container">
+            <h5>
+                Как летите
+            </h5>
+            <div class="wrap">
+                <span>Класс:</span>
+                <br>
+                <select name="class">
+                    <option selected></option>
+                    <option value="Украина">Эконом</option>
+                    <option value="Польша">Средний</option>
+                    <option value="Англия">Бизнесс</option>
+                </select>
+            </div>
+            <div class="wrap">
+                <span>Количество пассажиров:</span>
+                <br>
+                <select name="passengers">
+                    <option selected></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="wrap">
+                <span>Предпочитаемые напитки:</span>
+                <br>
+                <select name="drinks">
+                    <option selected></option>
+                    <option value="Аэропорт южный">Вода</option>
+                    <option value="Аэропорт южный">Кока-Кола</option>
+                    <option value="Аэропорт южный">Алкогольные</option>
+                </select>
+            </div>
+            <div class="wrap">
+                <span>Введите промокод:</span>
+                <br>
+                <input type="text" name="promocode-3" id="promocode-3">
+            </div>
+            <div class="wrap">
+                <span>Ваши пожелания к полету:</span>
+            </div>
+            <div class="wrap">
+                <textarea name="" id=""></textarea>
+            </div>
+            <button>ЗАКАЗАТЬ</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('promocode-1').addEventListener('input', function() {
+            document.getElementById('promocode-2').value = this.value;
+            document.getElementById('promocode-3').value = this.value;
+        });
+
+        document.getElementById('promocode-2').addEventListener('input', function() {
+            document.getElementById('promocode-1').value = this.value;
+            document.getElementById('promocode-3').value = this.value;
+        });
+
+        document.getElementById('promocode-3').addEventListener('input', function() {
+            document.getElementById('promocode-1').value = this.value;
+            document.getElementById('promocode-2').value = this.value;
+        });
+    </script>
+
+</body>
+</html>

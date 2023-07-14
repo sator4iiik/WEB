@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <!-- без форм мы не сможем отправить данные на сервер без JS -->
+        <h3>Мои любимый цвет</h3>
+        <div class="wrap">
+          <input type="radio" name="color1" value="black" id="black">
+          <label for="black">Черный</label>
+          <!--  name="color" будет считать одной группой и выбирать только один из них-->
+          <!-- radio в котором нет пары если будет нажат, то уже не сможет быть отжат -->
+        </div>
+        <div class="wrap">
+          <input type="radio" name="color" value="white" id="white">
+          <label for="white">Белый</label>
+          <!-- for ссылается на id  -->
+        </div>
+        <div class="wrap">
+          <input type="radio" name="color" value="red" id="red">
+          <label for="red">Красный</label>
+        </div>
+        <div class="wrap_input_subbmit">
+            <input type="submit" value="Войти">
+        </div>
+
+        <!--
+            домашка добавить мои любимые цвета (чекбокс и радио на одной страничке) 7 штук в каждой в одной форме
+            мой любимый фильм и мои любимые песни
+        -->
+    </form>
+</body>
+</html>

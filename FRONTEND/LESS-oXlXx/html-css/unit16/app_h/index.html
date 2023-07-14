@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit16 homework</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 4px;
+        }
+
+        .row {
+            font-size: 0;
+        }
+
+        .col {
+            font-size: 16px;
+            display: inline-block;
+            background-color: fuchsia;
+            border: 1px solid white;
+        }
+
+        .top > .left {
+            width: 20%;
+        }
+
+        .top > .center {
+            width: 60%;
+        }
+
+        .top > .right {
+            width: 20%;
+        }
+
+        .center > .left {
+            width: 20%;
+        }
+
+        .center > .center {
+            width: 20%;
+        }
+
+        .center > .right {
+            width: 60%;
+        }
+
+        .bottom > .left {
+            width: 60%;
+        }
+
+        .bottom > .center {
+            width: 20%;
+        }
+
+        .bottom > .right {
+            width: 20%;
+        }
+
+        h2 {
+            vertical-align: top;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="row top">
+            <div class="col left">
+                <h2>
+                    20%
+                </h2>
+            </div>
+            <div class="col center">
+                <h2>
+                    60%
+                </h2>
+            </div>
+            <div class="col right">
+                <h2>
+                    20%
+                </h2>
+            </div>
+        </div>
+        <div class="row center">
+            <div class="col left">
+                <h2>
+                    20%
+                </h2>
+            </div>
+            <div class="col center">
+                <h2>
+                    20%
+                </h2>
+            </div>
+            <div class="col right">
+                <h2>
+                    60%
+                </h2>
+            </div>
+        </div>
+        <div class="row bottom">
+            <div class="col left">
+                <h2>
+                    60%
+                </h2>
+            </div>
+            <div class="col center">
+                <h2>
+                    20%
+                </h2>
+            </div>
+            <div class="col right">
+                <h2>
+                    20%
+                </h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
