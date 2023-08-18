@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toCapitalCase</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+
+        }
+
+        html {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background: url(Binary_Terpene_by_Protobacillus_FullHD_01.mp4);
+            background-size: cover;
+            background-color: rgb(4, 16, 78);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: rgb(169, 183, 197);
+        }
+
+        body {
+            margin: 0 auto;
+            width: 500px;
+        }
+
+        .main {
+            display: block;
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+            height: 500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            height: 180px;
+            background: transparent;
+            border: 0.001px solid rgba(255,255,255,0.101);
+            border-radius: 20px;
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+        }
+
+        h1 {
+            text-align: center;
+            padding: 15px;
+            background: url(Binary_Terpene_by_Protobacillus_FullHD_01.mp4);
+            background-clip: text;
+            box-decoration-break: clone;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        label {
+            padding: 20px;
+            background: url(Binary_Terpene_by_Protobacillus_FullHD_01.mp4);
+            background-clip: text;
+            box-decoration-break: clone;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .to-case-btn {
+            position: relative;
+
+            width: 100px;
+            padding: 10px;
+            background-color: rgb(106, 154, 53);
+            color: #fff;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .to-case-btn:hover {
+            transition: .1s;
+            background-color: rgb(122, 183, 56);
+        }
+
+        .to-case-btn:active {
+            transition: .1s;
+            background-color: rgb(149, 207, 3);
+        }
+
+        .out {
+            position: relative;
+            top: 0;
+            height: 20px;
+            padding: 5px;
+            color: greenyellow;
+            text-align: center;
+        }
+
+        input {
+            height: 30px;
+            width: 185px;
+            border-radius: 5px;
+            background: transparent;
+            -webkit-backdrop-filter: blur(70px);
+            backdrop-filter: blur(70px);
+            color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="form-group">
+            <h1>toCapitalCase()</h1>
+            <label for="enter-text">Введи текст:</label>
+            <input type="text" id="enter-text-1">
+            <button class="to-case-btn" onclick="toCapitalCase()">Исправить</button>
+            <div class="out" id="result-1">не вводить числа</div>
+        </div>
+        <div class="form-group">
+            <h1>divideString()</h1>
+            <label for="enter-text-2">Введи текст:</label>
+            <input type="text" id="enter-text-2">
+            <button class="to-case-btn" onclick="divideString()">Поделить</button>
+            <div class="out" id="result-2">первое деление</div>
+            <div class="out" id="result-3">второе деление</div>
+        </div>
+    </div>
+    <script>
+
+    function toCapitalCase() {
+        let input = document.getElementById('enter-text-1').value;
+
+        if (input != '') {
+            input = input.trim();
+            input = input.toLowerCase();
+            let subres = input.substring(1);
+            let firstChar  = input[0].toUpperCase();
+            input = firstChar + subres;
+
+            document.getElementById('result-1').innerHTML = input;
+            document.getElementById('enter-text-1').value = '';
+        }
+    }
+
+    function divideString() {
+        let input = document.getElementById('enter-text-2').value;
+
+        if (input != '') {
+            input = input.trim();
+            let p = input.indexOf(' ');
+
+            let he = input.substring(0, p);
+            let wo = input.substring(p);
+
+            document.getElementById('result-2').innerHTML = he;
+            document.getElementById('result-3').innerHTML = wo;
+        }
+    }
+
+    </script>
+</body>
+</html>

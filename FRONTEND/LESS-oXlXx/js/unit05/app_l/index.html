@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .green-text {
+            color: chartreuse;
+        }
+
+        .bold-text {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <a href="http://google.com"></a>
+        <img src="./05.jpg" alt="mijorney img">
+    </div>
+    <script>
+        // в а записан обьект, потому могу записать в него значение
+        // меняю свойство обьекта, меняю сам обьект
+
+        let elAncore = document.querySelector('a');
+        console.log(elAncore);
+        console.dir(elAncore);
+
+        let hrefLink = elAncore.getAttribute('href');
+        elAncore.innerHTML = hrefLink.substring(7);
+
+        let elImg = document.querySelector('img');
+        elImg.setAttribute('src', './06.jpg');
+
+        let altValue = elImg.getAttribute('alt');
+
+        elAncore.setAttribute('class', 'green-text');
+        // elAncore.setAttribute('class', 'bold-text'); // перепишет класс
+        elAncore.classList.add('bold-text');
+
+        elAncore.classList.remove('green-text')
+
+    </script>
+</body>
+</html>

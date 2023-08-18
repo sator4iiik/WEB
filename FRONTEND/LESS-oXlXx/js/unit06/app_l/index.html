@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+
+</head>
+<body>
+
+    <script>
+        // DOM дерево еще не создано потому консоль отрабатывает но не в дерево
+        console.log("wdcwdc");
+        const elBody = document.querySelector('body');
+        // elBody.innerHTML = '<button>Конпка</button>';
+        // const elButton = document.querySelector('button');
+        const elButton = document.createElement('button');
+        console.log(elButton);
+
+        // innerHTML
+
+        // elBody.textContent = '<button>Конпка</button>';
+        // минус этого способа сложно добавить атрибут
+        elButton.classList.add('green');
+        elBody.appendChild(elButton)
+        elButton.innerHTML = 'Send';
+
+        const link = document.createElement('a'); // ожидает строку
+        link.setAttribute('href', 'http://instagram.com');
+        link.innerHTML = 'instagram';
+        elBody.appendChild(link); // поместить на страницу через переменную body (ожидает узел)
+    </script>
+</body>
+</html>

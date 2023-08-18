@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rieltor</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        html {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color:rgb(84, 100, 107);
+            color: #234;
+        }
+
+
+        .main {
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            padding-bottom: 20px;
+            color:rgb(84, 100, 107);
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 10px;
+            left: calc(50% - 80px);
+        }
+
+        .form-group input {
+            display: block;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .calculate-btn {
+            position: relative;
+            left: calc(35% - 50px);
+            top: 10px;
+            width: 100px;
+            padding: 15px;
+            background-color: #368d61;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .calculate-btn-rand {
+            position: relative;
+            left: calc(35% - 50px);
+            top: 10px;
+            width: 100px;
+            padding: 15px;
+            background-color: #814768;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .out {
+            position: relative;
+            top: 30px;
+            height: 50px;
+            color: #22aa56;
+            text-align: center;
+        }
+
+        .out-1 {
+            position: relative;
+            top: 0px;
+            height: 50px;
+            color: #8e6a7f;
+            text-align: center;
+        }
+
+        .out-2 {
+            position: relative;
+            top: -30px;
+            height: 50px;
+            color: #816d9f;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>калькулятор</h1>
+        <div class="form-group">
+            <label for="costApartament">Общая цена квартиры: ($)</label>
+            <input type="number" id="costApartament">
+        </div>
+        <hr>
+        <div class="form-group">
+            <label for="roomLength">Длина комнаты (м): </label>
+            <input type="number" id="roomLength">
+        </div>
+        <div class="form-group">
+            <label for="roomWidth">Ширина комнаты (м):</label>
+            <input type="number" id="roomWidth">
+        </div>
+        <div class="form-group">
+            <label for="kitchenLength">Длина кухни (м):</label>
+            <input type="number" id="kitchenLength">
+        </div>
+        <div class="form-group">
+            <label for="kitchenWidth">Ширина кухни (м):</label>
+            <input type="number" id="kitchenWidth">
+        </div>
+        <div class="form-group">
+            <label for="bathroomLength">Длина ванной (м):</label>
+            <input type="number" id="bathroomLength">
+        </div>
+        <div class="form-group">
+            <label for="bathroomWidth">Ширина ванной (м):</label>
+            <input type="number" id="bathroomWidth">
+        </div>
+        <div class="form-group">
+            <label for="corridorLength">Процент коридора (%):</label>
+            <input type="number" id="corridorPercent">
+        </div>
+        <hr>
+        <button class="calculate-btn b-1" onclick="calculatePrice(), exchangeUsd()">Посчитать</button>
+        <button class="calculate-btn-rand b-2" onclick="randDiscount()">Скидка</button>
+        <div class="out" id='result'></div>
+        <div class="out-1" id='result-1'></div>
+        <div class="out-2" id='result-2'></div>
+    </div>
+
+    <script>
+    function calculatePrice() {
+        const costApartament = parseFloat(document.getElementById("costApartament").value);
+        const roomLength = parseFloat(document.getElementById("roomLength").value);
+        const roomWidth = parseFloat(document.getElementById("roomWidth").value);
+        const kitchenLength = parseFloat(document.getElementById("kitchenLength").value);
+        const kitchenWidth = parseFloat(document.getElementById("kitchenWidth").value);
+        const bathroomLength = parseFloat(document.getElementById("bathroomLength").value);
+        const bathroomWidth = parseFloat(document.getElementById("bathroomWidth").value);
+        const corridorPercent = parseFloat(document.getElementById("corridorPercent").value);
+
+        const roomArea = roomLength * roomWidth;
+        const kitchenArea = kitchenLength * kitchenWidth;
+        const bathroomArea = bathroomLength * bathroomWidth;
+
+        const totalArea = roomArea + kitchenArea + bathroomArea;
+        const corridorArea = (corridorPercent / 100) * totalArea;
+        const otherAreas = totalArea - corridorArea;
+
+        const pricePerSquareMeter = costApartament / otherAreas;
+
+        document.getElementById('result').innerHTML = `Цена за квадратный метр: ${pricePerSquareMeter.toFixed(2)} $.`;
+    }
+
+    function randDiscount() {
+        let n = Math.random();
+        // 0123
+        n *= 4;
+        n = Math.trunc(n);
+
+        // 012345
+        let m = Math.random();
+        m *= 6;
+        m = Math.trunc(m);
+
+        document.getElementById('result-1').innerHTML = `Ваша скидка: ${n}${m}%`;
+    }
+
+    function exchangeUsd() {
+        let n = Math.random();
+
+        // 012 3 4
+        n *= 2;
+        n = Math.trunc(n);
+        n += 3;
+
+        let m = Math.random();
+
+        m *= 9;
+        m = Math.trunc(m);
+
+        document.getElementById('result-2').innerHTML = `Курс ${n}${m} грн за 1$`;
+
+    }
+
+    </script>
+</body>
+</html>

@@ -4,12 +4,143 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cinema</title>
     <style>
         /* http://34.71.150.163/cinema/ */
+
+        * {
+            box-sizing: border-box;
+            user-select: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background: url(bg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+        }
+
+        body {
+            color: #2c3e50;
+        }
+
+        .main {
+            margin: 0 auto;
+            width: 640px;
+            height: 0;
+        }
+
+        .row {
+            font-size: 0;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .row > div {
+            display: inline-block;
+            font-size: 16px;
+            height: 100%;
+            vertical-align: top;
+            overflow: hidden;
+            white-space: normal;
+        }
+
+        .box {
+            background-color: rgb(205, 205, 205);
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .box > .top {
+            padding: 10px 20px;
+            cursor: pointer;
+            line-height: 40px;
+        }
+
+        .top:hover {
+            border-radius: 30px;
+            background-color: rgba(82, 142, 144, 0.2);
+            color: rgb(246, 246, 246);
+        }
+
+        .box > .bottom {
+            height: 0px;
+        }
+
+        .box > input {
+            opacity: 0;
+        }
+
+        .box > input:checked + .top + .bottom {
+            height: 300px;
+            transition: all .1s;
+        }
+
+        img {
+           height: 200px;
+        }
+
+        .box > .top + .bottom > .right {
+            padding: 10px;
+        }
+
+        .box > .bottom > .left {
+            background-color: rgb(175, 175, 175);
+        }
+
+        .box > .top + .bottom > .left + .right > .p {
+            white-space: normal;
+            color: brown;
+            background-color: brown;
+        }
+
+
     </style>
 </head>
 <body>
+    <div class="main">
+        <div class="title">
+            <form action="">
+                <div class="box">
+                    <input type="checkbox" id="chk1">
+                    <div class="top">
+                        <label for="chk1">✦ Прометей</label>
+                    </div>
+                    <div class="bottom row">
+                        <div class="left">
+                            <div class="top">
+                                <div class="wrap_img">
+                                    <img src="./29.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <input type="submit" value="Замовити квиток">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <p>
+                                В прокатi з 2013
+                            </p>
+                            <p>
+                                <b>Країна</b>
+                            </p>
+                            <p>
+
+                                Були знайдені наскельні малюнки, що збігаються з малюнками інших цивілізацій, які існували в різний час і ніяк не пов'язані між собою. На малюнках зображені люди, які поклоняються іншим істотам, схожим на людей, але набагато більшим.
+                                    "Прометей" - це науково-дослідний космічний корабель, члени якого вирушають на пошуки прабатьків. Через кілька років, команда корабля прибуває до місця призначення. На планеті вони знаходять штучні споруди. Але те, що вони там виявлять, навряд чи дасть їм відповіді на питання, які їх цікавлять...
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 
 </body>
 </html>

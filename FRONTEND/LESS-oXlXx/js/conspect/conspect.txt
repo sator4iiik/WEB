@@ -1,0 +1,84 @@
+let variable 
+console.log (variable) undefined 
+console. log(typeof variable) undefined
+
+variable = 1
+console.log (variable) 1
+
+variable = undefined
+console.log(variable) undefined
+
+variable = 'hello world'
+console.log (variable) hello world
+
+variable = console. log('hello world')
+console.log(variable) undefined
+
+Значение переменной не определено
+
+variable = null
+console.log (variable) null 
+console.log (typeof variable) object
+
+variable = document. querySelector ('qwerty') document is not defined
+console. log (variable)
+
+
+Объекта нет NULL
+
+=========-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=================
+
+
+Boolеаn тип данных (на один больше чем у undefined)
+
+//! - логическое "НЕ" (логическое отрицание)
+
+q = !true (унарный оператор который работает всего с одним операндом)
+
+q false 
+
+|| && - ищут true
+
+=-=-=-=-=-=-=-=-=-
+Оператор логического И умный и если будет false то он остановиться (слева на право)
+
+===================
+&& - ищет первое попавшееся false
+
+|| - не такой привередливый (забирает первый true но последний flase)
+
+В случае логического отрицания возвращает булевый тип
+
+===========
+Привидение типа
+
+hint унарный плюсик преобразовывает в number +n
+
+let n = '123'
+n = +n
+n = n + 4
+
+console.log(n)
+n = n + ''
+n = n + 8
+console.log() 1278
+
+(Не строгая типизация позволяет записывать в переменную и стринг и намбер)
+
+
+Приведение к булевому типу двойным отрицанием 
+
+q = 1
+
+q = !!q
+
+q = ture
+
+---------
+
+q = 0
+
+q = !!q
+
+q = false
+=============
