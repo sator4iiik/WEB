@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html {
+      font-family: Calibry, sans-serif;
+      color: #234;
+    }
+    table {
+      border-spacing: 5px;
+    }
+    th, td {
+      background-color: lightblue;
+      border-radius: 10px;
+      padding: 5px;
+    }
+    td:nth-child(even),
+    th:nth-child(even) {
+      background-color: #d4eaf2;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <caption>Учет прибыли</caption>
+    <thead>
+      <tr>
+        <th>Лид</th>
+        <th>Цена лида</th>
+        <th>Цена закупки</th>
+        <th>Цена продажи</th>
+        <th>Стоимость доставки</th>
+        <th>Премия менеджеру</th>
+        <th>Бонус от поставщика</th>
+        <th>Издержки</th>
+        <th>Выручка</th>
+        <th>Прибыль</th>
+        <th>Налог на прибыль</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>707432523</td>
+        <td>200</td>
+        <td>1000</td>
+        <td>2000</td>
+        <td>150</td>
+        <td>100</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>707432641</td>
+        <td>576</td>
+        <td>3875</td>
+        <td>5050</td>
+        <td>386</td>
+        <td>417</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>707432875</td>
+        <td>432</td>
+        <td>12624</td>
+        <td>15950</td>
+        <td>213</td>
+        <td>333</td>
+        <td>220</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>Итого</th>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {
+        font-family: Calibry, sans-serif;
+        color: #234;
+        }
+
+        table {
+        border-spacing: 5px;
+        }
+
+        th, td {
+        background-color: lightblue;
+        border-radius: 10px;
+        padding: 5px;
+        }
+
+        td:nth-child(even),
+        th:nth-child(even) {
+        background-color: #d4eaf2;
+        }
+    </style>
+
+</head>
+<body>
+    <script>
+        const elBody = document.querySelector('body');
+        const elTable = document.createElement('table');
+        const elCapition = document.createElement('caption');
+
+        const elThead = document.createElement('thead');
+        const elTbody = document.createElement('tbody');
+        const elTfoot = document.createElement('tfoot');
+
+        const elTheadTr = document.createElement('tr');
+        const elTheadTh1 = document.createElement('th');
+        const elTheadTh2 = document.createElement('th');
+        const elTheadTh3 = document.createElement('th');
+        const elTheadTh4 = document.createElement('th');
+        const elTheadTh5 = document.createElement('th');
+        const elTheadTh6 = document.createElement('th');
+        const elTheadTh7 = document.createElement('th');
+        const elTheadTh8 = document.createElement('th');
+        const elTheadTh9 = document.createElement('th');
+        const elTheadTh10 = document.createElement('th');
+        const elTheadTh11 = document.createElement('th');
+
+        const elTbodyTr1 = document.createElement('tr');
+        const elTbodyTh1 = document.createElement('th');
+        const elTbodyTh2 = document.createElement('th');
+        const elTbodyTh3 = document.createElement('th');
+        const elTbodyTh4 = document.createElement('th');
+        const elTbodyTh5 = document.createElement('th');
+        const elTbodyTh6 = document.createElement('th');
+        const elTbodyTh7 = document.createElement('th');
+        const elTbodyTh8 = document.createElement('th');
+        const elTbodyTh9 = document.createElement('th');
+        const elTbodyTh10 = document.createElement('th');
+        const elTbodyTh11 = document.createElement('th');
+
+        const elTbodyTrB1 = document.createElement('tr');
+        const elTbodyThB1 = document.createElement('th');
+        const elTbodyThB2 = document.createElement('th');
+        const elTbodyThB3 = document.createElement('th');
+        const elTbodyThB4 = document.createElement('th');
+        const elTbodyThB5 = document.createElement('th');
+        const elTbodyThB6 = document.createElement('th');
+        const elTbodyThB7 = document.createElement('th');
+        const elTbodyThB8 = document.createElement('th');
+        const elTbodyThB9 = document.createElement('th');
+        const elTbodyThB10 = document.createElement('th');
+        const elTbodyThB11 = document.createElement('th');
+
+        const elTbodyTrC1 = document.createElement('tr');
+        const elTbodyThC1 = document.createElement('th');
+        const elTbodyThC2 = document.createElement('th');
+        const elTbodyThC3 = document.createElement('th');
+        const elTbodyThC4 = document.createElement('th');
+        const elTbodyThC5 = document.createElement('th');
+        const elTbodyThC6 = document.createElement('th');
+        const elTbodyThC7 = document.createElement('th');
+        const elTbodyThC8 = document.createElement('th');
+        const elTbodyThC9 = document.createElement('th');
+        const elTbodyThC10 = document.createElement('th');
+        const elTbodyThC11 = document.createElement('th');
+
+        const elTfootTr1 = document.createElement('tr');
+        const elTfootTh1 = document.createElement('th');
+        const elTfootTh2 = document.createElement('th');
+        const elTfootTh3 = document.createElement('th');
+        const elTfootTh4 = document.createElement('th');
+        const elTfootTh5 = document.createElement('th');
+        const elTfootTh6 = document.createElement('th');
+        const elTfootTh7 = document.createElement('th');
+        const elTfootTh8 = document.createElement('th');
+        const elTfootTh9 = document.createElement('th');
+        const elTfootTh10 = document.createElement('th');
+        const elTfootTh11 = document.createElement('th');
+
+        const lead1 = 707432523;
+        const costLead1 = 200;
+        const costProcurement1 = 1000;
+        const costSale1 = 2000;
+        const costDelivery1 = 150;
+        const managBonus1 = 100;
+        const supplierBonus1 = 50;
+
+        const lead2 = 707432641;
+        const costLead2 = 576;
+        const costProcurement2 = 3875;
+        const costSale2 = 5050;
+        const costDelivery2 = 386;
+        const managBonus2 = 417;
+        const supplierBonus2 = 90;
+
+        const lead3 = 707432875;
+        const costLead3 = 432;
+        const costProcurement3 = 12624;
+        const costSale3 = 15950;
+        const costDelivery3 = 213;
+        const managBonus3 = 333;
+        const supplierBonus3 = 220;
+
+        const costs1 = costProcurement1 + costDelivery1 + managBonus1 + supplierBonus1;
+        const profit1 = costSale1 - costs1;
+        const tax1 = (profit1 * 3) / 100;
+        const costs2 = costProcurement2 + costDelivery2 + managBonus2 + supplierBonus2;
+        const profit2 = costSale2 - costs2;
+        const tax2 = (profit2 * 3) / 100;
+        const costs3 = costProcurement3 + costDelivery3 + managBonus3 + supplierBonus3;
+        const profit3 = costSale3 - costs3;
+        const tax3 = (profit3 * 3) / 100;
+
+        const totalCostLead = costLead1 + costLead2 + costLead3;
+        const totalCostProcurement = costProcurement1 + costProcurement2 + costProcurement3;
+        const totalCostSale = costSale1 + costSale2 + costSale3;
+        const totalCostDelivery = costDelivery1 + costDelivery2 + costDelivery3;
+        const totalManagBonus = managBonus1 + managBonus2 + managBonus3;
+        const totalSupplierBonus = supplierBonus1 + supplierBonus2 + supplierBonus3;
+
+        const totalCosts = totalCostProcurement + totalCostDelivery + totalManagBonus + totalSupplierBonus;
+        const totalProfit = totalCostSale - totalCosts;
+        const totalTax = (totalProfit * 3) / 100;
+
+        elBody.appendChild(elTable);
+        elCapition.innerHTML = 'Учет прибыли';
+        elTable.appendChild(elCapition);
+
+        elTable.appendChild(elThead);
+        elThead.appendChild(elTheadTr);
+        elTheadTh1.innerHTML = 'Лид';
+        elTheadTr.appendChild(elTheadTh1);
+        elTheadTh2.innerHTML = 'Цена Лида';
+        elTheadTr.appendChild(elTheadTh2);
+        elTheadTh3.innerHTML = 'Цена Закупки';
+        elTheadTr.appendChild(elTheadTh3);
+        elTheadTh4.innerHTML = 'Цена Продажи';
+        elTheadTr.appendChild(elTheadTh4);
+        elTheadTh5.innerHTML = 'Стоимость доставки';
+        elTheadTr.appendChild(elTheadTh5);
+        elTheadTh6.innerHTML = 'Премия менеджеру';
+        elTheadTr.appendChild(elTheadTh6);
+        elTheadTh7.innerHTML = 'Бонус от поставщика';
+        elTheadTr.appendChild(elTheadTh7);
+        elTheadTh8.innerHTML = 'Издержки';
+        elTheadTr.appendChild(elTheadTh8);
+        elTheadTh9.innerHTML = 'Выручка';
+        elTheadTr.appendChild(elTheadTh9);
+        elTheadTh10.innerHTML = 'Прибыль';
+        elTheadTr.appendChild(elTheadTh10);
+        elTheadTh11.innerHTML = 'Налог на прибыль';
+        elTheadTr.appendChild(elTheadTh11);
+
+        elTable.appendChild(elTbody);
+        elTbody.appendChild(elTbodyTr1);
+        elTbodyTh1.innerHTML = lead1;
+        elTbodyTr1.appendChild(elTbodyTh1);
+        elTbodyTh2.innerHTML = costLead1;
+        elTbodyTr1.appendChild(elTbodyTh2);
+        elTbodyTh3.innerHTML = costProcurement1;
+        elTbodyTr1.appendChild(elTbodyTh3);
+        elTbodyTh4.innerHTML = costSale1;
+        elTbodyTr1.appendChild(elTbodyTh4);
+        elTbodyTh5.innerHTML = costDelivery1;
+        elTbodyTr1.appendChild(elTbodyTh5);
+        elTbodyTh6.innerHTML = managBonus1;
+        elTbodyTr1.appendChild(elTbodyTh6);
+        elTbodyTh7.innerHTML = supplierBonus1;
+        elTbodyTr1.appendChild(elTbodyTh7);
+
+        elTbodyTh8.innerHTML = costs1;
+        elTbodyTr1.appendChild(elTbodyTh8);
+        elTbodyTh9.innerHTML = costSale1;
+        elTbodyTr1.appendChild(elTbodyTh9);
+        elTbodyTh10.innerHTML = profit1;
+        elTbodyTr1.appendChild(elTbodyTh10);
+        elTbodyTh11.innerHTML = `${profit1 - tax1} (3%)`;
+        elTbodyTr1.appendChild(elTbodyTh11);
+
+        elTbody.appendChild(elTbodyTrB1);
+        elTbodyThB1.innerHTML = lead2;
+        elTbodyTrB1.appendChild(elTbodyThB1);
+        elTbodyThB2.innerHTML = costLead2;
+        elTbodyTrB1.appendChild(elTbodyThB2);
+        elTbodyThB3.innerHTML = costProcurement2;
+        elTbodyTrB1.appendChild(elTbodyThB3);
+        elTbodyThB4.innerHTML = costSale2;
+        elTbodyTrB1.appendChild(elTbodyThB4);
+        elTbodyThB5.innerHTML = costDelivery2;
+        elTbodyTrB1.appendChild(elTbodyThB5);
+        elTbodyThB6.innerHTML = managBonus2;
+        elTbodyTrB1.appendChild(elTbodyThB6);
+        elTbodyThB7.innerHTML = supplierBonus2;
+        elTbodyTrB1.appendChild(elTbodyThB7);
+
+        elTbodyThB8.innerHTML = costs2;
+        elTbodyTrB1.appendChild(elTbodyThB8);
+        elTbodyThB9.innerHTML = costSale2;
+        elTbodyTrB1.appendChild(elTbodyThB9);
+        elTbodyThB10.innerHTML = profit2;
+        elTbodyTrB1.appendChild(elTbodyThB10);
+        elTbodyThB11.innerHTML = `${profit2 - tax2} (3%)`;
+        elTbodyTrB1.appendChild(elTbodyThB11);
+
+        elTbody.appendChild(elTbodyTrC1);
+        elTbodyThC1.innerHTML = lead3;
+        elTbodyTrC1.appendChild(elTbodyThC1);
+        elTbodyThC2.innerHTML = costLead3;
+        elTbodyTrC1.appendChild(elTbodyThC2);
+        elTbodyThC3.innerHTML = costProcurement3;
+        elTbodyTrC1.appendChild(elTbodyThC3);
+        elTbodyThC4.innerHTML = costSale3;
+        elTbodyTrC1.appendChild(elTbodyThC4);
+        elTbodyThC5.innerHTML = costDelivery3;
+        elTbodyTrC1.appendChild(elTbodyThC5);
+        elTbodyThC6.innerHTML = managBonus3;
+        elTbodyTrC1.appendChild(elTbodyThC6);
+        elTbodyThC7.innerHTML = supplierBonus3;
+        elTbodyTrC1.appendChild(elTbodyThC7);
+
+        elTbodyThC8.innerHTML = costs3;
+        elTbodyTrC1.appendChild(elTbodyThC8);
+        elTbodyThC9.innerHTML = costSale3;
+        elTbodyTrC1.appendChild(elTbodyThC9);
+        elTbodyThC10.innerHTML = profit3;
+        elTbodyTrC1.appendChild(elTbodyThC10);
+        elTbodyThC11.innerHTML = `${profit3 - tax3} (3%)`;
+        elTbodyTrC1.appendChild(elTbodyThC11);
+
+        elTable.appendChild(elTfoot);
+        elTfoot.appendChild(elTfootTr1);
+        elTfootTh1.innerHTML = 'Итого';
+        elTfootTr1.appendChild(elTfootTh1);
+        elTfootTh2.innerHTML = totalCostLead;
+        elTfootTr1.appendChild(elTfootTh2);
+        elTfootTh3.innerHTML = totalCostProcurement;
+        elTfootTr1.appendChild(elTfootTh3);
+        elTfootTh4.innerHTML = totalCostSale;
+        elTfootTr1.appendChild(elTfootTh4);
+        elTfootTh5.innerHTML = totalCostDelivery;
+        elTfootTr1.appendChild(elTfootTh5);
+        elTfootTh6.innerHTML = managBonus1;
+        elTfootTr1.appendChild(elTfootTh6);
+        elTfootTh7.innerHTML = totalManagBonus;
+        elTfootTr1.appendChild(elTfootTh7);
+
+        elTfootTh8.innerHTML = totalCosts;
+        elTfootTr1.appendChild(elTfootTh8);
+        elTfootTh9.innerHTML = totalCostSale;
+        elTfootTr1.appendChild(elTfootTh9);
+        elTfootTh10.innerHTML = totalProfit;
+        elTfootTr1.appendChild(elTfootTh10);
+        elTfootTh11.innerHTML = `${totalProfit - totalTax} (3%)`;
+        elTfootTr1.appendChild(elTfootTh11);
+
+    </script>
+</body>
+</html>

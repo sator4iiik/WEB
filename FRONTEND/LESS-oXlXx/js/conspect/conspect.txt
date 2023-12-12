@@ -1,5 +1,5 @@
-let variable 
-console.log (variable) undefined 
+let variable
+console.log (variable) undefined
 console. log(typeof variable) undefined
 
 variable = 1
@@ -17,14 +17,14 @@ console.log(variable) undefined
 Значение переменной не определено
 
 variable = null
-console.log (variable) null 
+console.log (variable) null
 console.log (typeof variable) object
 
 variable = document. querySelector ('qwerty') document is not defined
 console. log (variable)
 
 
-Объекта нет NULL
+Объекта нет null
 
 =========-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=================
 
@@ -35,12 +35,17 @@ Boolеаn тип данных (на один больше чем у undefined)
 
 q = !true (унарный оператор который работает всего с одним операндом)
 
-q false 
+q false
 
+(с лева на право)
 || && - ищут true
 
 =-=-=-=-=-=-=-=-=-
 Оператор логического И умный и если будет false то он остановиться (слева на право)
+result = true && 0 && false
+result 0 (false но вернуло в исходных данных)
+
+()
 
 ===================
 && - ищет первое попавшееся false
@@ -66,7 +71,7 @@ console.log() 1278
 (Не строгая типизация позволяет записывать в переменную и стринг и намбер)
 
 
-Приведение к булевому типу двойным отрицанием 
+Приведение к булевому типу двойным отрицанием
 
 q = 1
 
@@ -81,4 +86,11 @@ q = 0
 q = !!q
 
 q = false
+
+
+все числа с number будут true (в строке есть числа)
+все числа с string будут true (в строке есть строка)
+
 =============
+
+NaN - это результат некорректной арифметической операции с undefined

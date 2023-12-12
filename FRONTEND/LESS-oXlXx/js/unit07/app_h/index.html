@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            user-select: none;
+            color: #234;
+        }
+
+        .container {
+            border: 1px solid #ccc;
+            width: 450px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .wrap {
+            margin: auto;
+            width: 320px;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        .wrap_input_text > input {
+            width: 100%;
+            font-size: 20px;
+        }
+
+        form > div {
+            padding: 5px;
+        }
+
+        .wrap_input_radio {
+            padding: 5px;
+        }
+
+        .wrap_range > input {
+            width: 100%;
+        }
+
+        .wrap_input_submit {
+            text-align: center;
+        }
+
+        .wrap_input_submit > input {
+            font-size: 16px;
+        }
+
+        .wrap_input_file > input {
+            font-size: 15px;
+        }
+
+        .wrap_select_option > select {
+            font-size: 15px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <script>
+        const elBody = document.querySelector('body');
+
+        const container = document.createElement('div');
+        container.classList.add('container');
+        elBody.appendChild(container);
+
+        const wrap = document.createElement('div');
+        wrap.classList.add('wrap');
+        container.appendChild(wrap);
+
+        const header3 = document.createElement('h3');
+        header3.innerHTML = 'Регистрация на сайте'
+        wrap.appendChild(header3);
+
+        const form = document.createElement('form');
+        form.setAttribute('action', 'http://34.71.150.163/form/get_test.php');
+        form.setAttribute('target', '_blank');
+        wrap.appendChild(form);
+
+        const divInputTextLog = document.createElement('div');
+        divInputTextLog.classList.add('wrap_input_text');
+        form.appendChild(divInputTextLog);
+
+        const labelLogin = document.createElement('label');
+        labelLogin.setAttribute('for', 'login');
+        labelLogin.innerHTML = 'Придумайте логин:';
+        divInputTextLog.appendChild(labelLogin);
+
+        const inputText = document.createElement('input');
+        inputText.setAttribute('type', 'text');
+        inputText.setAttribute('name', 'login');
+        inputText.setAttribute('id', 'login');
+        divInputTextLog.appendChild(inputText);
+
+
+        const divInputTextPass = document.createElement('div');
+        divInputTextPass.classList.add('wrap_input_text');
+        form.appendChild(divInputTextPass);
+
+        const labelPassword = document.createElement('label');
+        labelPassword.setAttribute('for', 'password');
+        labelPassword.innerHTML = 'Придумайте пароль:';
+        divInputTextPass.appendChild(labelPassword);
+
+        const inputPassword = document.createElement('input');
+        inputPassword.setAttribute('type', 'password');
+        inputPassword.setAttribute('name', 'password');
+        inputPassword.setAttribute('id', 'password');
+        divInputTextPass.appendChild(inputPassword);
+
+
+        const divInputTextPassRet = document.createElement('div');
+        divInputTextPassRet.classList.add('wrap_input_text');
+        form.appendChild(divInputTextPassRet);
+
+        const labelPasswordRet = document.createElement('label');
+        labelPasswordRet.setAttribute('for', 'retry');
+        labelPasswordRet.innerHTML = 'Повторите пароль:';
+        divInputTextPassRet.appendChild(labelPasswordRet);
+
+        const inputPasswordRet = document.createElement('input');
+        inputPasswordRet.setAttribute('type', 'password');
+        inputPasswordRet.setAttribute('name', 'retry');
+        inputPasswordRet.setAttribute('id', 'retry');
+        divInputTextPassRet.appendChild(inputPasswordRet);
+
+
+        const divInputTextEmail = document.createElement('div');
+        divInputTextEmail.classList.add('wrap_input_text');
+        form.appendChild(divInputTextEmail);
+
+        const labelEmail = document.createElement('label');
+        labelEmail.setAttribute('for', 'email');
+        labelEmail.innerHTML = 'Ваш email:';
+        divInputTextEmail.appendChild(labelEmail);
+
+        const inputEmail = document.createElement('input');
+        inputEmail.setAttribute('type', 'email');
+        inputEmail.setAttribute('name', 'email');
+        inputEmail.setAttribute('id', 'email');
+        divInputTextEmail.appendChild(inputEmail);
+
+
+        const group = document.createElement('div');
+        group.classList.add('group');
+        form.appendChild(group);
+
+        const spanGroup = document.createElement('span');
+        spanGroup.innerHTML = 'Ваш пол:';
+        group.appendChild(spanGroup);
+
+        const wrapRadioFem = document.createElement('div');
+        wrapRadioFem.classList.add('wrap_input_radio');
+        group.appendChild(wrapRadioFem);
+
+        const inputFem = document.createElement('input');
+        inputFem.setAttribute('type', 'radio');
+        inputFem.setAttribute('name', 'gender');
+        inputFem.setAttribute('value', 'female');
+        inputFem.setAttribute('id', 'female');
+        wrapRadioFem.appendChild(inputFem);
+
+        const labelFem = document.createElement('label');
+        labelFem.setAttribute('for', 'female');
+        labelFem.innerHTML = 'Женский';
+        wrapRadioFem.appendChild(labelFem);
+
+
+        const wrapRadioMal = document.createElement('div');
+        wrapRadioMal.classList.add('wrap_input_radio');
+        form.appendChild(wrapRadioMal);
+
+        const inputMal = document.createElement('input');
+        inputMal.setAttribute('type', 'radio');
+        inputMal.setAttribute('name', 'gender');
+        inputMal.setAttribute('value', 'male');
+        inputMal.setAttribute('id', 'male');
+        wrapRadioMal.appendChild(inputMal);
+
+        const labelMal = document.createElement('lable');
+        labelMal.setAttribute('for', 'male');
+        labelMal.innerHTML = 'Мужской';
+        wrapRadioMal.appendChild(labelMal);
+
+
+        const wrapRange = document.createElement('div');
+        wrapRange.classList.add('wrap_range');
+        form.appendChild(wrapRange);
+
+        const rangeLabel = document.createElement('lable');
+        rangeLabel.setAttribute('for', 'age');
+        rangeLabel.innerHTML = 'Ваш возраст:';
+        wrapRange.appendChild(rangeLabel);
+
+        const rangeInput = document.createElement('input');
+        rangeInput.setAttribute('type', 'range');
+        rangeInput.setAttribute('name', 'age');
+        rangeInput.setAttribute('value', '18');
+        rangeInput.setAttribute('min', '0');
+        rangeInput.setAttribute('max', '100');
+        wrapRange.appendChild(rangeInput);
+
+
+        const wrapOption = document.createElement('div');
+        wrapOption.classList.add('wrap_select_option');
+        form.appendChild(wrapOption);
+
+        const optionLable = document.createElement('lable');
+        optionLable.setAttribute('for', 'city');
+        optionLable.innerHTML = 'Ваш город:';
+        wrapOption.appendChild(optionLable);
+
+        const select = document.createElement('select');
+        select.setAttribute('name', 'city');
+        select.setAttribute('id', 'city');
+        wrapOption.appendChild(select);
+
+        const optSelected = document.createElement('option');
+        // optSelected.setAttribute('selected', '');
+        optSelected.setAttribute('selected', true);
+        optSelected.innerHTML = 'Выберете город';
+        select.appendChild(optSelected);
+
+        const optKyiv = document.createElement('option');
+        optKyiv.setAttribute('value', 'kyiv');
+        optKyiv.innerHTML = 'Киев';
+        select.appendChild(optKyiv);
+
+        const optWarshawa = document.createElement('option');
+        optWarshawa.setAttribute('value', 'warshawa');
+        optWarshawa.innerHTML = 'Варшава';
+        select.appendChild(optWarshawa);
+
+        const optLondon = document.createElement('option');
+        optLondon.setAttribute('value', 'london');
+        optLondon.innerHTML = 'Лондон';
+        select.appendChild(optLondon);
+
+
+        const wrapFile = document.createElement('div');
+        wrapFile.classList.add('wrap_input_file');
+        form.appendChild(wrapFile);
+
+        const fileLabel = document.createElement('label');
+        fileLabel.setAttribute('for', 'file');
+        fileLabel.innerHTML = 'Загрузите аватарку:';
+        wrapFile.appendChild(fileLabel);
+
+        const fileInput = document.createElement('input');
+        fileInput.setAttribute('type', 'file');
+        fileInput.setAttribute('name', 'file');
+        fileInput.setAttribute('id', 'file');
+        wrapFile.appendChild(fileInput);
+
+
+        const wrapCheckbox = document.createElement('div');
+        wrapCheckbox.classList.add('wrap_input_checkbox');
+        form.appendChild(wrapCheckbox);
+
+        const checkInput = document.createElement('input');
+        checkInput.setAttribute('type', 'checkbox');
+        checkInput.setAttribute('name', 'not_robot');
+        checkInput.setAttribute('id', 'not_robot');
+        wrapCheckbox.appendChild(checkInput);
+
+        const checkLabel = document.createElement('label');
+        checkLabel.setAttribute('for', 'not_robot');
+        checkLabel.innerHTML = 'Я не робот';
+        wrapCheckbox.appendChild(checkLabel);
+
+
+        const wrapAgreeCheckbox = document.createElement('div');
+        wrapAgreeCheckbox .classList.add('wrap_input_checkbox');
+        form.appendChild(wrapAgreeCheckbox );
+
+        const checkAgreeInput = document.createElement('input');
+        checkAgreeInput.setAttribute('type', 'checkbox');
+        checkAgreeInput.setAttribute('name', 'is_agree');
+        checkAgreeInput.setAttribute('id', 'is_agree');
+        wrapAgreeCheckbox.appendChild(checkAgreeInput);
+
+        const checkAgreeLabel = document.createElement('label');
+        checkAgreeLabel.setAttribute('for', 'is_agree');
+        checkAgreeLabel.innerHTML = 'Подтверждаю согласие';
+        wrapAgreeCheckbox.appendChild(checkAgreeLabel);
+
+
+        const wrapSubmit = document.createElement('div');
+        wrapSubmit .classList.add('wrap_input_submit');
+        form.appendChild(wrapSubmit);
+
+        const inputSubmit = document.createElement('input');
+        inputSubmit.setAttribute('type', 'submit');
+        inputSubmit.setAttribute('value', 'Зарегистрироваться');
+        wrapSubmit.appendChild(inputSubmit);
+
+    </script>
+
+</body>
+</html>

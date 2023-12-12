@@ -13,16 +13,23 @@
         html {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             color: #234;
+            font-weight: 300;
+            user-select: none;
         }
 
-        .container {
+        h3 {
+            text-align: center;
+        }
+
+        .container_login {
             border: 1px solid;
-            width: 300px;
+            width: 290px;
             padding: 10px;
         }
 
         .wrap_input_checkbox {
             padding: 5px;
+            text-align: center;
         }
 
         .wrap_input_text {
@@ -31,13 +38,10 @@
 
         .wrap_input_text > input {
             width: 100%;
+            padding: 0px;
         }
 
-        label {
-            user-select: none;
-        }
-
-        .wrap_input_button  {
+        .wrap_input_submit {
             text-align: center;
             padding: 5px;
         }
@@ -48,26 +52,85 @@
 
     <script>
         const elBody = document.querySelector('body');
-        container.classList.add('container');
+
+        const container = document.createElement('div');
+        container.classList.add('container_login');
+        elBody.appendChild(container);
+
+        const header3 = document.createElement('h3');
+        header3.innerHTML = 'Вход в систему'
+        container.appendChild(header3);
 
         const form = document.createElement('form');
-
-        const container = document.querySelector('div');
-
-        const header = document.querySelector('h3');
-        header.innerHTML = 'Отправка данных на сервер';
-        container.appendChild(header);
-
-
         form.setAttribute('action', 'http://34.71.150.163/form/get_test.php');
         form.setAttribute('target', '_blank');
+        container.appendChild(form);
 
-        elBody.appendChild(container);
-        // container.appendChild(form);
+        const divInputTextLog = document.createElement('div');
+        divInputTextLog.classList.add('wrap_input_text');
+        form.appendChild(divInputTextLog);
 
+        const labelLogin = document.createElement('lable');
+        labelLogin.setAttribute('for', 'username');
+        labelLogin.innerHTML = 'Ваш логин:';
+        divInputTextLog.appendChild(labelLogin);
 
+        const inputText = document.createElement('input');
+        inputText.setAttribute('type', 'text');
+        inputText.setAttribute('name', 'username');
+        inputText.setAttribute('id', 'username');
+        divInputTextLog.appendChild(inputText)
+
+        const divInputTextPass = document.createElement('div');
+        divInputTextPass.classList.add('wrap_input_text');
+        form.appendChild(divInputTextPass);
+
+        const labelPassword = document.createElement('label');
+        labelPassword.setAttribute('for', 'password');
+        labelPassword.innerHTML = 'Ваш пароль:';
+        divInputTextPass.appendChild(labelPassword);
+
+        const inputPassword = document.createElement('input');
+        inputPassword.setAttribute('type', 'password');
+        inputPassword.setAttribute('name', 'password');
+        inputPassword.setAttribute('id', 'password');
+        divInputTextPass.appendChild(inputPassword);
+
+        const divInputCheckbox = document.createElement('div');
+        divInputCheckbox.classList.add('wrap_input_checkbox');
+        form.appendChild(divInputCheckbox);
+
+        const inputCheckbox = document.createElement('input');
+        inputCheckbox.setAttribute('type', 'checkbox');
+        inputCheckbox.setAttribute('name', 'is_agree');
+        inputCheckbox.setAttribute('id', 'is_agree');
+        divInputCheckbox.appendChild(inputCheckbox);
+
+        const labelCheckbox = document.createElement('label');
+        labelCheckbox.setAttribute('for', 'is_agree');
+        labelCheckbox.innerHTML = 'Я не робот';
+        divInputCheckbox.appendChild(labelCheckbox);
+
+        const wrap = document.createElement('div');
+        wrap.classList.add('wrap');
+        form.appendChild(wrap);
+
+        const inputReset = document.createElement('input');
+        inputReset.setAttribute('type', 'reset');
+        inputReset.setAttribute('value', 'Очистить');
+        wrap.appendChild(inputReset);
+
+        const wrapSubmit = document.createElement('div');
+        wrapSubmit.classList.add('wrap_input_submit');
+        form.appendChild(wrapSubmit);
+
+        const inputSubmit = document.createElement('input');
+        inputSubmit.setAttribute('type', 'submit');
+        inputSubmit.setAttribute('value', 'Войти');
+        wrapSubmit.appendChild(inputSubmit);
 
 
     </script>
+
 </body>
 </html>
