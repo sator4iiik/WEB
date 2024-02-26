@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>UNIT 1 MMJS</div>
+
+    <script>
+        // indexOf
+        const a = [3, 9, 8, 7, 5, 3, 7, 5, 2];
+        const b = ['hi', 'hello'];
+        // нужно учитывать регистр
+
+        // -1
+        console.log(a.indexOf(5,5)); // с какой позиции проводить поиск и какое число
+        // if (a.indexOf(7) !== -1) {
+        //     console.log('yes');
+        // } else {
+        //     console.log('no');
+        // }
+
+        function indexOfEmul(ar, item, from = 0) {
+            for (let i = from; i < ar.length; i++) {
+                if (ar[i] === item) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        console.log(indexOfEmul(a, 5, 5));
+    </script>
+
+</body>
+</html>

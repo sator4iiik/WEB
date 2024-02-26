@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELLO WORLD!</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4d4d4d;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <p id="header_field">HELLO WORLD</p>
+        </div>
+        <textarea name="" id="textarea" cols="30" rows="10">HELLO WORLD!</textarea>
+
+        <button class="b-1">ПРИМЕНИТЬ</button>
+    </div>
+
+    <script src="./model.js"></script>
+    <script src="./controller.js"></script>
+    <script src="./view.js"></script>
+    <script>
+
+
+        // MODEL
+        //////////////////////////////
+
+        // function getText(){
+        //     const textareaValue = document.getElementById('textarea').value;
+        //     document.getElementById('header_field').innerText = textareaValue;
+        //     changeTextColor();
+        // }
+
+        // function changeTextColor() {
+        //     const header = document.getElementById('header_field');
+        //     const randomColor = getRandomColor();
+        //     header.style.color = randomColor;
+        // }
+
+        // function getRandomColor() {
+        //     const red = Math.floor(Math.random() * 256);
+        //     const green = Math.floor(Math.random() * 256);
+        //     const blue = Math.floor(Math.random() * 256);
+        //     const randomColor = `rgb(${red}, ${green}, ${blue})`;
+        //     return randomColor;
+        // }
+
+
+        // // CONTROLLER
+        // //////////////////////////////
+        // document.querySelector('.b-1').onclick = getText;
+        // getText();
+
+        // // VIEW
+        // //////////////////////////////
+
+
+    </script>
+</body>
+</html>

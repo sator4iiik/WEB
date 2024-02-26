@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Разделяем три пары наушников по разным карманам что бы не запутались друг в друге</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+
+        .ticket {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ticket-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .ticket-header h2 {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+            color: #333;
+            margin-right: 10px;
+        }
+
+        .ticket-header img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .ticket-details {
+            margin-top: 20px;
+        }
+
+        .ticket-details p {
+            margin: 5px 0;
+        }
+
+        .ticket-footer {
+            margin-top: 20px;
+            padding-top: 10px;
+            text-align: center;
+            border-top: 1px solid #ccc;
+        }
+
+        .ticket-footer p {
+            animation: heartbeat 1.5s infinite;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        @keyframes heartbeat {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.03);
+        }
+        100% {
+            transform: scale(1);
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+
+        <div class="ticket">
+            <div class="ticket-header">
+                <p>🚈  </p>
+                <h2>Билет на поезд</h2>
+            </div>
+            <div class="ticket-details">
+                <p><strong>Отправление:</strong> Киев</p>
+                <p><strong>Прибытие:</strong> Симферопль</p>
+                <p><strong>Дата и время:</strong> 10 июля 2027, <span id="time"></span></p>
+                <p><strong>Поезд:</strong> №<span id="train_number">123</span></p>
+                <p><strong>Место:</strong> Вагон <span id="train_wagon">5</span> Купе, <span id="train_coupe">5</span>, Место <span id="train_place">15</span></p>
+                <p><span class="tea_comliment">1</span></p>
+            </div>
+            <div class="ticket-footer">
+                <p>Цена: 200 грн</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="model.js"></script>
+    <script src="view.js"></script>
+    <script src="controller.js"></script>
+
+</body>
+</html>

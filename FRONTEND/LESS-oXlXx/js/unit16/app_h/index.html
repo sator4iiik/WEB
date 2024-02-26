@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4d4d4d;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        .header {
+            display: flex;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <!--  сделать игру 'камень ножницы бумага'
+    в MVC
+    -->
+
+    <div class="main">
+        <div class="header">
+            <h3>Камень Ножницы Бумага</h3>
+        </div>
+
+        <div id="game"></div>
+        <button onclick="controller.play('камень')">🪨 Камень</button>
+        <button onclick="controller.play('бумага')">📄 Бумага</button>
+        <button onclick="controller.play('ножницы')">✂️ Ножницы</button>
+    </div>
+
+    <script src="model.js"></script>
+    <script src="controller.js"></script>
+    <script src="view.js"></script>
+</body>
+</html>

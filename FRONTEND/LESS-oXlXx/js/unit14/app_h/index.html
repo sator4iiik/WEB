@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENERGY</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            user-select: none;
+            color: #234;
+        }
+
+        .container {
+            border: 1px solid #ccc;
+            width: 450px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .h3 {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class=""></div>
+
+    <script>
+    ////////////////// MODEL      ////////////////////
+    //////////////////////////////////////////////////
+
+    function rand(from, to) {
+        const range = to - from + 1;
+        let number = Math.random() * range;
+        return Math.trunc(number) + from;
+    }
+
+    ////////////////// CONTROLLER ////////////////////
+    //////////////////////////////////////////////////
+
+    const generatedPower = rand(9000, 11000);
+    const electricityConsumption = rand(777, 14000);
+    const threshold = Math.trunc(generatedPower * 0.9);
+
+    ////////////////// VIEW       ////////////////////
+    //////////////////////////////////////////////////
+
+    const elBody = document.querySelector('body');
+
+    const container = document.createElement('div');
+    container.classList.add('container');
+    elBody.appendChild(container);
+
+    const wrap = document.createElement('div');
+    wrap.classList.add('wrap');
+    container.appendChild(wrap);
+
+    // function renderMain() {
+
+    // }
+
+    function blackoutCheck() {
+        if(electricityConsumption > threshold){
+            const header3 = document.createElement('h3');
+            header3.innerHTML = '>>>>>>> внимание блэкаут! <<<<<<<<<<'
+            wrap.appendChild(header3);
+
+            const textGeneratedPower = document.createElement('p');
+            textGeneratedPower.innerHTML = `произведенная энергия = ${generatedPower}`;
+            wrap.appendChild(textGeneratedPower);
+
+            const thresholdText = document.createElement('p');
+            thresholdText.innerHTML = `порог % = ${threshold}`;
+            wrap.appendChild(thresholdText);
+
+            const electricityConsText = document.createElement('p');
+            electricityConsText.innerHTML = `потребление = ${electricityConsumption}`;
+            wrap.appendChild(electricityConsText);
+
+            const tagText = document.createElement('h3');
+            tagText.innerHTML = `>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>`;
+            wrap.appendChild(tagText);
+        } else {
+            const header3 = document.createElement('h3');
+            header3.innerHTML = '///////  электроснабжение в норме  ///////'
+            wrap.appendChild(header3);
+
+            const textGeneratedPower = document.createElement('p');
+            textGeneratedPower.innerHTML = `произведенная энергия = ${generatedPower}`;
+            wrap.appendChild(textGeneratedPower);
+
+            const thresholdText = document.createElement('p');
+            thresholdText.innerHTML = `порог % = ${threshold}`;
+            wrap.appendChild(thresholdText);
+
+            const electricityConsText = document.createElement('p');
+            electricityConsText.innerHTML = `потребление = ${electricityConsumption}`;
+            wrap.appendChild(electricityConsText);
+
+            const tagText = document.createElement('h3');
+            tagText.innerHTML = `////////////////////////////////////////`;
+            wrap.appendChild(tagText);
+        }
+    }
+
+    blackoutCheck();
+
+    </script>
+</body>
+</html>
+
+
+<!-- учимся отделять требования бизнесса от отображения
+     нужно стараться разделять логику от отображения
+     модель которая связана с отображением невозможно поддерживать и масштабировать
+
+     мы кладем две пары наушников в два разных кармана что бы они не запутались друг в друга
+
+     название функции сначала глагол, потом прилогательное/существительное (функция отвечает на вопрос: что сделать?)
+     задача контроллера, связать модель с отображением
+
+     контроллер нужно вызывать в самом низу
+
+
+-->
