@@ -1,16 +1,16 @@
-// const button = document.querySelector('.button');
-const main = document.querySelector('.main');
+const button = document.querySelector('.button');
 const round1 = document.querySelector('.round1');
 
-function somthing(player, computer) {
-    round1.innerHTML = `
-    <p>xz: ${player} y: ${computer}</p>
+
+function something(playerResult, computerResult, result) {
+    return round1.innerHTML = `
+    <p>player: ${playerResult} computer: ${computerResult}  результат ${result} </p>
     `;
-    main.appendChild(round1);
+    // main.appendChild(round1);
 }
 
 
-document.querySelector('.button').onclick = somthing;
+document.querySelector('.button').onclick = getResult;
 
 
 // TODO сделать выпадающее что-то при нажатии на кнопку
