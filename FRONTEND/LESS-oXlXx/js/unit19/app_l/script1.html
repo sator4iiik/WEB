@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3.js Пример</title>
+    <!-- Подключение библиотеки D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        /* Стили для графика */
+        .bar {
+            fill: steelblue;
+        }
+        .bar:hover {
+            fill: orange;
+        }
+        .axis-x text {
+            font-size: 12px;
+        }
+        .axis-y text {
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Контейнер для графика -->
+    <svg id="chart"></svg>
+
+    <script>
+        // Данные о продажах
+        var salesData = [
+            { product: "Product A", sales: 100 },
+            { product: "Product B", sales: 150 },
+            { product: "Product C", sales: 80 },
+            { product: "Product D", sales: 120 },
+        ];
+
+        // Установка размеров графика
+        var width = 400;
+        var height = 200;
+
+        // Создание контейнера SVG
+        var svg = d3.select("#chart")
+                    .attr("width", width)
+                    .attr("height", height);
+
+        // Создание шкалы для оси X (названия продуктов)
+        var xScale = d3.scaleBand()
+                       .domain(salesData.map(function(d) { return d.product; }))
+                       .range([0, width])
+                       .padding(0.1);
+
+        // Создание шкалы для оси Y (объем продаж)
+        var yScale = d3.scaleLinear()
+                       .domain([0, d3.max(salesData, function(d) { return d.sales; })])
+                       .range([height, 0]);
+
+        // Создание оси X
+        svg.append("g")
+           .attr("class", "axis-x")
+           .attr("transform", "translate(0," + height + ")")
+           .call(d3.axisBottom(xScale));
+
+        // Создание оси Y
+        svg.append("g")
+           .attr("class", "axis-y")
+           .call(d3.axisLeft(yScale));
+
+        // Создание столбцов гистограммы
+        svg.selectAll(".bar")
+           .data(salesData)
+           .enter().append("rect")
+           .attr("class", "bar")
+           .attr("x", function(d) { return xScale(d.product); })
+           .attr("width", xScale.bandwidth())
+           .attr("y", function(d) { return yScale(d.sales); })
+           .attr("height", function(d) { return height - yScale(d.sales); });
+    </script>
+</body>
+</html>
