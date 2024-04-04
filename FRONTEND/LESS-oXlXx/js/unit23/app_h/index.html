@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Button or Placeholder</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4d4d4d;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .btn {
+            margin-right: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <button class="btn" onclick="onClickListener()">Randomize</button>
+    </div>
+
+    <script>
+        function getRandom(from = 1, to = 100) {
+            const range = to - from + 1;
+            let number = Math.random() * range;
+            return Math.trunc(number) + from;
+        }
+
+        function generateButton(randomNum) {
+            const elButton = document.createElement('button');
+            elButton.onclick = onClickListener;
+            elButton.classList.add('btn');
+            elButton.textContent = randomNum.toString();
+            return elButton;
+        }
+
+        function generateInput(randomNum) {
+            const inputPlaceholder = document.createElement('input');
+            inputPlaceholder.placeholder = randomNum;
+            inputPlaceholder.disabled = true; // вышибаем редактирование
+            return inputPlaceholder;
+        }
+
+        function isEven(number) {
+            return number % 2 === 0;
+        }
+
+        function onClickListener() {
+            renderMain();
+        }
+
+        function renderMain() {
+            const elMain = document.querySelector('.main');
+            const elButton = generateButton();
+            elMain.appendChild(elButton);
+        }
+
+        // function generateButton() {
+        //     const randomNum = getRandom();
+        //     if (randomNum >= 50) {
+        //         return generateButton();
+        //     } else {
+        //         if (isEven(randomNum)) {
+        //             return  generateButton();
+        //         } else {
+        //             return generateInput();
+        //         }
+        //     }
+        // }
+    </script>
+
+</body>
+</html>
