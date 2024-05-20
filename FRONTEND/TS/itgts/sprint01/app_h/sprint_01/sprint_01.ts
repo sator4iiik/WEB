@@ -95,13 +95,13 @@ console.log(p_10);
 // Task 11
 // Создайте константу p_11 и получите в нее число из .p-11. Константу выведите в консоль.
 
-const p_11 = document.querySelector('.p-11').textContent;
+const p_11 : number = +document.querySelector('.p-11').textContent;
 console.log(p_11);
 
 // Task 12
 // Создайте константу p_12 и получите в нее число из .p-12. Константу выведите в консоль.
 
-const p_12 = document.querySelector('.p-12').textContent;
+const p_12 : number = +document.querySelector('.p-12').textContent;
 console.log(p_12);
 
 
@@ -111,7 +111,8 @@ console.log(p_12);
 // привести к числу то, присвойте число в n_13. Если строка - то присвойте строку в s_13.
 // Выведите в консоль n_13, s_13.
 
-let n_13 : number, s_13 : string;
+let n_13 : number
+let s_13;
 s_13 = document.querySelector('.p-13').textContent;
 console.log(n_13, s_13);
 
@@ -167,7 +168,8 @@ console.log(b_negative);
 // Создайте переменную b_19, тип boolean и поместите в нее значение из .p-19.
 // Выведите в консоль.
 
-let b_19 : boolean = !document.querySelector('.p-19').textContent;
+let b_19 : boolean;
+b_19 = Boolean(document.querySelector('.p-19').innerHTML);
 // там что то есть? true, там ничего нет false
 console.log(b_19);
 
@@ -175,5 +177,6 @@ console.log(b_19);
 // Создайте переменную b_20, тип boolean и поместите в нее значение из .p-20
 // (число из .p-20). Выведите в консоль.
 
-let b_20 : boolean = !document.querySelector('.p-20').textContent;
+let b_20 : boolean;
+b_20 = Boolean(document.querySelector('.p-20').innerHTML);
 console.log(b_20);
